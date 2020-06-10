@@ -1,0 +1,11 @@
+h1 {
+  p {
+    background: coral;
+  }
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
