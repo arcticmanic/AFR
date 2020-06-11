@@ -5238,7 +5238,7 @@
 
   // intersection-observer have no default export (neither any export). Write it yourself if need after installing the package.
   document.addEventListener('DOMContentLoaded', () => {
-    intersectionObserver();
+    // intersectionObserver()
     lazyLoading();
     const inputPhones = document.querySelectorAll('input[data-input-type="phone"]');
     inputPhones?.forEach(inputPhone => {

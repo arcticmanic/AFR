@@ -19,7 +19,18 @@
   </head>
 </html>
 <body>
-  <div class="page-content">
+  <div class="page-content min-h-screen flex flex-col bg-blue-900 text-white">
+
+    <div class="top-pattern pointer-events-none"></div>
+
     {% include '../layout/header.twig' %}
+
+    <main class="page-main-content flex-auto">
+      {% block content %}
+
+      {% endblock %}
+    </main>
+
+    {% include '../layout/footer.twig' %}
   </div>
 </body>

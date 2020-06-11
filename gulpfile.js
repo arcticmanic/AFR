@@ -11,7 +11,8 @@ const browserSync = require('browser-sync').create(),
 const gulp = require('gulp'),
   watch = require('gulp-watch'),
   sourcemaps = require('gulp-sourcemaps'),
-  plumber = require('gulp-plumber')
+  plumber = require('gulp-plumber'),
+  size = require('gulp-size')
 
 const rollup = require('gulp-better-rollup'),
   babel = require('rollup-plugin-babel'),
@@ -50,9 +51,7 @@ const paths = {
 }
 
 const postcssPlugins = [
-  atImport({
-    plugins: [stylelint()],
-  }),
+  atImport(),
   cssDeclarationSorter({ order: 'smacss' }),
   postcssPresetEnv({ stage: 3, autoprefixer: false }),
   tailwindcss(),
@@ -113,6 +112,7 @@ const styles = () => {
     .src(path.join(paths.src.css, 'style.css'))
     .pipe(sourcemaps.init())
     .pipe(postcss(postcssPlugins))
+    .pipe(size({ title: 'css' }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(browserSync.stream())
@@ -160,7 +160,6 @@ const clean = () => {
     path.join(paths.dist.js, '*.js'),
     paths.dist.css,
     path.join(paths.dist.root, '*.html'),
-    path.join(paths.dist.images, '*'),
   ]
 
   return del(files)

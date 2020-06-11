@@ -14,7 +14,7 @@ import MicroModal from 'micromodal'
 import lazyLoading from './lazyLoading'
 
 document.addEventListener('DOMContentLoaded', () => {
-  intersectionObserver()
+  // intersectionObserver()
 
   lazyLoading()
 

@@ -1,0 +1,21 @@
+html {
+  font-size: 13px;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'IBMPlexSans';
+  font-style: normal;
+  font-display: swap;
+  src: local('IBMPlexSans-Regular'),
+    url('../fonts/IBMPlexSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'IBMPlexSans';
+  font-style: normal;
+  font-display: swap;
+  src: local('IBMPlexSans-SemiBold'),
+    url('../fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
+}

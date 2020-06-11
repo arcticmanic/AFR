@@ -1,11 +1,28 @@
-h1 {
-  p {
-    background: coral;
-  }
-}
+@import './base/_base.css';
+@import './utils/_utils.css';
+
+@import './big-layout-elements/_big-layout-elements.css';
+
+@import './blocks_unique/_blocks_unique.css';
 
 @tailwind base;
 
 @tailwind components;
+
+.button {
+  @apply py-2 px-5 rounded-full text-tiny leading-none;
+}
+
+.button_blue-300 {
+  @apply bg-blue-300 text-blue-900 font-medium;
+}
+
+.button_blue-300:hover {
+  @apply bg-blue-400;
+}
+
+.button:focus {
+  @apply outline-none shadow-outline;
+}
 
 @tailwind utilities;
