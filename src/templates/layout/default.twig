@@ -21,11 +21,11 @@
 <body>
   <div class="page-content min-h-screen flex flex-col bg-blue-900 text-white">
 
-    <div class="top-pattern pointer-events-none"></div>
+    <div class="top-pattern max-h-full pointer-events-none"></div>
 
     {% include '../layout/header.twig' %}
 
-    <main class="page-main-content flex-auto">
+    <main class="page-main-content z-10 flex-auto">
       {% block content %}
 
       {% endblock %}

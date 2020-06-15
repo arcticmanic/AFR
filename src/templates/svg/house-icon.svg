@@ -1,0 +1,6 @@
+<svg class="house-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+  <polyline class="svg-shape stroke nofill" points="1,5 6,1 11,5 " />
+  <polyline class="svg-shape stroke nofill" points="2,4 2,11 10,11 10,4 " />
+  <line class="svg-shape stroke nofill" x1="6" y1="8" x2="6" y2="11" />
+  <line class="svg-shape stroke nofill" x1="9" y1="1" x2="9" y2="3" />
+</svg>

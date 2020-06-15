@@ -1,37 +1,38 @@
 body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--blue-900) var(--purple-300);
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue-900) var(--purple-300);
 }
 
 body::-webkit-scrollbar {
-  width: 7px;
+    width: 7px;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--blue-900);
+    background: var(--blue-900);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--purple-300);
-  border: 0px solid var(--blue-900);
+    background-color: var(--purple-300);
+    border: 0px solid var(--blue-900);
 }
 
 .page-content {
-  position: relative;
+    position: relative;
 
-  background-size: 12.35vw 100vh;
-  background-image: linear-gradient(to right, #324456 1px, transparent 1px);
-  background-position: 107%;
+    background-size: 12.35vw 100vh;
+    background-image: linear-gradient(to right, #324456 1px, transparent 1px);
+    background-position: 107%;
 }
 
 .top-pattern {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
 
-  height: 750px;
-  background-image: linear-gradient(to bottom, #324456 1px, transparent 1px);
-  background-size: 100% 12.35vw;
-  background-position: 100% 102%;
+    height: 750px;
+    background-image: linear-gradient(to bottom, #324456 1px, transparent 1px);
+    background-size: 100% 12.35vw;
+    background-position: 100% 102%;
 }

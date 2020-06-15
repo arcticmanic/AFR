@@ -2,3 +2,28 @@
   width: 13px;
   height: 13px;
 }
+
+.facebook-icon-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.main-logo-svg {
+  width: 81px;
+  height: 56px;
+}
+
+.main-logo-svg.main-logo-svg_sm {
+  width: 41px;
+  height: 28px;
+}
+
+.mindmap-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.siluet-icon-svg {
+  width: 26px;
+  height: 26px;
+}

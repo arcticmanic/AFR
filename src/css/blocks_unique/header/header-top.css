@@ -1,3 +1,5 @@
-.search-field__input {
-  min-width: 372px;
+@media (min-width: 1280px) {
+  .search-field__input {
+    min-width: 372px;
+  }
 }
