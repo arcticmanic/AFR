@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('#mobile-menu')
 
   if (mobileMenu) {
-    new Mmenu(mobileMenu, {
+    new Mmenu('#mobile-menu', {
       extensions: ['position-right', 'pagedim-black'],
       navbar: {
-        title: 'Logo',
+        title: 'АФР',
       },
     })
   }

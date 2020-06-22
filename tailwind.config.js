@@ -99,7 +99,7 @@ module.exports = {
       // },
       purple: {
         100: '#faf5ff',
-        200: '#e9d8fd',
+        200: '#6a8eff', // custom
         300: '#507bff', // custom
         400: '#b794f4',
         500: '#9f7aea',
@@ -144,7 +144,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'IBMPlexSans',
+        'IBM Plex Sans',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
@@ -159,7 +159,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ],
       serif: [
-        'IBMPlexSans Serif',
+        'IBM Plex Serif',
         'Cambria',
         '"Times New Roman"',
         'Times',
@@ -182,10 +182,10 @@ module.exports = {
       lg: '1.125rem',
       xl: '1.25rem',
       '2xl': '1.5rem',
-      // '3xl': '1.875rem',
-      // '4xl': '2.25rem',
-      // '5xl': '3rem',
-      // '6xl': '4rem',
+      '3xl': '1.75rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '3.75rem',
     },
     fontWeight: {
       // hairline: '100',
@@ -201,10 +201,10 @@ module.exports = {
     lineHeight: {
       none: '1',
       tight: '1.25',
-      // snug: '1.375',
+      snug: '1.375',
       normal: '1.5',
       // relaxed: '1.625',
-      // loose: '2',
+      loose: '2',
       // '3': '.75rem',
       // '4': '1rem',
       // '5': '1.25rem',
@@ -267,7 +267,7 @@ module.exports = {
           paddingLeft: '15px',
           paddingRight: '15px',
           '@screen sm': {
-            maxWidth: '640px',
+            maxWidth: '100%',
           },
           '@screen md': {
             maxWidth: '100%',
@@ -314,12 +314,14 @@ module.exports = {
     divideOpacity: false,
     divideWidth: false,
     float: false,
+    fontSmoothing: false,
     // letterSpacing: false,
     listStylePosition: false,
     listStyleType: false,
     objectPosition: false,
     placeholderOpacity: false,
     skew: false,
+    space: false,
     transitionDuration: false,
     transitionDelay: false,
     transformOrigin: false,

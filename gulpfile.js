@@ -29,6 +29,7 @@ const postcss = require('gulp-postcss'),
   atImport = require('postcss-import'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
+  nested = require('postcss-nested'),
   tailwindcss = require('tailwindcss')
 
 const templateEngine = require('gulp-twig'),
@@ -53,6 +54,7 @@ const paths = {
 
 const postcssPlugins = [
   atImport(),
+  nested(),
   cssDeclarationSorter({ order: 'smacss' }),
   postcssPresetEnv({ stage: 3, autoprefixer: false }),
   tailwindcss(),

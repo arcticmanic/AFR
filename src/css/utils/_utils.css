@@ -1,1 +1,6 @@
 @import './svg.css';
+@import './space.css';
+
+.max-w-fit {
+  max-width: fit-content;
+}

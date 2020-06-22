@@ -1,5 +1,16 @@
+.mburger {
+  margin-right: -10px;
+}
+
 @media (min-width: 1280px) {
-  .search-field__input {
-    min-width: 372px;
+  .search-field {
+    max-width: 372px !important;
+    min-width: 372px !important;
+    
+    &__input {
+      max-width: 372px !important;
+      min-width: 372px !important;
+
+    }
   }
 }

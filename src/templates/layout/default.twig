@@ -18,14 +18,16 @@
     <script src="./assets/js/core.js" defer></script>
   </head>
 </html>
-<body>
+<body class="bg-blue-900">
   <div class="page-content min-h-screen flex flex-col bg-blue-900 text-white">
+
+    {% include '../layout/mobile-menu.twig' %}
 
     <div class="top-pattern max-h-full pointer-events-none"></div>
 
     {% include '../layout/header.twig' %}
 
-    <main class="page-main-content z-10 flex-auto">
+    <main class="page-main-content z-10 flex flex-col  flex-auto">
       {% include '../includes/breadcrumbs.twig' %}
       
       {% block content %}

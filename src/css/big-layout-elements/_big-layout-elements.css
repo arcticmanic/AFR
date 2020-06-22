@@ -36,3 +36,10 @@ body::-webkit-scrollbar-thumb {
     background-size: 100% 12.35vw;
     background-position: 100% 102%;
 }
+
+.container {
+  @media (max-width: 320px) {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}

@@ -1,7 +1,64 @@
 {% extends '../layout/default.twig' %}
 
 {% block content %}
-  <div class="container">
+  <div class="container flex flex-col flex-auto">
+    <div class="content-header flex flex-wrap items-center justify-between space-x-6">
+      <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Рекомендации АФР online</h1>
 
+      <a href="#" class="mb-4 button bg-purple-300 hover:bg-purple-200 sm:py-3 flex items-center justify-between space-x-5 lg:text-base text-tiny">
+        <span>Поиск по разделу</span>
+        {% include '../svg/arrow-svg.twig' with {classes: "text-white"} %}
+      </a>
+    </div>
+
+    <div class="md:my-12 my-6 flex-auto grid gap-5 md:grid-cols-2 md:grid-rows-2">
+      <a href="#" class="item relative shadow-lg hover:shadow-2xl">
+        <img data-src="./assets/images/item-bg-4.png" class="lazy ml-auto" alt="">
+
+        <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
+          <h5 class="md:w-1/2 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">Тромбоз поверхностных вен </h5>
+          <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
+            <span>Подробнее</span>
+            {% include '../svg/arrow-svg.twig' with {classes: "text-purple-300"} %}
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="item relative shadow-lg hover:shadow-2xl">
+        <img data-src="./assets/images/item-bg-1.png" class="lazy ml-auto" alt="">
+
+        <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
+          <h5 class="md:w-1/2 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">Хронические заболевания вен </h5>
+          <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
+            <span>Подробнее</span>
+            {% include '../svg/arrow-svg.twig' with {classes: "text-purple-300"} %}
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="item relative shadow-lg hover:shadow-2xl">
+        <img data-src="./assets/images/item-bg-2.png" class="lazy ml-auto" alt="">
+
+        <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
+          <h5 class="md:w-1/2 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">Венозные <br> тромбоэмболические осложнения </h5>
+          <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
+            <span>Подробнее</span>
+            {% include '../svg/arrow-svg.twig' with {classes: "text-purple-300"} %}
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="item relative shadow-lg hover:shadow-2xl">
+        <img data-src="./assets/images/item-bg-3.png" class="lazy ml-auto" alt="">
+
+        <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
+          <h5 class="md:w-1/2 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">Варикозное расширение вен нижних конечностей</h5>
+          <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
+            <span>Подробнее</span>
+            {% include '../svg/arrow-svg.twig' with {classes: "text-purple-300"} %}
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 {% endblock %}
