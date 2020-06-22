@@ -19,7 +19,8 @@ const rollup = require('gulp-better-rollup'),
   resolve = require('rollup-plugin-node-resolve'),
   commonjs = require('rollup-plugin-commonjs'),
   nodeResolve = require('rollup-plugin-node-resolve'),
-  globals = require('rollup-plugin-node-globals')
+  globals = require('rollup-plugin-node-globals'),
+  uglify = require('gulp-uglify-es').default
 
 const postcss = require('gulp-postcss'),
   postcssPresetEnv = require('postcss-preset-env'),
@@ -109,7 +110,7 @@ const templating = () => {
 
 const styles = () => {
   const cssStream = gulp
-    .src(path.join(paths.src.css, 'style.css'))
+    .src(path.join(paths.src.css, 'base.css'))
     .pipe(sourcemaps.init())
     .pipe(postcss(postcssPlugins))
     .pipe(size({ title: 'css' }))
@@ -136,18 +137,16 @@ const js = () => {
       rollup(
         {
           plugins: [
-            nodeResolve({ preferBuiltins: false }),
             babel({
               presets: ['@babel/preset-env'],
             }),
             resolve(),
-            commonjs(),
-            globals(),
           ],
         },
         'umd'
       )
     )
+    .pipe(uglify({ compress: isProd }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist.js))
     .pipe(browserSync.stream())
@@ -165,7 +164,7 @@ const clean = () => {
   return del(files)
 }
 
-const selectedClean = files => {
+const selectedClean = (files) => {
   return del(files)
 }
 

@@ -1,0 +1,49 @@
+<div class="container mt-10 mb-1">
+  <ul
+    class="flex items-center space-x-3"
+    itemscope=""
+    itemtype="http://schema.org/BreadcrumbList"
+  >
+    <li
+      itemprop="itemListElement"
+      itemscope=""
+      itemtype="http://schema.org/ListItem"
+    >
+      <a itemprop="item" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" class="house-svg stroke-2 stroke-current text-purple-300 hover:text-white" viewBox="0 0 12 12">
+          <path d="M1 5l5-4 5 4"/>
+          <path d="M2 4v7h8V4"/>
+          <path d="M6 8v3M9 1v2"/>
+        </svg>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+
+    {% for breadcrumb in breadcrumbs %}
+      <svg
+        class="accord-svg fill-current text-purple-300"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 7 12"
+      >
+        <path
+          d="M4.7 6L.2 10.5 0 11l.2.5.4.4.4.1.5-.2 5.3-5.3c.2-.2.3-.3.2-.5l-.2-.5L1.5.2a.8.8 0 00-.4-.2L.6.2.2.6c-.3.3-.3.7 0 .9L4.7 6z"
+        />
+      </svg>
+
+      <li
+        class="text-tiny leading-none font-light"
+        itemprop="itemListElement"
+        itemscope=""
+        itemtype="http://schema.org/ListItem"
+      >
+        {% if loop.index != loop.length %}
+          <a href="#" itemprop="item">{{breadcrumb.title}}</a>
+          <meta itemprop="position" content="{{loop.index + 1}}" />
+        {% else %}
+          <span itemprop="name">{{breadcrumb.title}}</span>
+          <meta itemprop="position" content="{{loop.index + 1}}" />
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -14,7 +14,7 @@
     <meta name="msapplication-config" content="./assets/favlike/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>Ассоциация Флебологов России</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
     <script src="./assets/js/core.js" defer></script>
   </head>
 </html>
@@ -26,6 +26,8 @@
     {% include '../layout/header.twig' %}
 
     <main class="page-main-content z-10 flex-auto">
+      {% include '../includes/breadcrumbs.twig' %}
+      
       {% block content %}
 
       {% endblock %}
