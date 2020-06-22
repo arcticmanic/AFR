@@ -2,6 +2,29 @@
 
 {% block content %}
   <div class="container">
+    <div class="content-header flex flex-wrap items-center justify-between space-x-6">
+      <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Флебологу</h1>
 
+      <a href="#" class="mb-4 button bg-purple-300 hover:bg-purple-200 sm:py-3 flex items-center justify-between space-x-5 lg:text-base text-tiny">
+        <span>Схема каталога</span>
+        {% include '../svg/mindmap-svg.twig' with {classes: 'w-5 h-5 text-white'} %}
+      </a>
+    </div>
+
+    <div class="md:my-8 my-6 flex-auto grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+      {% for item in items %}
+        <a href="#" class="item relative h-40 bg-blue-900 shadow-lg hover:shadow-2xl">
+          <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
+
+          <div class="absolute content inset-0 left-0 lg:pt-8 pt-4 lg:pl-10 px-4 lg:pb-5 pb-3 flex flex-col">
+            <h5 class="lg:w-2/3 text-xl leading-tight font-serif font-light">{{item.title}}</h5>
+            <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
+              <span>Подробнее</span>
+              {% include '../svg/arrow-svg.twig' with {classes: "text-purple-300"} %}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}

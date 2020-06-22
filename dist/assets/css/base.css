@@ -3466,6 +3466,10 @@ html {
   max-width: fit-content;
 }
 
+.dimmed-img {
+  filter: grayscale(1) brightness(0.5);
+}
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--blue-900) var(--purple-300);

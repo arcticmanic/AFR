@@ -4,3 +4,7 @@
 .max-w-fit {
   max-width: fit-content;
 }
+
+.dimmed-img {
+  filter: grayscale(1) brightness(0.5);
+}
