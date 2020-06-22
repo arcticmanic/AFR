@@ -11,7 +11,7 @@
       </a>
     </div>
 
-    <div class="md:my-8 my-6 flex-auto grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+    <div class="md:my-8 my-6 grid gap-8 lg:grid-cols-3 md:grid-cols-2">
       {% for item in items %}
         <a href="#" class="item relative h-40 bg-blue-900 shadow-lg hover:shadow-2xl">
           <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
@@ -20,7 +20,7 @@
             <h5 class="lg:w-2/3 text-xl leading-tight font-serif font-light">{{item.title}}</h5>
             <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
               <span>Подробнее</span>
-              {% include '../svg/arrow-svg.twig' with {classes: "text-purple-300"} %}
+              {% include '../svg/arrow-right-svg.twig' with {classes: "text-purple-300"} %}
             </div>
           </div>
         </a>

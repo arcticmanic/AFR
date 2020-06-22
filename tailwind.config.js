@@ -83,7 +83,7 @@ module.exports = {
         500: '#4299e1',
         600: '#3182ce',
         700: '#324456', //custom
-        800: '#2c5282',
+        800: '#363a47', //custom
         900: '#303441', // custom
       },
       // indigo: {
@@ -136,6 +136,7 @@ module.exports = {
       '16': '4rem',
       '20': '5rem',
       '24': '6rem',
+      '26': '6.75rem',
       '32': '8rem',
       '40': '10rem',
       '48': '12rem',
@@ -175,6 +176,7 @@ module.exports = {
       // ],
     },
     fontSize: {
+      xxs: '0.6875rem',
       xs: '0.75rem',
       tiny: '0.8125rem',
       sm: '0.875rem',
@@ -225,12 +227,12 @@ module.exports = {
   },
   variants: {
     accessibility: [],
-    backgroundColor: ['hover', 'focus'],
-    backgroundOpacity: ['hover', 'focus'],
+    backgroundColor: ['hover'],
+    backgroundOpacity: ['hover'],
     backgroundPosition: [],
     backgroundRepeat: [],
     backgroundSize: [],
-    borderColor: ['hover', 'focus'],
+    borderColor: ['hover'],
     borderStyle: [],
     boxShadow: ['hover', 'focus'],
     boxSizing: [],
@@ -245,10 +247,9 @@ module.exports = {
     rotate: ['hover'],
     scale: ['hover', 'focus'],
     stroke: [],
-    translate: ['responsive', 'hover'],
+    translate: ['hover', 'group-hover'],
     transitionProperty: [],
     transitionTimingFunction: [],
-    textOpacity: ['hover'],
     textDecoration: ['hover'],
     textTransform: [],
     userSelect: [],
@@ -322,7 +323,8 @@ module.exports = {
     placeholderOpacity: false,
     skew: false,
     space: false,
-    transitionDuration: false,
+    textOpacity: false,
+    // transitionDuration: false,
     transitionDelay: false,
     transformOrigin: false,
   },

@@ -1,0 +1,33 @@
+<div class="pagination relative py-2 mb-6">
+  <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 w-full h-full text-blue-800 z-0" >
+    <defs>
+      <pattern id="pattern_0gLSGx" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+        <line x1="0" y="0" x2="0" y2="4" stroke="currentColor" stroke-width="4" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#pattern_0gLSGx)" :opacity="1" />
+  </svg>
+
+  <div class="relative z-10 container flex flex-wrap items-center sm:justify-between justify-center space-x-3 font-serif text-xl">
+    <div class="pagination-numbers my-2 sm:pl-6 flex items-center justify-between space-x-4 select-none">
+      <a href="#" class="hover:text-purple-300">1</a>
+      <a href="#" class="hover:text-purple-300">...</a>
+      <a href="#" class="hover:text-purple-300">6</a>
+      <span>.</span>
+      <a href="#" class="text-purple-300 cursor-default pointer-events-none">7</a>
+      <span>.</span>
+      <a href="#" class="hover:text-purple-300">8</a>
+      <a href="#" class="hover:text-purple-300">...</a>
+      <a href="#" class="hover:text-purple-300">15</a>
+    </div>
+
+    <div class="pagination-arrows my-2 sm:w-auto w-full flex items-center justify-between space-x-3">
+      <a href="#" class="group p-3">
+        {% include '../svg/arrow-left-svg.twig' with {classes: 'text-purple-300 ease-in-out transition-all duration-300 transform group-hover:-translate-x-2'} %}
+      </a>
+      <a href="#" class="group p-3">
+        {% include '../svg/arrow-right-svg.twig' with {classes: 'text-purple-300 ease-in-out transition-all duration-300 transform group-hover:translate-x-2'} %}
+      </a>
+    </div>
+  </div>
+</div>

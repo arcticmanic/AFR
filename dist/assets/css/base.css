@@ -3470,6 +3470,15 @@ html {
   filter: grayscale(1) brightness(0.5);
 }
 
+.shifted-shadow {
+  box-shadow: 20px 20px 0px 0px #3d414e;
+  transition: all 0.15s ease
+}
+
+a:hover .shifted-shadow {
+  box-shadow: 0px 0px 0px 0px #3d414e;
+}
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--blue-900) var(--purple-300);
@@ -4163,9 +4172,7 @@ video {
   --bg-opacity: 1;
   background-color: #43c0ff;
   background-color: rgba(67, 192, 255, var(--bg-opacity));
-  --text-opacity: 1;
   color: #303441;
-  color: rgba(48, 52, 65, var(--text-opacity));
   font-weight: 500;
 }
 
@@ -4375,8 +4382,8 @@ video {
 
 .bg-blue-800 {
   --bg-opacity: 1;
-  background-color: #2c5282;
-  background-color: rgba(44, 82, 130, var(--bg-opacity));
+  background-color: #363a47;
+  background-color: rgba(54, 58, 71, var(--bg-opacity));
 }
 
 .bg-blue-900 {
@@ -4611,8 +4618,8 @@ video {
 
 .hover\:bg-blue-800:hover {
   --bg-opacity: 1;
-  background-color: #2c5282;
-  background-color: rgba(44, 82, 130, var(--bg-opacity));
+  background-color: #363a47;
+  background-color: rgba(54, 58, 71, var(--bg-opacity));
 }
 
 .hover\:bg-blue-900:hover {
@@ -4675,242 +4682,6 @@ video {
   background-color: rgba(68, 51, 122, var(--bg-opacity));
 }
 
-.focus\:bg-transparent:focus {
-  background-color: transparent;
-}
-
-.focus\:bg-current:focus {
-  background-color: currentColor;
-}
-
-.focus\:bg-black:focus {
-  --bg-opacity: 1;
-  background-color: #000;
-  background-color: rgba(0, 0, 0, var(--bg-opacity));
-}
-
-.focus\:bg-white:focus {
-  --bg-opacity: 1;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
-}
-
-.focus\:bg-gray-100:focus {
-  --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
-}
-
-.focus\:bg-gray-200:focus {
-  --bg-opacity: 1;
-  background-color: #edf2f7;
-  background-color: rgba(237, 242, 247, var(--bg-opacity));
-}
-
-.focus\:bg-gray-300:focus {
-  --bg-opacity: 1;
-  background-color: #e2e8f0;
-  background-color: rgba(226, 232, 240, var(--bg-opacity));
-}
-
-.focus\:bg-gray-400:focus {
-  --bg-opacity: 1;
-  background-color: #cbd5e0;
-  background-color: rgba(203, 213, 224, var(--bg-opacity));
-}
-
-.focus\:bg-gray-500:focus {
-  --bg-opacity: 1;
-  background-color: #a0aec0;
-  background-color: rgba(160, 174, 192, var(--bg-opacity));
-}
-
-.focus\:bg-gray-600:focus {
-  --bg-opacity: 1;
-  background-color: #718096;
-  background-color: rgba(113, 128, 150, var(--bg-opacity));
-}
-
-.focus\:bg-gray-700:focus {
-  --bg-opacity: 1;
-  background-color: #4a5568;
-  background-color: rgba(74, 85, 104, var(--bg-opacity));
-}
-
-.focus\:bg-gray-800:focus {
-  --bg-opacity: 1;
-  background-color: #2d3748;
-  background-color: rgba(45, 55, 72, var(--bg-opacity));
-}
-
-.focus\:bg-gray-900:focus {
-  --bg-opacity: 1;
-  background-color: #1a202c;
-  background-color: rgba(26, 32, 44, var(--bg-opacity));
-}
-
-.focus\:bg-red-100:focus {
-  --bg-opacity: 1;
-  background-color: #fff5f5;
-  background-color: rgba(255, 245, 245, var(--bg-opacity));
-}
-
-.focus\:bg-red-200:focus {
-  --bg-opacity: 1;
-  background-color: #fed7d7;
-  background-color: rgba(254, 215, 215, var(--bg-opacity));
-}
-
-.focus\:bg-red-300:focus {
-  --bg-opacity: 1;
-  background-color: #feb2b2;
-  background-color: rgba(254, 178, 178, var(--bg-opacity));
-}
-
-.focus\:bg-red-400:focus {
-  --bg-opacity: 1;
-  background-color: #ec5247;
-  background-color: rgba(236, 82, 71, var(--bg-opacity));
-}
-
-.focus\:bg-red-500:focus {
-  --bg-opacity: 1;
-  background-color: #f56565;
-  background-color: rgba(245, 101, 101, var(--bg-opacity));
-}
-
-.focus\:bg-red-600:focus {
-  --bg-opacity: 1;
-  background-color: #e53e3e;
-  background-color: rgba(229, 62, 62, var(--bg-opacity));
-}
-
-.focus\:bg-red-700:focus {
-  --bg-opacity: 1;
-  background-color: #c53030;
-  background-color: rgba(197, 48, 48, var(--bg-opacity));
-}
-
-.focus\:bg-red-800:focus {
-  --bg-opacity: 1;
-  background-color: #9b2c2c;
-  background-color: rgba(155, 44, 44, var(--bg-opacity));
-}
-
-.focus\:bg-red-900:focus {
-  --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
-}
-
-.focus\:bg-blue-100:focus {
-  --bg-opacity: 1;
-  background-color: #ebf8ff;
-  background-color: rgba(235, 248, 255, var(--bg-opacity));
-}
-
-.focus\:bg-blue-200:focus {
-  --bg-opacity: 1;
-  background-color: #bee3f8;
-  background-color: rgba(190, 227, 248, var(--bg-opacity));
-}
-
-.focus\:bg-blue-300:focus {
-  --bg-opacity: 1;
-  background-color: #43c0ff;
-  background-color: rgba(67, 192, 255, var(--bg-opacity));
-}
-
-.focus\:bg-blue-400:focus {
-  --bg-opacity: 1;
-  background-color: #63b3ed;
-  background-color: rgba(99, 179, 237, var(--bg-opacity));
-}
-
-.focus\:bg-blue-500:focus {
-  --bg-opacity: 1;
-  background-color: #4299e1;
-  background-color: rgba(66, 153, 225, var(--bg-opacity));
-}
-
-.focus\:bg-blue-600:focus {
-  --bg-opacity: 1;
-  background-color: #3182ce;
-  background-color: rgba(49, 130, 206, var(--bg-opacity));
-}
-
-.focus\:bg-blue-700:focus {
-  --bg-opacity: 1;
-  background-color: #324456;
-  background-color: rgba(50, 68, 86, var(--bg-opacity));
-}
-
-.focus\:bg-blue-800:focus {
-  --bg-opacity: 1;
-  background-color: #2c5282;
-  background-color: rgba(44, 82, 130, var(--bg-opacity));
-}
-
-.focus\:bg-blue-900:focus {
-  --bg-opacity: 1;
-  background-color: #303441;
-  background-color: rgba(48, 52, 65, var(--bg-opacity));
-}
-
-.focus\:bg-purple-100:focus {
-  --bg-opacity: 1;
-  background-color: #faf5ff;
-  background-color: rgba(250, 245, 255, var(--bg-opacity));
-}
-
-.focus\:bg-purple-200:focus {
-  --bg-opacity: 1;
-  background-color: #6a8eff;
-  background-color: rgba(106, 142, 255, var(--bg-opacity));
-}
-
-.focus\:bg-purple-300:focus {
-  --bg-opacity: 1;
-  background-color: #507bff;
-  background-color: rgba(80, 123, 255, var(--bg-opacity));
-}
-
-.focus\:bg-purple-400:focus {
-  --bg-opacity: 1;
-  background-color: #b794f4;
-  background-color: rgba(183, 148, 244, var(--bg-opacity));
-}
-
-.focus\:bg-purple-500:focus {
-  --bg-opacity: 1;
-  background-color: #9f7aea;
-  background-color: rgba(159, 122, 234, var(--bg-opacity));
-}
-
-.focus\:bg-purple-600:focus {
-  --bg-opacity: 1;
-  background-color: #805ad5;
-  background-color: rgba(128, 90, 213, var(--bg-opacity));
-}
-
-.focus\:bg-purple-700:focus {
-  --bg-opacity: 1;
-  background-color: #6b46c1;
-  background-color: rgba(107, 70, 193, var(--bg-opacity));
-}
-
-.focus\:bg-purple-800:focus {
-  --bg-opacity: 1;
-  background-color: #553c9a;
-  background-color: rgba(85, 60, 154, var(--bg-opacity));
-}
-
-.focus\:bg-purple-900:focus {
-  --bg-opacity: 1;
-  background-color: #44337a;
-  background-color: rgba(68, 51, 122, var(--bg-opacity));
-}
-
 .bg-opacity-0 {
   --bg-opacity: 0;
 }
@@ -4948,26 +4719,6 @@ video {
 }
 
 .hover\:bg-opacity-100:hover {
-  --bg-opacity: 1;
-}
-
-.focus\:bg-opacity-0:focus {
-  --bg-opacity: 0;
-}
-
-.focus\:bg-opacity-25:focus {
-  --bg-opacity: 0.25;
-}
-
-.focus\:bg-opacity-50:focus {
-  --bg-opacity: 0.5;
-}
-
-.focus\:bg-opacity-75:focus {
-  --bg-opacity: 0.75;
-}
-
-.focus\:bg-opacity-100:focus {
   --bg-opacity: 1;
 }
 
@@ -5160,7 +4911,7 @@ video {
 }
 
 .border-blue-800 {
-  border-color: #2c5282;
+  border-color: #363a47;
 }
 
 .border-blue-900 {
@@ -5320,7 +5071,7 @@ video {
 }
 
 .hover\:border-blue-800:hover {
-  border-color: #2c5282;
+  border-color: #363a47;
 }
 
 .hover\:border-blue-900:hover {
@@ -5360,166 +5111,6 @@ video {
 }
 
 .hover\:border-purple-900:hover {
-  border-color: #44337a;
-}
-
-.focus\:border-transparent:focus {
-  border-color: transparent;
-}
-
-.focus\:border-current:focus {
-  border-color: currentColor;
-}
-
-.focus\:border-black:focus {
-  border-color: #000;
-}
-
-.focus\:border-white:focus {
-  border-color: #fff;
-}
-
-.focus\:border-gray-100:focus {
-  border-color: #f7fafc;
-}
-
-.focus\:border-gray-200:focus {
-  border-color: #edf2f7;
-}
-
-.focus\:border-gray-300:focus {
-  border-color: #e2e8f0;
-}
-
-.focus\:border-gray-400:focus {
-  border-color: #cbd5e0;
-}
-
-.focus\:border-gray-500:focus {
-  border-color: #a0aec0;
-}
-
-.focus\:border-gray-600:focus {
-  border-color: #718096;
-}
-
-.focus\:border-gray-700:focus {
-  border-color: #4a5568;
-}
-
-.focus\:border-gray-800:focus {
-  border-color: #2d3748;
-}
-
-.focus\:border-gray-900:focus {
-  border-color: #1a202c;
-}
-
-.focus\:border-red-100:focus {
-  border-color: #fff5f5;
-}
-
-.focus\:border-red-200:focus {
-  border-color: #fed7d7;
-}
-
-.focus\:border-red-300:focus {
-  border-color: #feb2b2;
-}
-
-.focus\:border-red-400:focus {
-  border-color: #ec5247;
-}
-
-.focus\:border-red-500:focus {
-  border-color: #f56565;
-}
-
-.focus\:border-red-600:focus {
-  border-color: #e53e3e;
-}
-
-.focus\:border-red-700:focus {
-  border-color: #c53030;
-}
-
-.focus\:border-red-800:focus {
-  border-color: #9b2c2c;
-}
-
-.focus\:border-red-900:focus {
-  border-color: #742a2a;
-}
-
-.focus\:border-blue-100:focus {
-  border-color: #ebf8ff;
-}
-
-.focus\:border-blue-200:focus {
-  border-color: #bee3f8;
-}
-
-.focus\:border-blue-300:focus {
-  border-color: #43c0ff;
-}
-
-.focus\:border-blue-400:focus {
-  border-color: #63b3ed;
-}
-
-.focus\:border-blue-500:focus {
-  border-color: #4299e1;
-}
-
-.focus\:border-blue-600:focus {
-  border-color: #3182ce;
-}
-
-.focus\:border-blue-700:focus {
-  border-color: #324456;
-}
-
-.focus\:border-blue-800:focus {
-  border-color: #2c5282;
-}
-
-.focus\:border-blue-900:focus {
-  border-color: #303441;
-}
-
-.focus\:border-purple-100:focus {
-  border-color: #faf5ff;
-}
-
-.focus\:border-purple-200:focus {
-  border-color: #6a8eff;
-}
-
-.focus\:border-purple-300:focus {
-  border-color: #507bff;
-}
-
-.focus\:border-purple-400:focus {
-  border-color: #b794f4;
-}
-
-.focus\:border-purple-500:focus {
-  border-color: #9f7aea;
-}
-
-.focus\:border-purple-600:focus {
-  border-color: #805ad5;
-}
-
-.focus\:border-purple-700:focus {
-  border-color: #6b46c1;
-}
-
-.focus\:border-purple-800:focus {
-  border-color: #553c9a;
-}
-
-.focus\:border-purple-900:focus {
   border-color: #44337a;
 }
 
@@ -6307,6 +5898,10 @@ video {
   height: 6rem;
 }
 
+.h-26 {
+  height: 6.75rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -6341,6 +5936,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.text-xxs {
+  font-size: 0.6875rem;
 }
 
 .text-xs {
@@ -6463,6 +6062,10 @@ video {
   margin: 6rem;
 }
 
+.m-26 {
+  margin: 6.75rem;
+}
+
 .m-32 {
   margin: 8rem;
 }
@@ -6541,6 +6144,10 @@ video {
 
 .-m-24 {
   margin: -6rem;
+}
+
+.-m-26 {
+  margin: -6.75rem;
 }
 
 .-m-32 {
@@ -6705,6 +6312,16 @@ video {
 .mx-24 {
   margin-left: 6rem;
   margin-right: 6rem;
+}
+
+.my-26 {
+  margin-top: 6.75rem;
+  margin-bottom: 6.75rem;
+}
+
+.mx-26 {
+  margin-left: 6.75rem;
+  margin-right: 6.75rem;
 }
 
 .my-32 {
@@ -6905,6 +6522,16 @@ video {
 .-mx-24 {
   margin-left: -6rem;
   margin-right: -6rem;
+}
+
+.-my-26 {
+  margin-top: -6.75rem;
+  margin-bottom: -6.75rem;
+}
+
+.-mx-26 {
+  margin-left: -6.75rem;
+  margin-right: -6.75rem;
 }
 
 .-my-32 {
@@ -7189,6 +6816,22 @@ video {
 
 .ml-24 {
   margin-left: 6rem;
+}
+
+.mt-26 {
+  margin-top: 6.75rem;
+}
+
+.mr-26 {
+  margin-right: 6.75rem;
+}
+
+.mb-26 {
+  margin-bottom: 6.75rem;
+}
+
+.ml-26 {
+  margin-left: 6.75rem;
 }
 
 .mt-32 {
@@ -7509,6 +7152,22 @@ video {
 
 .-ml-24 {
   margin-left: -6rem;
+}
+
+.-mt-26 {
+  margin-top: -6.75rem;
+}
+
+.-mr-26 {
+  margin-right: -6.75rem;
+}
+
+.-mb-26 {
+  margin-bottom: -6.75rem;
+}
+
+.-ml-26 {
+  margin-left: -6.75rem;
 }
 
 .-mt-32 {
@@ -7899,6 +7558,10 @@ video {
   padding: 6rem;
 }
 
+.p-26 {
+  padding: 6.75rem;
+}
+
 .p-32 {
   padding: 8rem;
 }
@@ -8061,6 +7724,16 @@ video {
 .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+.py-26 {
+  padding-top: 6.75rem;
+  padding-bottom: 6.75rem;
+}
+
+.px-26 {
+  padding-left: 6.75rem;
+  padding-right: 6.75rem;
 }
 
 .py-32 {
@@ -8347,6 +8020,22 @@ video {
   padding-left: 6rem;
 }
 
+.pt-26 {
+  padding-top: 6.75rem;
+}
+
+.pr-26 {
+  padding-right: 6.75rem;
+}
+
+.pb-26 {
+  padding-bottom: 6.75rem;
+}
+
+.pl-26 {
+  padding-left: 6.75rem;
+}
+
 .pt-32 {
   padding-top: 8rem;
 }
@@ -8560,7 +8249,7 @@ video {
 }
 
 .placeholder-blue-800::placeholder {
-  color: #2c5282;
+  color: #363a47;
 }
 
 .placeholder-blue-900::placeholder {
@@ -8894,231 +8583,155 @@ video {
 }
 
 .text-black {
-  --text-opacity: 1;
   color: #000;
-  color: rgba(0, 0, 0, var(--text-opacity));
 }
 
 .text-white {
-  --text-opacity: 1;
   color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
 .text-gray-100 {
-  --text-opacity: 1;
   color: #f7fafc;
-  color: rgba(247, 250, 252, var(--text-opacity));
 }
 
 .text-gray-200 {
-  --text-opacity: 1;
   color: #edf2f7;
-  color: rgba(237, 242, 247, var(--text-opacity));
 }
 
 .text-gray-300 {
-  --text-opacity: 1;
   color: #e2e8f0;
-  color: rgba(226, 232, 240, var(--text-opacity));
 }
 
 .text-gray-400 {
-  --text-opacity: 1;
   color: #cbd5e0;
-  color: rgba(203, 213, 224, var(--text-opacity));
 }
 
 .text-gray-500 {
-  --text-opacity: 1;
   color: #a0aec0;
-  color: rgba(160, 174, 192, var(--text-opacity));
 }
 
 .text-gray-600 {
-  --text-opacity: 1;
   color: #718096;
-  color: rgba(113, 128, 150, var(--text-opacity));
 }
 
 .text-gray-700 {
-  --text-opacity: 1;
   color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
 }
 
 .text-gray-800 {
-  --text-opacity: 1;
   color: #2d3748;
-  color: rgba(45, 55, 72, var(--text-opacity));
 }
 
 .text-gray-900 {
-  --text-opacity: 1;
   color: #1a202c;
-  color: rgba(26, 32, 44, var(--text-opacity));
 }
 
 .text-red-100 {
-  --text-opacity: 1;
   color: #fff5f5;
-  color: rgba(255, 245, 245, var(--text-opacity));
 }
 
 .text-red-200 {
-  --text-opacity: 1;
   color: #fed7d7;
-  color: rgba(254, 215, 215, var(--text-opacity));
 }
 
 .text-red-300 {
-  --text-opacity: 1;
   color: #feb2b2;
-  color: rgba(254, 178, 178, var(--text-opacity));
 }
 
 .text-red-400 {
-  --text-opacity: 1;
   color: #ec5247;
-  color: rgba(236, 82, 71, var(--text-opacity));
 }
 
 .text-red-500 {
-  --text-opacity: 1;
   color: #f56565;
-  color: rgba(245, 101, 101, var(--text-opacity));
 }
 
 .text-red-600 {
-  --text-opacity: 1;
   color: #e53e3e;
-  color: rgba(229, 62, 62, var(--text-opacity));
 }
 
 .text-red-700 {
-  --text-opacity: 1;
   color: #c53030;
-  color: rgba(197, 48, 48, var(--text-opacity));
 }
 
 .text-red-800 {
-  --text-opacity: 1;
   color: #9b2c2c;
-  color: rgba(155, 44, 44, var(--text-opacity));
 }
 
 .text-red-900 {
-  --text-opacity: 1;
   color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
 }
 
 .text-blue-100 {
-  --text-opacity: 1;
   color: #ebf8ff;
-  color: rgba(235, 248, 255, var(--text-opacity));
 }
 
 .text-blue-200 {
-  --text-opacity: 1;
   color: #bee3f8;
-  color: rgba(190, 227, 248, var(--text-opacity));
 }
 
 .text-blue-300 {
-  --text-opacity: 1;
   color: #43c0ff;
-  color: rgba(67, 192, 255, var(--text-opacity));
 }
 
 .text-blue-400 {
-  --text-opacity: 1;
   color: #63b3ed;
-  color: rgba(99, 179, 237, var(--text-opacity));
 }
 
 .text-blue-500 {
-  --text-opacity: 1;
   color: #4299e1;
-  color: rgba(66, 153, 225, var(--text-opacity));
 }
 
 .text-blue-600 {
-  --text-opacity: 1;
   color: #3182ce;
-  color: rgba(49, 130, 206, var(--text-opacity));
 }
 
 .text-blue-700 {
-  --text-opacity: 1;
   color: #324456;
-  color: rgba(50, 68, 86, var(--text-opacity));
 }
 
 .text-blue-800 {
-  --text-opacity: 1;
-  color: #2c5282;
-  color: rgba(44, 82, 130, var(--text-opacity));
+  color: #363a47;
 }
 
 .text-blue-900 {
-  --text-opacity: 1;
   color: #303441;
-  color: rgba(48, 52, 65, var(--text-opacity));
 }
 
 .text-purple-100 {
-  --text-opacity: 1;
   color: #faf5ff;
-  color: rgba(250, 245, 255, var(--text-opacity));
 }
 
 .text-purple-200 {
-  --text-opacity: 1;
   color: #6a8eff;
-  color: rgba(106, 142, 255, var(--text-opacity));
 }
 
 .text-purple-300 {
-  --text-opacity: 1;
   color: #507bff;
-  color: rgba(80, 123, 255, var(--text-opacity));
 }
 
 .text-purple-400 {
-  --text-opacity: 1;
   color: #b794f4;
-  color: rgba(183, 148, 244, var(--text-opacity));
 }
 
 .text-purple-500 {
-  --text-opacity: 1;
   color: #9f7aea;
-  color: rgba(159, 122, 234, var(--text-opacity));
 }
 
 .text-purple-600 {
-  --text-opacity: 1;
   color: #805ad5;
-  color: rgba(128, 90, 213, var(--text-opacity));
 }
 
 .text-purple-700 {
-  --text-opacity: 1;
   color: #6b46c1;
-  color: rgba(107, 70, 193, var(--text-opacity));
 }
 
 .text-purple-800 {
-  --text-opacity: 1;
   color: #553c9a;
-  color: rgba(85, 60, 154, var(--text-opacity));
 }
 
 .text-purple-900 {
-  --text-opacity: 1;
   color: #44337a;
-  color: rgba(68, 51, 122, var(--text-opacity));
 }
 
 .hover\:text-transparent:hover {
@@ -9130,231 +8743,155 @@ video {
 }
 
 .hover\:text-black:hover {
-  --text-opacity: 1;
   color: #000;
-  color: rgba(0, 0, 0, var(--text-opacity));
 }
 
 .hover\:text-white:hover {
-  --text-opacity: 1;
   color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
 .hover\:text-gray-100:hover {
-  --text-opacity: 1;
   color: #f7fafc;
-  color: rgba(247, 250, 252, var(--text-opacity));
 }
 
 .hover\:text-gray-200:hover {
-  --text-opacity: 1;
   color: #edf2f7;
-  color: rgba(237, 242, 247, var(--text-opacity));
 }
 
 .hover\:text-gray-300:hover {
-  --text-opacity: 1;
   color: #e2e8f0;
-  color: rgba(226, 232, 240, var(--text-opacity));
 }
 
 .hover\:text-gray-400:hover {
-  --text-opacity: 1;
   color: #cbd5e0;
-  color: rgba(203, 213, 224, var(--text-opacity));
 }
 
 .hover\:text-gray-500:hover {
-  --text-opacity: 1;
   color: #a0aec0;
-  color: rgba(160, 174, 192, var(--text-opacity));
 }
 
 .hover\:text-gray-600:hover {
-  --text-opacity: 1;
   color: #718096;
-  color: rgba(113, 128, 150, var(--text-opacity));
 }
 
 .hover\:text-gray-700:hover {
-  --text-opacity: 1;
   color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
 }
 
 .hover\:text-gray-800:hover {
-  --text-opacity: 1;
   color: #2d3748;
-  color: rgba(45, 55, 72, var(--text-opacity));
 }
 
 .hover\:text-gray-900:hover {
-  --text-opacity: 1;
   color: #1a202c;
-  color: rgba(26, 32, 44, var(--text-opacity));
 }
 
 .hover\:text-red-100:hover {
-  --text-opacity: 1;
   color: #fff5f5;
-  color: rgba(255, 245, 245, var(--text-opacity));
 }
 
 .hover\:text-red-200:hover {
-  --text-opacity: 1;
   color: #fed7d7;
-  color: rgba(254, 215, 215, var(--text-opacity));
 }
 
 .hover\:text-red-300:hover {
-  --text-opacity: 1;
   color: #feb2b2;
-  color: rgba(254, 178, 178, var(--text-opacity));
 }
 
 .hover\:text-red-400:hover {
-  --text-opacity: 1;
   color: #ec5247;
-  color: rgba(236, 82, 71, var(--text-opacity));
 }
 
 .hover\:text-red-500:hover {
-  --text-opacity: 1;
   color: #f56565;
-  color: rgba(245, 101, 101, var(--text-opacity));
 }
 
 .hover\:text-red-600:hover {
-  --text-opacity: 1;
   color: #e53e3e;
-  color: rgba(229, 62, 62, var(--text-opacity));
 }
 
 .hover\:text-red-700:hover {
-  --text-opacity: 1;
   color: #c53030;
-  color: rgba(197, 48, 48, var(--text-opacity));
 }
 
 .hover\:text-red-800:hover {
-  --text-opacity: 1;
   color: #9b2c2c;
-  color: rgba(155, 44, 44, var(--text-opacity));
 }
 
 .hover\:text-red-900:hover {
-  --text-opacity: 1;
   color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
 }
 
 .hover\:text-blue-100:hover {
-  --text-opacity: 1;
   color: #ebf8ff;
-  color: rgba(235, 248, 255, var(--text-opacity));
 }
 
 .hover\:text-blue-200:hover {
-  --text-opacity: 1;
   color: #bee3f8;
-  color: rgba(190, 227, 248, var(--text-opacity));
 }
 
 .hover\:text-blue-300:hover {
-  --text-opacity: 1;
   color: #43c0ff;
-  color: rgba(67, 192, 255, var(--text-opacity));
 }
 
 .hover\:text-blue-400:hover {
-  --text-opacity: 1;
   color: #63b3ed;
-  color: rgba(99, 179, 237, var(--text-opacity));
 }
 
 .hover\:text-blue-500:hover {
-  --text-opacity: 1;
   color: #4299e1;
-  color: rgba(66, 153, 225, var(--text-opacity));
 }
 
 .hover\:text-blue-600:hover {
-  --text-opacity: 1;
   color: #3182ce;
-  color: rgba(49, 130, 206, var(--text-opacity));
 }
 
 .hover\:text-blue-700:hover {
-  --text-opacity: 1;
   color: #324456;
-  color: rgba(50, 68, 86, var(--text-opacity));
 }
 
 .hover\:text-blue-800:hover {
-  --text-opacity: 1;
-  color: #2c5282;
-  color: rgba(44, 82, 130, var(--text-opacity));
+  color: #363a47;
 }
 
 .hover\:text-blue-900:hover {
-  --text-opacity: 1;
   color: #303441;
-  color: rgba(48, 52, 65, var(--text-opacity));
 }
 
 .hover\:text-purple-100:hover {
-  --text-opacity: 1;
   color: #faf5ff;
-  color: rgba(250, 245, 255, var(--text-opacity));
 }
 
 .hover\:text-purple-200:hover {
-  --text-opacity: 1;
   color: #6a8eff;
-  color: rgba(106, 142, 255, var(--text-opacity));
 }
 
 .hover\:text-purple-300:hover {
-  --text-opacity: 1;
   color: #507bff;
-  color: rgba(80, 123, 255, var(--text-opacity));
 }
 
 .hover\:text-purple-400:hover {
-  --text-opacity: 1;
   color: #b794f4;
-  color: rgba(183, 148, 244, var(--text-opacity));
 }
 
 .hover\:text-purple-500:hover {
-  --text-opacity: 1;
   color: #9f7aea;
-  color: rgba(159, 122, 234, var(--text-opacity));
 }
 
 .hover\:text-purple-600:hover {
-  --text-opacity: 1;
   color: #805ad5;
-  color: rgba(128, 90, 213, var(--text-opacity));
 }
 
 .hover\:text-purple-700:hover {
-  --text-opacity: 1;
   color: #6b46c1;
-  color: rgba(107, 70, 193, var(--text-opacity));
 }
 
 .hover\:text-purple-800:hover {
-  --text-opacity: 1;
   color: #553c9a;
-  color: rgba(85, 60, 154, var(--text-opacity));
 }
 
 .hover\:text-purple-900:hover {
-  --text-opacity: 1;
   color: #44337a;
-  color: rgba(68, 51, 122, var(--text-opacity));
 }
 
 .focus\:text-transparent:focus {
@@ -9366,271 +8903,155 @@ video {
 }
 
 .focus\:text-black:focus {
-  --text-opacity: 1;
   color: #000;
-  color: rgba(0, 0, 0, var(--text-opacity));
 }
 
 .focus\:text-white:focus {
-  --text-opacity: 1;
   color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
 .focus\:text-gray-100:focus {
-  --text-opacity: 1;
   color: #f7fafc;
-  color: rgba(247, 250, 252, var(--text-opacity));
 }
 
 .focus\:text-gray-200:focus {
-  --text-opacity: 1;
   color: #edf2f7;
-  color: rgba(237, 242, 247, var(--text-opacity));
 }
 
 .focus\:text-gray-300:focus {
-  --text-opacity: 1;
   color: #e2e8f0;
-  color: rgba(226, 232, 240, var(--text-opacity));
 }
 
 .focus\:text-gray-400:focus {
-  --text-opacity: 1;
   color: #cbd5e0;
-  color: rgba(203, 213, 224, var(--text-opacity));
 }
 
 .focus\:text-gray-500:focus {
-  --text-opacity: 1;
   color: #a0aec0;
-  color: rgba(160, 174, 192, var(--text-opacity));
 }
 
 .focus\:text-gray-600:focus {
-  --text-opacity: 1;
   color: #718096;
-  color: rgba(113, 128, 150, var(--text-opacity));
 }
 
 .focus\:text-gray-700:focus {
-  --text-opacity: 1;
   color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
 }
 
 .focus\:text-gray-800:focus {
-  --text-opacity: 1;
   color: #2d3748;
-  color: rgba(45, 55, 72, var(--text-opacity));
 }
 
 .focus\:text-gray-900:focus {
-  --text-opacity: 1;
   color: #1a202c;
-  color: rgba(26, 32, 44, var(--text-opacity));
 }
 
 .focus\:text-red-100:focus {
-  --text-opacity: 1;
   color: #fff5f5;
-  color: rgba(255, 245, 245, var(--text-opacity));
 }
 
 .focus\:text-red-200:focus {
-  --text-opacity: 1;
   color: #fed7d7;
-  color: rgba(254, 215, 215, var(--text-opacity));
 }
 
 .focus\:text-red-300:focus {
-  --text-opacity: 1;
   color: #feb2b2;
-  color: rgba(254, 178, 178, var(--text-opacity));
 }
 
 .focus\:text-red-400:focus {
-  --text-opacity: 1;
   color: #ec5247;
-  color: rgba(236, 82, 71, var(--text-opacity));
 }
 
 .focus\:text-red-500:focus {
-  --text-opacity: 1;
   color: #f56565;
-  color: rgba(245, 101, 101, var(--text-opacity));
 }
 
 .focus\:text-red-600:focus {
-  --text-opacity: 1;
   color: #e53e3e;
-  color: rgba(229, 62, 62, var(--text-opacity));
 }
 
 .focus\:text-red-700:focus {
-  --text-opacity: 1;
   color: #c53030;
-  color: rgba(197, 48, 48, var(--text-opacity));
 }
 
 .focus\:text-red-800:focus {
-  --text-opacity: 1;
   color: #9b2c2c;
-  color: rgba(155, 44, 44, var(--text-opacity));
 }
 
 .focus\:text-red-900:focus {
-  --text-opacity: 1;
   color: #742a2a;
-  color: rgba(116, 42, 42, var(--text-opacity));
 }
 
 .focus\:text-blue-100:focus {
-  --text-opacity: 1;
   color: #ebf8ff;
-  color: rgba(235, 248, 255, var(--text-opacity));
 }
 
 .focus\:text-blue-200:focus {
-  --text-opacity: 1;
   color: #bee3f8;
-  color: rgba(190, 227, 248, var(--text-opacity));
 }
 
 .focus\:text-blue-300:focus {
-  --text-opacity: 1;
   color: #43c0ff;
-  color: rgba(67, 192, 255, var(--text-opacity));
 }
 
 .focus\:text-blue-400:focus {
-  --text-opacity: 1;
   color: #63b3ed;
-  color: rgba(99, 179, 237, var(--text-opacity));
 }
 
 .focus\:text-blue-500:focus {
-  --text-opacity: 1;
   color: #4299e1;
-  color: rgba(66, 153, 225, var(--text-opacity));
 }
 
 .focus\:text-blue-600:focus {
-  --text-opacity: 1;
   color: #3182ce;
-  color: rgba(49, 130, 206, var(--text-opacity));
 }
 
 .focus\:text-blue-700:focus {
-  --text-opacity: 1;
   color: #324456;
-  color: rgba(50, 68, 86, var(--text-opacity));
 }
 
 .focus\:text-blue-800:focus {
-  --text-opacity: 1;
-  color: #2c5282;
-  color: rgba(44, 82, 130, var(--text-opacity));
+  color: #363a47;
 }
 
 .focus\:text-blue-900:focus {
-  --text-opacity: 1;
   color: #303441;
-  color: rgba(48, 52, 65, var(--text-opacity));
 }
 
 .focus\:text-purple-100:focus {
-  --text-opacity: 1;
   color: #faf5ff;
-  color: rgba(250, 245, 255, var(--text-opacity));
 }
 
 .focus\:text-purple-200:focus {
-  --text-opacity: 1;
   color: #6a8eff;
-  color: rgba(106, 142, 255, var(--text-opacity));
 }
 
 .focus\:text-purple-300:focus {
-  --text-opacity: 1;
   color: #507bff;
-  color: rgba(80, 123, 255, var(--text-opacity));
 }
 
 .focus\:text-purple-400:focus {
-  --text-opacity: 1;
   color: #b794f4;
-  color: rgba(183, 148, 244, var(--text-opacity));
 }
 
 .focus\:text-purple-500:focus {
-  --text-opacity: 1;
   color: #9f7aea;
-  color: rgba(159, 122, 234, var(--text-opacity));
 }
 
 .focus\:text-purple-600:focus {
-  --text-opacity: 1;
   color: #805ad5;
-  color: rgba(128, 90, 213, var(--text-opacity));
 }
 
 .focus\:text-purple-700:focus {
-  --text-opacity: 1;
   color: #6b46c1;
-  color: rgba(107, 70, 193, var(--text-opacity));
 }
 
 .focus\:text-purple-800:focus {
-  --text-opacity: 1;
   color: #553c9a;
-  color: rgba(85, 60, 154, var(--text-opacity));
 }
 
 .focus\:text-purple-900:focus {
-  --text-opacity: 1;
   color: #44337a;
-  color: rgba(68, 51, 122, var(--text-opacity));
-}
-
-.text-opacity-0 {
-  --text-opacity: 0;
-}
-
-.text-opacity-25 {
-  --text-opacity: 0.25;
-}
-
-.text-opacity-50 {
-  --text-opacity: 0.5;
-}
-
-.text-opacity-75 {
-  --text-opacity: 0.75;
-}
-
-.text-opacity-100 {
-  --text-opacity: 1;
-}
-
-.hover\:text-opacity-0:hover {
-  --text-opacity: 0;
-}
-
-.hover\:text-opacity-25:hover {
-  --text-opacity: 0.25;
-}
-
-.hover\:text-opacity-50:hover {
-  --text-opacity: 0.5;
-}
-
-.hover\:text-opacity-75:hover {
-  --text-opacity: 0.75;
-}
-
-.hover\:text-opacity-100:hover {
-  --text-opacity: 1;
 }
 
 .italic {
@@ -9846,6 +9267,10 @@ video {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-26 {
+  width: 6.75rem;
 }
 
 .w-32 {
@@ -10086,6 +9511,11 @@ video {
   gap: 6rem;
 }
 
+.gap-26 {
+  grid-gap: 6.75rem;
+  gap: 6.75rem;
+}
+
 .gap-32 {
   grid-gap: 8rem;
   gap: 8rem;
@@ -10186,6 +9616,11 @@ video {
   column-gap: 6rem;
 }
 
+.col-gap-26 {
+  grid-column-gap: 6.75rem;
+  column-gap: 6.75rem;
+}
+
 .col-gap-32 {
   grid-column-gap: 8rem;
   column-gap: 8rem;
@@ -10284,6 +9719,11 @@ video {
 .row-gap-24 {
   grid-row-gap: 6rem;
   row-gap: 6rem;
+}
+
+.row-gap-26 {
+  grid-row-gap: 6.75rem;
+  row-gap: 6.75rem;
 }
 
 .row-gap-32 {
@@ -11185,6 +10625,10 @@ video {
   --transform-translate-x: 6rem;
 }
 
+.translate-x-26 {
+  --transform-translate-x: 6.75rem;
+}
+
 .translate-x-32 {
   --transform-translate-x: 8rem;
 }
@@ -11259,6 +10703,10 @@ video {
 
 .-translate-x-24 {
   --transform-translate-x: -6rem;
+}
+
+.-translate-x-26 {
+  --transform-translate-x: -6.75rem;
 }
 
 .-translate-x-32 {
@@ -11357,6 +10805,10 @@ video {
   --transform-translate-y: 6rem;
 }
 
+.translate-y-26 {
+  --transform-translate-y: 6.75rem;
+}
+
 .translate-y-32 {
   --transform-translate-y: 8rem;
 }
@@ -11431,6 +10883,10 @@ video {
 
 .-translate-y-24 {
   --transform-translate-y: -6rem;
+}
+
+.-translate-y-26 {
+  --transform-translate-y: -6.75rem;
 }
 
 .-translate-y-32 {
@@ -11529,6 +10985,10 @@ video {
   --transform-translate-x: 6rem;
 }
 
+.hover\:translate-x-26:hover {
+  --transform-translate-x: 6.75rem;
+}
+
 .hover\:translate-x-32:hover {
   --transform-translate-x: 8rem;
 }
@@ -11603,6 +11063,10 @@ video {
 
 .hover\:-translate-x-24:hover {
   --transform-translate-x: -6rem;
+}
+
+.hover\:-translate-x-26:hover {
+  --transform-translate-x: -6.75rem;
 }
 
 .hover\:-translate-x-32:hover {
@@ -11701,6 +11165,10 @@ video {
   --transform-translate-y: 6rem;
 }
 
+.hover\:translate-y-26:hover {
+  --transform-translate-y: 6.75rem;
+}
+
 .hover\:translate-y-32:hover {
   --transform-translate-y: 8rem;
 }
@@ -11777,6 +11245,10 @@ video {
   --transform-translate-y: -6rem;
 }
 
+.hover\:-translate-y-26:hover {
+  --transform-translate-y: -6.75rem;
+}
+
 .hover\:-translate-y-32:hover {
   --transform-translate-y: -8rem;
 }
@@ -11814,6 +11286,366 @@ video {
 }
 
 .hover\:translate-y-full:hover {
+  --transform-translate-y: 100%;
+}
+
+.group:hover .group-hover\:translate-x-0 {
+  --transform-translate-x: 0;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  --transform-translate-x: 0.25rem;
+}
+
+.group:hover .group-hover\:translate-x-2 {
+  --transform-translate-x: 0.5rem;
+}
+
+.group:hover .group-hover\:translate-x-3 {
+  --transform-translate-x: 0.75rem;
+}
+
+.group:hover .group-hover\:translate-x-4 {
+  --transform-translate-x: 1rem;
+}
+
+.group:hover .group-hover\:translate-x-5 {
+  --transform-translate-x: 1.25rem;
+}
+
+.group:hover .group-hover\:translate-x-6 {
+  --transform-translate-x: 1.5rem;
+}
+
+.group:hover .group-hover\:translate-x-7 {
+  --transform-translate-x: 1.75rem;
+}
+
+.group:hover .group-hover\:translate-x-8 {
+  --transform-translate-x: 2rem;
+}
+
+.group:hover .group-hover\:translate-x-10 {
+  --transform-translate-x: 2.5rem;
+}
+
+.group:hover .group-hover\:translate-x-12 {
+  --transform-translate-x: 3rem;
+}
+
+.group:hover .group-hover\:translate-x-16 {
+  --transform-translate-x: 4rem;
+}
+
+.group:hover .group-hover\:translate-x-20 {
+  --transform-translate-x: 5rem;
+}
+
+.group:hover .group-hover\:translate-x-24 {
+  --transform-translate-x: 6rem;
+}
+
+.group:hover .group-hover\:translate-x-26 {
+  --transform-translate-x: 6.75rem;
+}
+
+.group:hover .group-hover\:translate-x-32 {
+  --transform-translate-x: 8rem;
+}
+
+.group:hover .group-hover\:translate-x-40 {
+  --transform-translate-x: 10rem;
+}
+
+.group:hover .group-hover\:translate-x-48 {
+  --transform-translate-x: 12rem;
+}
+
+.group:hover .group-hover\:translate-x-56 {
+  --transform-translate-x: 14rem;
+}
+
+.group:hover .group-hover\:translate-x-64 {
+  --transform-translate-x: 16rem;
+}
+
+.group:hover .group-hover\:translate-x-px {
+  --transform-translate-x: 1px;
+}
+
+.group:hover .group-hover\:-translate-x-1 {
+  --transform-translate-x: -0.25rem;
+}
+
+.group:hover .group-hover\:-translate-x-2 {
+  --transform-translate-x: -0.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-3 {
+  --transform-translate-x: -0.75rem;
+}
+
+.group:hover .group-hover\:-translate-x-4 {
+  --transform-translate-x: -1rem;
+}
+
+.group:hover .group-hover\:-translate-x-5 {
+  --transform-translate-x: -1.25rem;
+}
+
+.group:hover .group-hover\:-translate-x-6 {
+  --transform-translate-x: -1.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-7 {
+  --transform-translate-x: -1.75rem;
+}
+
+.group:hover .group-hover\:-translate-x-8 {
+  --transform-translate-x: -2rem;
+}
+
+.group:hover .group-hover\:-translate-x-10 {
+  --transform-translate-x: -2.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-12 {
+  --transform-translate-x: -3rem;
+}
+
+.group:hover .group-hover\:-translate-x-16 {
+  --transform-translate-x: -4rem;
+}
+
+.group:hover .group-hover\:-translate-x-20 {
+  --transform-translate-x: -5rem;
+}
+
+.group:hover .group-hover\:-translate-x-24 {
+  --transform-translate-x: -6rem;
+}
+
+.group:hover .group-hover\:-translate-x-26 {
+  --transform-translate-x: -6.75rem;
+}
+
+.group:hover .group-hover\:-translate-x-32 {
+  --transform-translate-x: -8rem;
+}
+
+.group:hover .group-hover\:-translate-x-40 {
+  --transform-translate-x: -10rem;
+}
+
+.group:hover .group-hover\:-translate-x-48 {
+  --transform-translate-x: -12rem;
+}
+
+.group:hover .group-hover\:-translate-x-56 {
+  --transform-translate-x: -14rem;
+}
+
+.group:hover .group-hover\:-translate-x-64 {
+  --transform-translate-x: -16rem;
+}
+
+.group:hover .group-hover\:-translate-x-px {
+  --transform-translate-x: -1px;
+}
+
+.group:hover .group-hover\:-translate-x-full {
+  --transform-translate-x: -100%;
+}
+
+.group:hover .group-hover\:-translate-x-1\/2 {
+  --transform-translate-x: -50%;
+}
+
+.group:hover .group-hover\:translate-x-1\/2 {
+  --transform-translate-x: 50%;
+}
+
+.group:hover .group-hover\:translate-x-full {
+  --transform-translate-x: 100%;
+}
+
+.group:hover .group-hover\:translate-y-0 {
+  --transform-translate-y: 0;
+}
+
+.group:hover .group-hover\:translate-y-1 {
+  --transform-translate-y: 0.25rem;
+}
+
+.group:hover .group-hover\:translate-y-2 {
+  --transform-translate-y: 0.5rem;
+}
+
+.group:hover .group-hover\:translate-y-3 {
+  --transform-translate-y: 0.75rem;
+}
+
+.group:hover .group-hover\:translate-y-4 {
+  --transform-translate-y: 1rem;
+}
+
+.group:hover .group-hover\:translate-y-5 {
+  --transform-translate-y: 1.25rem;
+}
+
+.group:hover .group-hover\:translate-y-6 {
+  --transform-translate-y: 1.5rem;
+}
+
+.group:hover .group-hover\:translate-y-7 {
+  --transform-translate-y: 1.75rem;
+}
+
+.group:hover .group-hover\:translate-y-8 {
+  --transform-translate-y: 2rem;
+}
+
+.group:hover .group-hover\:translate-y-10 {
+  --transform-translate-y: 2.5rem;
+}
+
+.group:hover .group-hover\:translate-y-12 {
+  --transform-translate-y: 3rem;
+}
+
+.group:hover .group-hover\:translate-y-16 {
+  --transform-translate-y: 4rem;
+}
+
+.group:hover .group-hover\:translate-y-20 {
+  --transform-translate-y: 5rem;
+}
+
+.group:hover .group-hover\:translate-y-24 {
+  --transform-translate-y: 6rem;
+}
+
+.group:hover .group-hover\:translate-y-26 {
+  --transform-translate-y: 6.75rem;
+}
+
+.group:hover .group-hover\:translate-y-32 {
+  --transform-translate-y: 8rem;
+}
+
+.group:hover .group-hover\:translate-y-40 {
+  --transform-translate-y: 10rem;
+}
+
+.group:hover .group-hover\:translate-y-48 {
+  --transform-translate-y: 12rem;
+}
+
+.group:hover .group-hover\:translate-y-56 {
+  --transform-translate-y: 14rem;
+}
+
+.group:hover .group-hover\:translate-y-64 {
+  --transform-translate-y: 16rem;
+}
+
+.group:hover .group-hover\:translate-y-px {
+  --transform-translate-y: 1px;
+}
+
+.group:hover .group-hover\:-translate-y-1 {
+  --transform-translate-y: -0.25rem;
+}
+
+.group:hover .group-hover\:-translate-y-2 {
+  --transform-translate-y: -0.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-3 {
+  --transform-translate-y: -0.75rem;
+}
+
+.group:hover .group-hover\:-translate-y-4 {
+  --transform-translate-y: -1rem;
+}
+
+.group:hover .group-hover\:-translate-y-5 {
+  --transform-translate-y: -1.25rem;
+}
+
+.group:hover .group-hover\:-translate-y-6 {
+  --transform-translate-y: -1.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-7 {
+  --transform-translate-y: -1.75rem;
+}
+
+.group:hover .group-hover\:-translate-y-8 {
+  --transform-translate-y: -2rem;
+}
+
+.group:hover .group-hover\:-translate-y-10 {
+  --transform-translate-y: -2.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-12 {
+  --transform-translate-y: -3rem;
+}
+
+.group:hover .group-hover\:-translate-y-16 {
+  --transform-translate-y: -4rem;
+}
+
+.group:hover .group-hover\:-translate-y-20 {
+  --transform-translate-y: -5rem;
+}
+
+.group:hover .group-hover\:-translate-y-24 {
+  --transform-translate-y: -6rem;
+}
+
+.group:hover .group-hover\:-translate-y-26 {
+  --transform-translate-y: -6.75rem;
+}
+
+.group:hover .group-hover\:-translate-y-32 {
+  --transform-translate-y: -8rem;
+}
+
+.group:hover .group-hover\:-translate-y-40 {
+  --transform-translate-y: -10rem;
+}
+
+.group:hover .group-hover\:-translate-y-48 {
+  --transform-translate-y: -12rem;
+}
+
+.group:hover .group-hover\:-translate-y-56 {
+  --transform-translate-y: -14rem;
+}
+
+.group:hover .group-hover\:-translate-y-64 {
+  --transform-translate-y: -16rem;
+}
+
+.group:hover .group-hover\:-translate-y-px {
+  --transform-translate-y: -1px;
+}
+
+.group:hover .group-hover\:-translate-y-full {
+  --transform-translate-y: -100%;
+}
+
+.group:hover .group-hover\:-translate-y-1\/2 {
+  --transform-translate-y: -50%;
+}
+
+.group:hover .group-hover\:translate-y-1\/2 {
+  --transform-translate-y: 50%;
+}
+
+.group:hover .group-hover\:translate-y-full {
   --transform-translate-y: 100%;
 }
 
@@ -11859,6 +11691,38 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-75 {
+  transition-duration: 75ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
 .border-b-transparent {
@@ -12029,7 +11893,7 @@ video {
   500: #4299e1;
   600: #3182ce;
   700: #324456;
-  800: #2c5282;
+  800: #363a47;
   900: #303441;
 }
 
@@ -12041,7 +11905,7 @@ video {
   500: #4299e1;
   600: #3182ce;
   700: #324456;
-  800: #2c5282;
+  800: #363a47;
   900: #303441;
 }
 
@@ -12053,7 +11917,7 @@ video {
   500: #4299e1;
   600: #3182ce;
   700: #324456;
-  800: #2c5282;
+  800: #363a47;
   900: #303441;
 }
 
@@ -12065,7 +11929,7 @@ video {
   500: #4299e1;
   600: #3182ce;
   700: #324456;
-  800: #2c5282;
+  800: #363a47;
   900: #303441;
 }
 
@@ -12846,6 +12710,10 @@ video {
     height: 6rem;
   }
 
+  .sm\:h-26 {
+    height: 6.75rem;
+  }
+
   .sm\:h-32 {
     height: 8rem;
   }
@@ -12880,6 +12748,10 @@ video {
 
   .sm\:h-screen {
     height: 100vh;
+  }
+
+  .sm\:text-xxs {
+    font-size: 0.6875rem;
   }
 
   .sm\:text-xs {
@@ -13002,6 +12874,10 @@ video {
     margin: 6rem;
   }
 
+  .sm\:m-26 {
+    margin: 6.75rem;
+  }
+
   .sm\:m-32 {
     margin: 8rem;
   }
@@ -13080,6 +12956,10 @@ video {
 
   .sm\:-m-24 {
     margin: -6rem;
+  }
+
+  .sm\:-m-26 {
+    margin: -6.75rem;
   }
 
   .sm\:-m-32 {
@@ -13244,6 +13124,16 @@ video {
   .sm\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .sm\:my-26 {
+    margin-top: 6.75rem;
+    margin-bottom: 6.75rem;
+  }
+
+  .sm\:mx-26 {
+    margin-left: 6.75rem;
+    margin-right: 6.75rem;
   }
 
   .sm\:my-32 {
@@ -13444,6 +13334,16 @@ video {
   .sm\:-mx-24 {
     margin-left: -6rem;
     margin-right: -6rem;
+  }
+
+  .sm\:-my-26 {
+    margin-top: -6.75rem;
+    margin-bottom: -6.75rem;
+  }
+
+  .sm\:-mx-26 {
+    margin-left: -6.75rem;
+    margin-right: -6.75rem;
   }
 
   .sm\:-my-32 {
@@ -13728,6 +13628,22 @@ video {
 
   .sm\:ml-24 {
     margin-left: 6rem;
+  }
+
+  .sm\:mt-26 {
+    margin-top: 6.75rem;
+  }
+
+  .sm\:mr-26 {
+    margin-right: 6.75rem;
+  }
+
+  .sm\:mb-26 {
+    margin-bottom: 6.75rem;
+  }
+
+  .sm\:ml-26 {
+    margin-left: 6.75rem;
   }
 
   .sm\:mt-32 {
@@ -14048,6 +13964,22 @@ video {
 
   .sm\:-ml-24 {
     margin-left: -6rem;
+  }
+
+  .sm\:-mt-26 {
+    margin-top: -6.75rem;
+  }
+
+  .sm\:-mr-26 {
+    margin-right: -6.75rem;
+  }
+
+  .sm\:-mb-26 {
+    margin-bottom: -6.75rem;
+  }
+
+  .sm\:-ml-26 {
+    margin-left: -6.75rem;
   }
 
   .sm\:-mt-32 {
@@ -14374,6 +14306,10 @@ video {
     padding: 6rem;
   }
 
+  .sm\:p-26 {
+    padding: 6.75rem;
+  }
+
   .sm\:p-32 {
     padding: 8rem;
   }
@@ -14536,6 +14472,16 @@ video {
   .sm\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .sm\:py-26 {
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+  }
+
+  .sm\:px-26 {
+    padding-left: 6.75rem;
+    padding-right: 6.75rem;
   }
 
   .sm\:py-32 {
@@ -14822,6 +14768,22 @@ video {
     padding-left: 6rem;
   }
 
+  .sm\:pt-26 {
+    padding-top: 6.75rem;
+  }
+
+  .sm\:pr-26 {
+    padding-right: 6.75rem;
+  }
+
+  .sm\:pb-26 {
+    padding-bottom: 6.75rem;
+  }
+
+  .sm\:pl-26 {
+    padding-left: 6.75rem;
+  }
+
   .sm\:pt-32 {
     padding-top: 8rem;
   }
@@ -15049,231 +15011,155 @@ video {
   }
 
   .sm\:text-black {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .sm\:text-white {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .sm\:text-gray-100 {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .sm\:text-gray-200 {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .sm\:text-gray-300 {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .sm\:text-gray-400 {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .sm\:text-gray-500 {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .sm\:text-gray-600 {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .sm\:text-gray-700 {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .sm\:text-gray-800 {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .sm\:text-gray-900 {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .sm\:text-red-100 {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .sm\:text-red-200 {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .sm\:text-red-300 {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .sm\:text-red-400 {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .sm\:text-red-500 {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .sm\:text-red-600 {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .sm\:text-red-700 {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .sm\:text-red-800 {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .sm\:text-red-900 {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .sm\:text-blue-100 {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .sm\:text-blue-200 {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .sm\:text-blue-300 {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .sm\:text-blue-400 {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .sm\:text-blue-500 {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .sm\:text-blue-600 {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .sm\:text-blue-700 {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .sm\:text-blue-800 {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .sm\:text-blue-900 {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .sm\:text-purple-100 {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .sm\:text-purple-200 {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .sm\:text-purple-300 {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .sm\:text-purple-400 {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .sm\:text-purple-500 {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .sm\:text-purple-600 {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .sm\:text-purple-700 {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .sm\:text-purple-800 {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .sm\:text-purple-900 {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -15285,231 +15171,155 @@ video {
   }
 
   .sm\:hover\:text-black:hover {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .sm\:hover\:text-white:hover {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-100:hover {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-200:hover {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-300:hover {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-400:hover {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-500:hover {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-600:hover {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-700:hover {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-800:hover {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .sm\:hover\:text-gray-900:hover {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-100:hover {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-200:hover {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-300:hover {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-400:hover {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-500:hover {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-600:hover {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-700:hover {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-800:hover {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .sm\:hover\:text-red-900:hover {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-100:hover {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-200:hover {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-300:hover {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-400:hover {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-500:hover {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-600:hover {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-700:hover {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .sm\:hover\:text-blue-800:hover {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .sm\:hover\:text-blue-900:hover {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-100:hover {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-200:hover {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-300:hover {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-400:hover {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-500:hover {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-600:hover {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-700:hover {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-800:hover {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .sm\:hover\:text-purple-900:hover {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .sm\:focus\:text-transparent:focus {
@@ -15521,231 +15331,155 @@ video {
   }
 
   .sm\:focus\:text-black:focus {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .sm\:focus\:text-white:focus {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-100:focus {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-200:focus {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-300:focus {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-400:focus {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-500:focus {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-600:focus {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-700:focus {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-800:focus {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .sm\:focus\:text-gray-900:focus {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-100:focus {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-200:focus {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-300:focus {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-400:focus {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-500:focus {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-600:focus {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-700:focus {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-800:focus {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .sm\:focus\:text-red-900:focus {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-100:focus {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-200:focus {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-300:focus {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-400:focus {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-500:focus {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-600:focus {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-700:focus {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .sm\:focus\:text-blue-800:focus {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .sm\:focus\:text-blue-900:focus {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-100:focus {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-200:focus {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-300:focus {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-400:focus {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-500:focus {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-600:focus {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-700:focus {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-800:focus {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .sm\:focus\:text-purple-900:focus {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .sm\:italic {
@@ -15834,6 +15568,10 @@ video {
 
   .sm\:w-24 {
     width: 6rem;
+  }
+
+  .sm\:w-26 {
+    width: 6.75rem;
   }
 
   .sm\:w-32 {
@@ -16074,6 +15812,11 @@ video {
     gap: 6rem;
   }
 
+  .sm\:gap-26 {
+    grid-gap: 6.75rem;
+    gap: 6.75rem;
+  }
+
   .sm\:gap-32 {
     grid-gap: 8rem;
     gap: 8rem;
@@ -16174,6 +15917,11 @@ video {
     column-gap: 6rem;
   }
 
+  .sm\:col-gap-26 {
+    grid-column-gap: 6.75rem;
+    column-gap: 6.75rem;
+  }
+
   .sm\:col-gap-32 {
     grid-column-gap: 8rem;
     column-gap: 8rem;
@@ -16272,6 +16020,11 @@ video {
   .sm\:row-gap-24 {
     grid-row-gap: 6rem;
     row-gap: 6rem;
+  }
+
+  .sm\:row-gap-26 {
+    grid-row-gap: 6.75rem;
+    row-gap: 6.75rem;
   }
 
   .sm\:row-gap-32 {
@@ -16671,692 +16424,36 @@ video {
     transform: none;
   }
 
-  .sm\:translate-x-0 {
-    --transform-translate-x: 0;
+  .sm\:duration-75 {
+    transition-duration: 75ms;
   }
 
-  .sm\:translate-x-1 {
-    --transform-translate-x: 0.25rem;
+  .sm\:duration-100 {
+    transition-duration: 100ms;
   }
 
-  .sm\:translate-x-2 {
-    --transform-translate-x: 0.5rem;
+  .sm\:duration-150 {
+    transition-duration: 150ms;
   }
 
-  .sm\:translate-x-3 {
-    --transform-translate-x: 0.75rem;
+  .sm\:duration-200 {
+    transition-duration: 200ms;
   }
 
-  .sm\:translate-x-4 {
-    --transform-translate-x: 1rem;
+  .sm\:duration-300 {
+    transition-duration: 300ms;
   }
 
-  .sm\:translate-x-5 {
-    --transform-translate-x: 1.25rem;
+  .sm\:duration-500 {
+    transition-duration: 500ms;
   }
 
-  .sm\:translate-x-6 {
-    --transform-translate-x: 1.5rem;
+  .sm\:duration-700 {
+    transition-duration: 700ms;
   }
 
-  .sm\:translate-x-7 {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .sm\:translate-x-8 {
-    --transform-translate-x: 2rem;
-  }
-
-  .sm\:translate-x-10 {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .sm\:translate-x-12 {
-    --transform-translate-x: 3rem;
-  }
-
-  .sm\:translate-x-16 {
-    --transform-translate-x: 4rem;
-  }
-
-  .sm\:translate-x-20 {
-    --transform-translate-x: 5rem;
-  }
-
-  .sm\:translate-x-24 {
-    --transform-translate-x: 6rem;
-  }
-
-  .sm\:translate-x-32 {
-    --transform-translate-x: 8rem;
-  }
-
-  .sm\:translate-x-40 {
-    --transform-translate-x: 10rem;
-  }
-
-  .sm\:translate-x-48 {
-    --transform-translate-x: 12rem;
-  }
-
-  .sm\:translate-x-56 {
-    --transform-translate-x: 14rem;
-  }
-
-  .sm\:translate-x-64 {
-    --transform-translate-x: 16rem;
-  }
-
-  .sm\:translate-x-px {
-    --transform-translate-x: 1px;
-  }
-
-  .sm\:-translate-x-1 {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .sm\:-translate-x-2 {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .sm\:-translate-x-3 {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .sm\:-translate-x-4 {
-    --transform-translate-x: -1rem;
-  }
-
-  .sm\:-translate-x-5 {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .sm\:-translate-x-6 {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .sm\:-translate-x-7 {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .sm\:-translate-x-8 {
-    --transform-translate-x: -2rem;
-  }
-
-  .sm\:-translate-x-10 {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .sm\:-translate-x-12 {
-    --transform-translate-x: -3rem;
-  }
-
-  .sm\:-translate-x-16 {
-    --transform-translate-x: -4rem;
-  }
-
-  .sm\:-translate-x-20 {
-    --transform-translate-x: -5rem;
-  }
-
-  .sm\:-translate-x-24 {
-    --transform-translate-x: -6rem;
-  }
-
-  .sm\:-translate-x-32 {
-    --transform-translate-x: -8rem;
-  }
-
-  .sm\:-translate-x-40 {
-    --transform-translate-x: -10rem;
-  }
-
-  .sm\:-translate-x-48 {
-    --transform-translate-x: -12rem;
-  }
-
-  .sm\:-translate-x-56 {
-    --transform-translate-x: -14rem;
-  }
-
-  .sm\:-translate-x-64 {
-    --transform-translate-x: -16rem;
-  }
-
-  .sm\:-translate-x-px {
-    --transform-translate-x: -1px;
-  }
-
-  .sm\:-translate-x-full {
-    --transform-translate-x: -100%;
-  }
-
-  .sm\:-translate-x-1\/2 {
-    --transform-translate-x: -50%;
-  }
-
-  .sm\:translate-x-1\/2 {
-    --transform-translate-x: 50%;
-  }
-
-  .sm\:translate-x-full {
-    --transform-translate-x: 100%;
-  }
-
-  .sm\:translate-y-0 {
-    --transform-translate-y: 0;
-  }
-
-  .sm\:translate-y-1 {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .sm\:translate-y-2 {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .sm\:translate-y-3 {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .sm\:translate-y-4 {
-    --transform-translate-y: 1rem;
-  }
-
-  .sm\:translate-y-5 {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .sm\:translate-y-6 {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .sm\:translate-y-7 {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .sm\:translate-y-8 {
-    --transform-translate-y: 2rem;
-  }
-
-  .sm\:translate-y-10 {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .sm\:translate-y-12 {
-    --transform-translate-y: 3rem;
-  }
-
-  .sm\:translate-y-16 {
-    --transform-translate-y: 4rem;
-  }
-
-  .sm\:translate-y-20 {
-    --transform-translate-y: 5rem;
-  }
-
-  .sm\:translate-y-24 {
-    --transform-translate-y: 6rem;
-  }
-
-  .sm\:translate-y-32 {
-    --transform-translate-y: 8rem;
-  }
-
-  .sm\:translate-y-40 {
-    --transform-translate-y: 10rem;
-  }
-
-  .sm\:translate-y-48 {
-    --transform-translate-y: 12rem;
-  }
-
-  .sm\:translate-y-56 {
-    --transform-translate-y: 14rem;
-  }
-
-  .sm\:translate-y-64 {
-    --transform-translate-y: 16rem;
-  }
-
-  .sm\:translate-y-px {
-    --transform-translate-y: 1px;
-  }
-
-  .sm\:-translate-y-1 {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .sm\:-translate-y-2 {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .sm\:-translate-y-3 {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .sm\:-translate-y-4 {
-    --transform-translate-y: -1rem;
-  }
-
-  .sm\:-translate-y-5 {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .sm\:-translate-y-6 {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .sm\:-translate-y-7 {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .sm\:-translate-y-8 {
-    --transform-translate-y: -2rem;
-  }
-
-  .sm\:-translate-y-10 {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .sm\:-translate-y-12 {
-    --transform-translate-y: -3rem;
-  }
-
-  .sm\:-translate-y-16 {
-    --transform-translate-y: -4rem;
-  }
-
-  .sm\:-translate-y-20 {
-    --transform-translate-y: -5rem;
-  }
-
-  .sm\:-translate-y-24 {
-    --transform-translate-y: -6rem;
-  }
-
-  .sm\:-translate-y-32 {
-    --transform-translate-y: -8rem;
-  }
-
-  .sm\:-translate-y-40 {
-    --transform-translate-y: -10rem;
-  }
-
-  .sm\:-translate-y-48 {
-    --transform-translate-y: -12rem;
-  }
-
-  .sm\:-translate-y-56 {
-    --transform-translate-y: -14rem;
-  }
-
-  .sm\:-translate-y-64 {
-    --transform-translate-y: -16rem;
-  }
-
-  .sm\:-translate-y-px {
-    --transform-translate-y: -1px;
-  }
-
-  .sm\:-translate-y-full {
-    --transform-translate-y: -100%;
-  }
-
-  .sm\:-translate-y-1\/2 {
-    --transform-translate-y: -50%;
-  }
-
-  .sm\:translate-y-1\/2 {
-    --transform-translate-y: 50%;
-  }
-
-  .sm\:translate-y-full {
-    --transform-translate-y: 100%;
-  }
-
-  .sm\:hover\:translate-x-0:hover {
-    --transform-translate-x: 0;
-  }
-
-  .sm\:hover\:translate-x-1:hover {
-    --transform-translate-x: 0.25rem;
-  }
-
-  .sm\:hover\:translate-x-2:hover {
-    --transform-translate-x: 0.5rem;
-  }
-
-  .sm\:hover\:translate-x-3:hover {
-    --transform-translate-x: 0.75rem;
-  }
-
-  .sm\:hover\:translate-x-4:hover {
-    --transform-translate-x: 1rem;
-  }
-
-  .sm\:hover\:translate-x-5:hover {
-    --transform-translate-x: 1.25rem;
-  }
-
-  .sm\:hover\:translate-x-6:hover {
-    --transform-translate-x: 1.5rem;
-  }
-
-  .sm\:hover\:translate-x-7:hover {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .sm\:hover\:translate-x-8:hover {
-    --transform-translate-x: 2rem;
-  }
-
-  .sm\:hover\:translate-x-10:hover {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .sm\:hover\:translate-x-12:hover {
-    --transform-translate-x: 3rem;
-  }
-
-  .sm\:hover\:translate-x-16:hover {
-    --transform-translate-x: 4rem;
-  }
-
-  .sm\:hover\:translate-x-20:hover {
-    --transform-translate-x: 5rem;
-  }
-
-  .sm\:hover\:translate-x-24:hover {
-    --transform-translate-x: 6rem;
-  }
-
-  .sm\:hover\:translate-x-32:hover {
-    --transform-translate-x: 8rem;
-  }
-
-  .sm\:hover\:translate-x-40:hover {
-    --transform-translate-x: 10rem;
-  }
-
-  .sm\:hover\:translate-x-48:hover {
-    --transform-translate-x: 12rem;
-  }
-
-  .sm\:hover\:translate-x-56:hover {
-    --transform-translate-x: 14rem;
-  }
-
-  .sm\:hover\:translate-x-64:hover {
-    --transform-translate-x: 16rem;
-  }
-
-  .sm\:hover\:translate-x-px:hover {
-    --transform-translate-x: 1px;
-  }
-
-  .sm\:hover\:-translate-x-1:hover {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .sm\:hover\:-translate-x-2:hover {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .sm\:hover\:-translate-x-3:hover {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .sm\:hover\:-translate-x-4:hover {
-    --transform-translate-x: -1rem;
-  }
-
-  .sm\:hover\:-translate-x-5:hover {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .sm\:hover\:-translate-x-6:hover {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .sm\:hover\:-translate-x-7:hover {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .sm\:hover\:-translate-x-8:hover {
-    --transform-translate-x: -2rem;
-  }
-
-  .sm\:hover\:-translate-x-10:hover {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .sm\:hover\:-translate-x-12:hover {
-    --transform-translate-x: -3rem;
-  }
-
-  .sm\:hover\:-translate-x-16:hover {
-    --transform-translate-x: -4rem;
-  }
-
-  .sm\:hover\:-translate-x-20:hover {
-    --transform-translate-x: -5rem;
-  }
-
-  .sm\:hover\:-translate-x-24:hover {
-    --transform-translate-x: -6rem;
-  }
-
-  .sm\:hover\:-translate-x-32:hover {
-    --transform-translate-x: -8rem;
-  }
-
-  .sm\:hover\:-translate-x-40:hover {
-    --transform-translate-x: -10rem;
-  }
-
-  .sm\:hover\:-translate-x-48:hover {
-    --transform-translate-x: -12rem;
-  }
-
-  .sm\:hover\:-translate-x-56:hover {
-    --transform-translate-x: -14rem;
-  }
-
-  .sm\:hover\:-translate-x-64:hover {
-    --transform-translate-x: -16rem;
-  }
-
-  .sm\:hover\:-translate-x-px:hover {
-    --transform-translate-x: -1px;
-  }
-
-  .sm\:hover\:-translate-x-full:hover {
-    --transform-translate-x: -100%;
-  }
-
-  .sm\:hover\:-translate-x-1\/2:hover {
-    --transform-translate-x: -50%;
-  }
-
-  .sm\:hover\:translate-x-1\/2:hover {
-    --transform-translate-x: 50%;
-  }
-
-  .sm\:hover\:translate-x-full:hover {
-    --transform-translate-x: 100%;
-  }
-
-  .sm\:hover\:translate-y-0:hover {
-    --transform-translate-y: 0;
-  }
-
-  .sm\:hover\:translate-y-1:hover {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .sm\:hover\:translate-y-2:hover {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .sm\:hover\:translate-y-3:hover {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .sm\:hover\:translate-y-4:hover {
-    --transform-translate-y: 1rem;
-  }
-
-  .sm\:hover\:translate-y-5:hover {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .sm\:hover\:translate-y-6:hover {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .sm\:hover\:translate-y-7:hover {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .sm\:hover\:translate-y-8:hover {
-    --transform-translate-y: 2rem;
-  }
-
-  .sm\:hover\:translate-y-10:hover {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .sm\:hover\:translate-y-12:hover {
-    --transform-translate-y: 3rem;
-  }
-
-  .sm\:hover\:translate-y-16:hover {
-    --transform-translate-y: 4rem;
-  }
-
-  .sm\:hover\:translate-y-20:hover {
-    --transform-translate-y: 5rem;
-  }
-
-  .sm\:hover\:translate-y-24:hover {
-    --transform-translate-y: 6rem;
-  }
-
-  .sm\:hover\:translate-y-32:hover {
-    --transform-translate-y: 8rem;
-  }
-
-  .sm\:hover\:translate-y-40:hover {
-    --transform-translate-y: 10rem;
-  }
-
-  .sm\:hover\:translate-y-48:hover {
-    --transform-translate-y: 12rem;
-  }
-
-  .sm\:hover\:translate-y-56:hover {
-    --transform-translate-y: 14rem;
-  }
-
-  .sm\:hover\:translate-y-64:hover {
-    --transform-translate-y: 16rem;
-  }
-
-  .sm\:hover\:translate-y-px:hover {
-    --transform-translate-y: 1px;
-  }
-
-  .sm\:hover\:-translate-y-1:hover {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .sm\:hover\:-translate-y-2:hover {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .sm\:hover\:-translate-y-3:hover {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .sm\:hover\:-translate-y-4:hover {
-    --transform-translate-y: -1rem;
-  }
-
-  .sm\:hover\:-translate-y-5:hover {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .sm\:hover\:-translate-y-6:hover {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .sm\:hover\:-translate-y-7:hover {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .sm\:hover\:-translate-y-8:hover {
-    --transform-translate-y: -2rem;
-  }
-
-  .sm\:hover\:-translate-y-10:hover {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .sm\:hover\:-translate-y-12:hover {
-    --transform-translate-y: -3rem;
-  }
-
-  .sm\:hover\:-translate-y-16:hover {
-    --transform-translate-y: -4rem;
-  }
-
-  .sm\:hover\:-translate-y-20:hover {
-    --transform-translate-y: -5rem;
-  }
-
-  .sm\:hover\:-translate-y-24:hover {
-    --transform-translate-y: -6rem;
-  }
-
-  .sm\:hover\:-translate-y-32:hover {
-    --transform-translate-y: -8rem;
-  }
-
-  .sm\:hover\:-translate-y-40:hover {
-    --transform-translate-y: -10rem;
-  }
-
-  .sm\:hover\:-translate-y-48:hover {
-    --transform-translate-y: -12rem;
-  }
-
-  .sm\:hover\:-translate-y-56:hover {
-    --transform-translate-y: -14rem;
-  }
-
-  .sm\:hover\:-translate-y-64:hover {
-    --transform-translate-y: -16rem;
-  }
-
-  .sm\:hover\:-translate-y-px:hover {
-    --transform-translate-y: -1px;
-  }
-
-  .sm\:hover\:-translate-y-full:hover {
-    --transform-translate-y: -100%;
-  }
-
-  .sm\:hover\:-translate-y-1\/2:hover {
-    --transform-translate-y: -50%;
-  }
-
-  .sm\:hover\:translate-y-1\/2:hover {
-    --transform-translate-y: 50%;
-  }
-
-  .sm\:hover\:translate-y-full:hover {
-    --transform-translate-y: 100%;
+  .sm\:duration-1000 {
+    transition-duration: 1000ms;
   }
 }
 
@@ -18089,6 +17186,10 @@ video {
     height: 6rem;
   }
 
+  .md\:h-26 {
+    height: 6.75rem;
+  }
+
   .md\:h-32 {
     height: 8rem;
   }
@@ -18123,6 +17224,10 @@ video {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:text-xxs {
+    font-size: 0.6875rem;
   }
 
   .md\:text-xs {
@@ -18245,6 +17350,10 @@ video {
     margin: 6rem;
   }
 
+  .md\:m-26 {
+    margin: 6.75rem;
+  }
+
   .md\:m-32 {
     margin: 8rem;
   }
@@ -18323,6 +17432,10 @@ video {
 
   .md\:-m-24 {
     margin: -6rem;
+  }
+
+  .md\:-m-26 {
+    margin: -6.75rem;
   }
 
   .md\:-m-32 {
@@ -18487,6 +17600,16 @@ video {
   .md\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .md\:my-26 {
+    margin-top: 6.75rem;
+    margin-bottom: 6.75rem;
+  }
+
+  .md\:mx-26 {
+    margin-left: 6.75rem;
+    margin-right: 6.75rem;
   }
 
   .md\:my-32 {
@@ -18687,6 +17810,16 @@ video {
   .md\:-mx-24 {
     margin-left: -6rem;
     margin-right: -6rem;
+  }
+
+  .md\:-my-26 {
+    margin-top: -6.75rem;
+    margin-bottom: -6.75rem;
+  }
+
+  .md\:-mx-26 {
+    margin-left: -6.75rem;
+    margin-right: -6.75rem;
   }
 
   .md\:-my-32 {
@@ -18971,6 +18104,22 @@ video {
 
   .md\:ml-24 {
     margin-left: 6rem;
+  }
+
+  .md\:mt-26 {
+    margin-top: 6.75rem;
+  }
+
+  .md\:mr-26 {
+    margin-right: 6.75rem;
+  }
+
+  .md\:mb-26 {
+    margin-bottom: 6.75rem;
+  }
+
+  .md\:ml-26 {
+    margin-left: 6.75rem;
   }
 
   .md\:mt-32 {
@@ -19291,6 +18440,22 @@ video {
 
   .md\:-ml-24 {
     margin-left: -6rem;
+  }
+
+  .md\:-mt-26 {
+    margin-top: -6.75rem;
+  }
+
+  .md\:-mr-26 {
+    margin-right: -6.75rem;
+  }
+
+  .md\:-mb-26 {
+    margin-bottom: -6.75rem;
+  }
+
+  .md\:-ml-26 {
+    margin-left: -6.75rem;
   }
 
   .md\:-mt-32 {
@@ -19617,6 +18782,10 @@ video {
     padding: 6rem;
   }
 
+  .md\:p-26 {
+    padding: 6.75rem;
+  }
+
   .md\:p-32 {
     padding: 8rem;
   }
@@ -19779,6 +18948,16 @@ video {
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .md\:py-26 {
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+  }
+
+  .md\:px-26 {
+    padding-left: 6.75rem;
+    padding-right: 6.75rem;
   }
 
   .md\:py-32 {
@@ -20065,6 +19244,22 @@ video {
     padding-left: 6rem;
   }
 
+  .md\:pt-26 {
+    padding-top: 6.75rem;
+  }
+
+  .md\:pr-26 {
+    padding-right: 6.75rem;
+  }
+
+  .md\:pb-26 {
+    padding-bottom: 6.75rem;
+  }
+
+  .md\:pl-26 {
+    padding-left: 6.75rem;
+  }
+
   .md\:pt-32 {
     padding-top: 8rem;
   }
@@ -20292,231 +19487,155 @@ video {
   }
 
   .md\:text-black {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .md\:text-white {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .md\:text-gray-100 {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .md\:text-gray-200 {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .md\:text-gray-300 {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .md\:text-gray-400 {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .md\:text-gray-500 {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .md\:text-gray-600 {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .md\:text-gray-700 {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .md\:text-gray-800 {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .md\:text-gray-900 {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .md\:text-red-100 {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .md\:text-red-200 {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .md\:text-red-300 {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .md\:text-red-400 {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .md\:text-red-500 {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .md\:text-red-600 {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .md\:text-red-700 {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .md\:text-red-800 {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .md\:text-red-900 {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .md\:text-blue-100 {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .md\:text-blue-200 {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .md\:text-blue-300 {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .md\:text-blue-400 {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .md\:text-blue-500 {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .md\:text-blue-600 {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .md\:text-blue-700 {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .md\:text-blue-800 {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .md\:text-blue-900 {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .md\:text-purple-100 {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .md\:text-purple-200 {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .md\:text-purple-300 {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .md\:text-purple-400 {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .md\:text-purple-500 {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .md\:text-purple-600 {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .md\:text-purple-700 {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .md\:text-purple-800 {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .md\:text-purple-900 {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .md\:hover\:text-transparent:hover {
@@ -20528,231 +19647,155 @@ video {
   }
 
   .md\:hover\:text-black:hover {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .md\:hover\:text-white:hover {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-100:hover {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-200:hover {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-300:hover {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-400:hover {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-500:hover {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-600:hover {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-700:hover {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-800:hover {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .md\:hover\:text-gray-900:hover {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .md\:hover\:text-red-100:hover {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .md\:hover\:text-red-200:hover {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .md\:hover\:text-red-300:hover {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .md\:hover\:text-red-400:hover {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .md\:hover\:text-red-500:hover {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .md\:hover\:text-red-600:hover {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .md\:hover\:text-red-700:hover {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .md\:hover\:text-red-800:hover {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .md\:hover\:text-red-900:hover {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-100:hover {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-200:hover {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-300:hover {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-400:hover {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-500:hover {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-600:hover {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-700:hover {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .md\:hover\:text-blue-800:hover {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .md\:hover\:text-blue-900:hover {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-100:hover {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-200:hover {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-300:hover {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-400:hover {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-500:hover {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-600:hover {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-700:hover {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-800:hover {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .md\:hover\:text-purple-900:hover {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .md\:focus\:text-transparent:focus {
@@ -20764,231 +19807,155 @@ video {
   }
 
   .md\:focus\:text-black:focus {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .md\:focus\:text-white:focus {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-100:focus {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-200:focus {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-300:focus {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-400:focus {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-500:focus {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-600:focus {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-700:focus {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-800:focus {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .md\:focus\:text-gray-900:focus {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .md\:focus\:text-red-100:focus {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .md\:focus\:text-red-200:focus {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .md\:focus\:text-red-300:focus {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .md\:focus\:text-red-400:focus {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .md\:focus\:text-red-500:focus {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .md\:focus\:text-red-600:focus {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .md\:focus\:text-red-700:focus {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .md\:focus\:text-red-800:focus {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .md\:focus\:text-red-900:focus {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-100:focus {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-200:focus {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-300:focus {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-400:focus {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-500:focus {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-600:focus {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-700:focus {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .md\:focus\:text-blue-800:focus {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .md\:focus\:text-blue-900:focus {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-100:focus {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-200:focus {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-300:focus {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-400:focus {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-500:focus {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-600:focus {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-700:focus {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-800:focus {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .md\:focus\:text-purple-900:focus {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .md\:italic {
@@ -21077,6 +20044,10 @@ video {
 
   .md\:w-24 {
     width: 6rem;
+  }
+
+  .md\:w-26 {
+    width: 6.75rem;
   }
 
   .md\:w-32 {
@@ -21317,6 +20288,11 @@ video {
     gap: 6rem;
   }
 
+  .md\:gap-26 {
+    grid-gap: 6.75rem;
+    gap: 6.75rem;
+  }
+
   .md\:gap-32 {
     grid-gap: 8rem;
     gap: 8rem;
@@ -21417,6 +20393,11 @@ video {
     column-gap: 6rem;
   }
 
+  .md\:col-gap-26 {
+    grid-column-gap: 6.75rem;
+    column-gap: 6.75rem;
+  }
+
   .md\:col-gap-32 {
     grid-column-gap: 8rem;
     column-gap: 8rem;
@@ -21515,6 +20496,11 @@ video {
   .md\:row-gap-24 {
     grid-row-gap: 6rem;
     row-gap: 6rem;
+  }
+
+  .md\:row-gap-26 {
+    grid-row-gap: 6.75rem;
+    row-gap: 6.75rem;
   }
 
   .md\:row-gap-32 {
@@ -21914,692 +20900,36 @@ video {
     transform: none;
   }
 
-  .md\:translate-x-0 {
-    --transform-translate-x: 0;
+  .md\:duration-75 {
+    transition-duration: 75ms;
   }
 
-  .md\:translate-x-1 {
-    --transform-translate-x: 0.25rem;
+  .md\:duration-100 {
+    transition-duration: 100ms;
   }
 
-  .md\:translate-x-2 {
-    --transform-translate-x: 0.5rem;
+  .md\:duration-150 {
+    transition-duration: 150ms;
   }
 
-  .md\:translate-x-3 {
-    --transform-translate-x: 0.75rem;
+  .md\:duration-200 {
+    transition-duration: 200ms;
   }
 
-  .md\:translate-x-4 {
-    --transform-translate-x: 1rem;
+  .md\:duration-300 {
+    transition-duration: 300ms;
   }
 
-  .md\:translate-x-5 {
-    --transform-translate-x: 1.25rem;
+  .md\:duration-500 {
+    transition-duration: 500ms;
   }
 
-  .md\:translate-x-6 {
-    --transform-translate-x: 1.5rem;
+  .md\:duration-700 {
+    transition-duration: 700ms;
   }
 
-  .md\:translate-x-7 {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .md\:translate-x-8 {
-    --transform-translate-x: 2rem;
-  }
-
-  .md\:translate-x-10 {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .md\:translate-x-12 {
-    --transform-translate-x: 3rem;
-  }
-
-  .md\:translate-x-16 {
-    --transform-translate-x: 4rem;
-  }
-
-  .md\:translate-x-20 {
-    --transform-translate-x: 5rem;
-  }
-
-  .md\:translate-x-24 {
-    --transform-translate-x: 6rem;
-  }
-
-  .md\:translate-x-32 {
-    --transform-translate-x: 8rem;
-  }
-
-  .md\:translate-x-40 {
-    --transform-translate-x: 10rem;
-  }
-
-  .md\:translate-x-48 {
-    --transform-translate-x: 12rem;
-  }
-
-  .md\:translate-x-56 {
-    --transform-translate-x: 14rem;
-  }
-
-  .md\:translate-x-64 {
-    --transform-translate-x: 16rem;
-  }
-
-  .md\:translate-x-px {
-    --transform-translate-x: 1px;
-  }
-
-  .md\:-translate-x-1 {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .md\:-translate-x-2 {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .md\:-translate-x-3 {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .md\:-translate-x-4 {
-    --transform-translate-x: -1rem;
-  }
-
-  .md\:-translate-x-5 {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .md\:-translate-x-6 {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .md\:-translate-x-7 {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .md\:-translate-x-8 {
-    --transform-translate-x: -2rem;
-  }
-
-  .md\:-translate-x-10 {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .md\:-translate-x-12 {
-    --transform-translate-x: -3rem;
-  }
-
-  .md\:-translate-x-16 {
-    --transform-translate-x: -4rem;
-  }
-
-  .md\:-translate-x-20 {
-    --transform-translate-x: -5rem;
-  }
-
-  .md\:-translate-x-24 {
-    --transform-translate-x: -6rem;
-  }
-
-  .md\:-translate-x-32 {
-    --transform-translate-x: -8rem;
-  }
-
-  .md\:-translate-x-40 {
-    --transform-translate-x: -10rem;
-  }
-
-  .md\:-translate-x-48 {
-    --transform-translate-x: -12rem;
-  }
-
-  .md\:-translate-x-56 {
-    --transform-translate-x: -14rem;
-  }
-
-  .md\:-translate-x-64 {
-    --transform-translate-x: -16rem;
-  }
-
-  .md\:-translate-x-px {
-    --transform-translate-x: -1px;
-  }
-
-  .md\:-translate-x-full {
-    --transform-translate-x: -100%;
-  }
-
-  .md\:-translate-x-1\/2 {
-    --transform-translate-x: -50%;
-  }
-
-  .md\:translate-x-1\/2 {
-    --transform-translate-x: 50%;
-  }
-
-  .md\:translate-x-full {
-    --transform-translate-x: 100%;
-  }
-
-  .md\:translate-y-0 {
-    --transform-translate-y: 0;
-  }
-
-  .md\:translate-y-1 {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .md\:translate-y-2 {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .md\:translate-y-3 {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .md\:translate-y-4 {
-    --transform-translate-y: 1rem;
-  }
-
-  .md\:translate-y-5 {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .md\:translate-y-6 {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .md\:translate-y-7 {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .md\:translate-y-8 {
-    --transform-translate-y: 2rem;
-  }
-
-  .md\:translate-y-10 {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .md\:translate-y-12 {
-    --transform-translate-y: 3rem;
-  }
-
-  .md\:translate-y-16 {
-    --transform-translate-y: 4rem;
-  }
-
-  .md\:translate-y-20 {
-    --transform-translate-y: 5rem;
-  }
-
-  .md\:translate-y-24 {
-    --transform-translate-y: 6rem;
-  }
-
-  .md\:translate-y-32 {
-    --transform-translate-y: 8rem;
-  }
-
-  .md\:translate-y-40 {
-    --transform-translate-y: 10rem;
-  }
-
-  .md\:translate-y-48 {
-    --transform-translate-y: 12rem;
-  }
-
-  .md\:translate-y-56 {
-    --transform-translate-y: 14rem;
-  }
-
-  .md\:translate-y-64 {
-    --transform-translate-y: 16rem;
-  }
-
-  .md\:translate-y-px {
-    --transform-translate-y: 1px;
-  }
-
-  .md\:-translate-y-1 {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .md\:-translate-y-2 {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .md\:-translate-y-3 {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .md\:-translate-y-4 {
-    --transform-translate-y: -1rem;
-  }
-
-  .md\:-translate-y-5 {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .md\:-translate-y-6 {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .md\:-translate-y-7 {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .md\:-translate-y-8 {
-    --transform-translate-y: -2rem;
-  }
-
-  .md\:-translate-y-10 {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .md\:-translate-y-12 {
-    --transform-translate-y: -3rem;
-  }
-
-  .md\:-translate-y-16 {
-    --transform-translate-y: -4rem;
-  }
-
-  .md\:-translate-y-20 {
-    --transform-translate-y: -5rem;
-  }
-
-  .md\:-translate-y-24 {
-    --transform-translate-y: -6rem;
-  }
-
-  .md\:-translate-y-32 {
-    --transform-translate-y: -8rem;
-  }
-
-  .md\:-translate-y-40 {
-    --transform-translate-y: -10rem;
-  }
-
-  .md\:-translate-y-48 {
-    --transform-translate-y: -12rem;
-  }
-
-  .md\:-translate-y-56 {
-    --transform-translate-y: -14rem;
-  }
-
-  .md\:-translate-y-64 {
-    --transform-translate-y: -16rem;
-  }
-
-  .md\:-translate-y-px {
-    --transform-translate-y: -1px;
-  }
-
-  .md\:-translate-y-full {
-    --transform-translate-y: -100%;
-  }
-
-  .md\:-translate-y-1\/2 {
-    --transform-translate-y: -50%;
-  }
-
-  .md\:translate-y-1\/2 {
-    --transform-translate-y: 50%;
-  }
-
-  .md\:translate-y-full {
-    --transform-translate-y: 100%;
-  }
-
-  .md\:hover\:translate-x-0:hover {
-    --transform-translate-x: 0;
-  }
-
-  .md\:hover\:translate-x-1:hover {
-    --transform-translate-x: 0.25rem;
-  }
-
-  .md\:hover\:translate-x-2:hover {
-    --transform-translate-x: 0.5rem;
-  }
-
-  .md\:hover\:translate-x-3:hover {
-    --transform-translate-x: 0.75rem;
-  }
-
-  .md\:hover\:translate-x-4:hover {
-    --transform-translate-x: 1rem;
-  }
-
-  .md\:hover\:translate-x-5:hover {
-    --transform-translate-x: 1.25rem;
-  }
-
-  .md\:hover\:translate-x-6:hover {
-    --transform-translate-x: 1.5rem;
-  }
-
-  .md\:hover\:translate-x-7:hover {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .md\:hover\:translate-x-8:hover {
-    --transform-translate-x: 2rem;
-  }
-
-  .md\:hover\:translate-x-10:hover {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .md\:hover\:translate-x-12:hover {
-    --transform-translate-x: 3rem;
-  }
-
-  .md\:hover\:translate-x-16:hover {
-    --transform-translate-x: 4rem;
-  }
-
-  .md\:hover\:translate-x-20:hover {
-    --transform-translate-x: 5rem;
-  }
-
-  .md\:hover\:translate-x-24:hover {
-    --transform-translate-x: 6rem;
-  }
-
-  .md\:hover\:translate-x-32:hover {
-    --transform-translate-x: 8rem;
-  }
-
-  .md\:hover\:translate-x-40:hover {
-    --transform-translate-x: 10rem;
-  }
-
-  .md\:hover\:translate-x-48:hover {
-    --transform-translate-x: 12rem;
-  }
-
-  .md\:hover\:translate-x-56:hover {
-    --transform-translate-x: 14rem;
-  }
-
-  .md\:hover\:translate-x-64:hover {
-    --transform-translate-x: 16rem;
-  }
-
-  .md\:hover\:translate-x-px:hover {
-    --transform-translate-x: 1px;
-  }
-
-  .md\:hover\:-translate-x-1:hover {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .md\:hover\:-translate-x-2:hover {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .md\:hover\:-translate-x-3:hover {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .md\:hover\:-translate-x-4:hover {
-    --transform-translate-x: -1rem;
-  }
-
-  .md\:hover\:-translate-x-5:hover {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .md\:hover\:-translate-x-6:hover {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .md\:hover\:-translate-x-7:hover {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .md\:hover\:-translate-x-8:hover {
-    --transform-translate-x: -2rem;
-  }
-
-  .md\:hover\:-translate-x-10:hover {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .md\:hover\:-translate-x-12:hover {
-    --transform-translate-x: -3rem;
-  }
-
-  .md\:hover\:-translate-x-16:hover {
-    --transform-translate-x: -4rem;
-  }
-
-  .md\:hover\:-translate-x-20:hover {
-    --transform-translate-x: -5rem;
-  }
-
-  .md\:hover\:-translate-x-24:hover {
-    --transform-translate-x: -6rem;
-  }
-
-  .md\:hover\:-translate-x-32:hover {
-    --transform-translate-x: -8rem;
-  }
-
-  .md\:hover\:-translate-x-40:hover {
-    --transform-translate-x: -10rem;
-  }
-
-  .md\:hover\:-translate-x-48:hover {
-    --transform-translate-x: -12rem;
-  }
-
-  .md\:hover\:-translate-x-56:hover {
-    --transform-translate-x: -14rem;
-  }
-
-  .md\:hover\:-translate-x-64:hover {
-    --transform-translate-x: -16rem;
-  }
-
-  .md\:hover\:-translate-x-px:hover {
-    --transform-translate-x: -1px;
-  }
-
-  .md\:hover\:-translate-x-full:hover {
-    --transform-translate-x: -100%;
-  }
-
-  .md\:hover\:-translate-x-1\/2:hover {
-    --transform-translate-x: -50%;
-  }
-
-  .md\:hover\:translate-x-1\/2:hover {
-    --transform-translate-x: 50%;
-  }
-
-  .md\:hover\:translate-x-full:hover {
-    --transform-translate-x: 100%;
-  }
-
-  .md\:hover\:translate-y-0:hover {
-    --transform-translate-y: 0;
-  }
-
-  .md\:hover\:translate-y-1:hover {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .md\:hover\:translate-y-2:hover {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .md\:hover\:translate-y-3:hover {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .md\:hover\:translate-y-4:hover {
-    --transform-translate-y: 1rem;
-  }
-
-  .md\:hover\:translate-y-5:hover {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .md\:hover\:translate-y-6:hover {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .md\:hover\:translate-y-7:hover {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .md\:hover\:translate-y-8:hover {
-    --transform-translate-y: 2rem;
-  }
-
-  .md\:hover\:translate-y-10:hover {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .md\:hover\:translate-y-12:hover {
-    --transform-translate-y: 3rem;
-  }
-
-  .md\:hover\:translate-y-16:hover {
-    --transform-translate-y: 4rem;
-  }
-
-  .md\:hover\:translate-y-20:hover {
-    --transform-translate-y: 5rem;
-  }
-
-  .md\:hover\:translate-y-24:hover {
-    --transform-translate-y: 6rem;
-  }
-
-  .md\:hover\:translate-y-32:hover {
-    --transform-translate-y: 8rem;
-  }
-
-  .md\:hover\:translate-y-40:hover {
-    --transform-translate-y: 10rem;
-  }
-
-  .md\:hover\:translate-y-48:hover {
-    --transform-translate-y: 12rem;
-  }
-
-  .md\:hover\:translate-y-56:hover {
-    --transform-translate-y: 14rem;
-  }
-
-  .md\:hover\:translate-y-64:hover {
-    --transform-translate-y: 16rem;
-  }
-
-  .md\:hover\:translate-y-px:hover {
-    --transform-translate-y: 1px;
-  }
-
-  .md\:hover\:-translate-y-1:hover {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .md\:hover\:-translate-y-2:hover {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .md\:hover\:-translate-y-3:hover {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .md\:hover\:-translate-y-4:hover {
-    --transform-translate-y: -1rem;
-  }
-
-  .md\:hover\:-translate-y-5:hover {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .md\:hover\:-translate-y-6:hover {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .md\:hover\:-translate-y-7:hover {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .md\:hover\:-translate-y-8:hover {
-    --transform-translate-y: -2rem;
-  }
-
-  .md\:hover\:-translate-y-10:hover {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .md\:hover\:-translate-y-12:hover {
-    --transform-translate-y: -3rem;
-  }
-
-  .md\:hover\:-translate-y-16:hover {
-    --transform-translate-y: -4rem;
-  }
-
-  .md\:hover\:-translate-y-20:hover {
-    --transform-translate-y: -5rem;
-  }
-
-  .md\:hover\:-translate-y-24:hover {
-    --transform-translate-y: -6rem;
-  }
-
-  .md\:hover\:-translate-y-32:hover {
-    --transform-translate-y: -8rem;
-  }
-
-  .md\:hover\:-translate-y-40:hover {
-    --transform-translate-y: -10rem;
-  }
-
-  .md\:hover\:-translate-y-48:hover {
-    --transform-translate-y: -12rem;
-  }
-
-  .md\:hover\:-translate-y-56:hover {
-    --transform-translate-y: -14rem;
-  }
-
-  .md\:hover\:-translate-y-64:hover {
-    --transform-translate-y: -16rem;
-  }
-
-  .md\:hover\:-translate-y-px:hover {
-    --transform-translate-y: -1px;
-  }
-
-  .md\:hover\:-translate-y-full:hover {
-    --transform-translate-y: -100%;
-  }
-
-  .md\:hover\:-translate-y-1\/2:hover {
-    --transform-translate-y: -50%;
-  }
-
-  .md\:hover\:translate-y-1\/2:hover {
-    --transform-translate-y: 50%;
-  }
-
-  .md\:hover\:translate-y-full:hover {
-    --transform-translate-y: 100%;
+  .md\:duration-1000 {
+    transition-duration: 1000ms;
   }
 }
 
@@ -23332,6 +21662,10 @@ video {
     height: 6rem;
   }
 
+  .lg\:h-26 {
+    height: 6.75rem;
+  }
+
   .lg\:h-32 {
     height: 8rem;
   }
@@ -23366,6 +21700,10 @@ video {
 
   .lg\:h-screen {
     height: 100vh;
+  }
+
+  .lg\:text-xxs {
+    font-size: 0.6875rem;
   }
 
   .lg\:text-xs {
@@ -23488,6 +21826,10 @@ video {
     margin: 6rem;
   }
 
+  .lg\:m-26 {
+    margin: 6.75rem;
+  }
+
   .lg\:m-32 {
     margin: 8rem;
   }
@@ -23566,6 +21908,10 @@ video {
 
   .lg\:-m-24 {
     margin: -6rem;
+  }
+
+  .lg\:-m-26 {
+    margin: -6.75rem;
   }
 
   .lg\:-m-32 {
@@ -23730,6 +22076,16 @@ video {
   .lg\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .lg\:my-26 {
+    margin-top: 6.75rem;
+    margin-bottom: 6.75rem;
+  }
+
+  .lg\:mx-26 {
+    margin-left: 6.75rem;
+    margin-right: 6.75rem;
   }
 
   .lg\:my-32 {
@@ -23930,6 +22286,16 @@ video {
   .lg\:-mx-24 {
     margin-left: -6rem;
     margin-right: -6rem;
+  }
+
+  .lg\:-my-26 {
+    margin-top: -6.75rem;
+    margin-bottom: -6.75rem;
+  }
+
+  .lg\:-mx-26 {
+    margin-left: -6.75rem;
+    margin-right: -6.75rem;
   }
 
   .lg\:-my-32 {
@@ -24214,6 +22580,22 @@ video {
 
   .lg\:ml-24 {
     margin-left: 6rem;
+  }
+
+  .lg\:mt-26 {
+    margin-top: 6.75rem;
+  }
+
+  .lg\:mr-26 {
+    margin-right: 6.75rem;
+  }
+
+  .lg\:mb-26 {
+    margin-bottom: 6.75rem;
+  }
+
+  .lg\:ml-26 {
+    margin-left: 6.75rem;
   }
 
   .lg\:mt-32 {
@@ -24534,6 +22916,22 @@ video {
 
   .lg\:-ml-24 {
     margin-left: -6rem;
+  }
+
+  .lg\:-mt-26 {
+    margin-top: -6.75rem;
+  }
+
+  .lg\:-mr-26 {
+    margin-right: -6.75rem;
+  }
+
+  .lg\:-mb-26 {
+    margin-bottom: -6.75rem;
+  }
+
+  .lg\:-ml-26 {
+    margin-left: -6.75rem;
   }
 
   .lg\:-mt-32 {
@@ -24860,6 +23258,10 @@ video {
     padding: 6rem;
   }
 
+  .lg\:p-26 {
+    padding: 6.75rem;
+  }
+
   .lg\:p-32 {
     padding: 8rem;
   }
@@ -25022,6 +23424,16 @@ video {
   .lg\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .lg\:py-26 {
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+  }
+
+  .lg\:px-26 {
+    padding-left: 6.75rem;
+    padding-right: 6.75rem;
   }
 
   .lg\:py-32 {
@@ -25308,6 +23720,22 @@ video {
     padding-left: 6rem;
   }
 
+  .lg\:pt-26 {
+    padding-top: 6.75rem;
+  }
+
+  .lg\:pr-26 {
+    padding-right: 6.75rem;
+  }
+
+  .lg\:pb-26 {
+    padding-bottom: 6.75rem;
+  }
+
+  .lg\:pl-26 {
+    padding-left: 6.75rem;
+  }
+
   .lg\:pt-32 {
     padding-top: 8rem;
   }
@@ -25535,231 +23963,155 @@ video {
   }
 
   .lg\:text-black {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .lg\:text-white {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .lg\:text-gray-100 {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .lg\:text-gray-200 {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .lg\:text-gray-300 {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .lg\:text-gray-400 {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .lg\:text-gray-500 {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .lg\:text-gray-600 {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .lg\:text-gray-700 {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .lg\:text-gray-800 {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .lg\:text-gray-900 {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .lg\:text-red-100 {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .lg\:text-red-200 {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .lg\:text-red-300 {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .lg\:text-red-400 {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .lg\:text-red-500 {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .lg\:text-red-600 {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .lg\:text-red-700 {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .lg\:text-red-800 {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .lg\:text-red-900 {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .lg\:text-blue-100 {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .lg\:text-blue-200 {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .lg\:text-blue-300 {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .lg\:text-blue-400 {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .lg\:text-blue-500 {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .lg\:text-blue-600 {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .lg\:text-blue-700 {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .lg\:text-blue-800 {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .lg\:text-blue-900 {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .lg\:text-purple-100 {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .lg\:text-purple-200 {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .lg\:text-purple-300 {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .lg\:text-purple-400 {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .lg\:text-purple-500 {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .lg\:text-purple-600 {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .lg\:text-purple-700 {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .lg\:text-purple-800 {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .lg\:text-purple-900 {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -25771,231 +24123,155 @@ video {
   }
 
   .lg\:hover\:text-black:hover {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .lg\:hover\:text-white:hover {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-100:hover {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-200:hover {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-300:hover {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-400:hover {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-500:hover {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-600:hover {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-700:hover {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-800:hover {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .lg\:hover\:text-gray-900:hover {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-100:hover {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-200:hover {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-300:hover {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-400:hover {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-500:hover {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-600:hover {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-700:hover {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-800:hover {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .lg\:hover\:text-red-900:hover {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-100:hover {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-200:hover {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-300:hover {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-400:hover {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-500:hover {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-600:hover {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-700:hover {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .lg\:hover\:text-blue-800:hover {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .lg\:hover\:text-blue-900:hover {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-100:hover {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-200:hover {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-300:hover {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-400:hover {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-500:hover {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-600:hover {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-700:hover {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-800:hover {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .lg\:hover\:text-purple-900:hover {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .lg\:focus\:text-transparent:focus {
@@ -26007,231 +24283,155 @@ video {
   }
 
   .lg\:focus\:text-black:focus {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .lg\:focus\:text-white:focus {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-100:focus {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-200:focus {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-300:focus {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-400:focus {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-500:focus {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-600:focus {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-700:focus {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-800:focus {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .lg\:focus\:text-gray-900:focus {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-100:focus {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-200:focus {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-300:focus {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-400:focus {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-500:focus {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-600:focus {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-700:focus {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-800:focus {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .lg\:focus\:text-red-900:focus {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-100:focus {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-200:focus {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-300:focus {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-400:focus {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-500:focus {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-600:focus {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-700:focus {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .lg\:focus\:text-blue-800:focus {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .lg\:focus\:text-blue-900:focus {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-100:focus {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-200:focus {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-300:focus {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-400:focus {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-500:focus {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-600:focus {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-700:focus {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-800:focus {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .lg\:focus\:text-purple-900:focus {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .lg\:italic {
@@ -26320,6 +24520,10 @@ video {
 
   .lg\:w-24 {
     width: 6rem;
+  }
+
+  .lg\:w-26 {
+    width: 6.75rem;
   }
 
   .lg\:w-32 {
@@ -26560,6 +24764,11 @@ video {
     gap: 6rem;
   }
 
+  .lg\:gap-26 {
+    grid-gap: 6.75rem;
+    gap: 6.75rem;
+  }
+
   .lg\:gap-32 {
     grid-gap: 8rem;
     gap: 8rem;
@@ -26660,6 +24869,11 @@ video {
     column-gap: 6rem;
   }
 
+  .lg\:col-gap-26 {
+    grid-column-gap: 6.75rem;
+    column-gap: 6.75rem;
+  }
+
   .lg\:col-gap-32 {
     grid-column-gap: 8rem;
     column-gap: 8rem;
@@ -26758,6 +24972,11 @@ video {
   .lg\:row-gap-24 {
     grid-row-gap: 6rem;
     row-gap: 6rem;
+  }
+
+  .lg\:row-gap-26 {
+    grid-row-gap: 6.75rem;
+    row-gap: 6.75rem;
   }
 
   .lg\:row-gap-32 {
@@ -27157,692 +25376,36 @@ video {
     transform: none;
   }
 
-  .lg\:translate-x-0 {
-    --transform-translate-x: 0;
+  .lg\:duration-75 {
+    transition-duration: 75ms;
   }
 
-  .lg\:translate-x-1 {
-    --transform-translate-x: 0.25rem;
+  .lg\:duration-100 {
+    transition-duration: 100ms;
   }
 
-  .lg\:translate-x-2 {
-    --transform-translate-x: 0.5rem;
+  .lg\:duration-150 {
+    transition-duration: 150ms;
   }
 
-  .lg\:translate-x-3 {
-    --transform-translate-x: 0.75rem;
+  .lg\:duration-200 {
+    transition-duration: 200ms;
   }
 
-  .lg\:translate-x-4 {
-    --transform-translate-x: 1rem;
+  .lg\:duration-300 {
+    transition-duration: 300ms;
   }
 
-  .lg\:translate-x-5 {
-    --transform-translate-x: 1.25rem;
+  .lg\:duration-500 {
+    transition-duration: 500ms;
   }
 
-  .lg\:translate-x-6 {
-    --transform-translate-x: 1.5rem;
+  .lg\:duration-700 {
+    transition-duration: 700ms;
   }
 
-  .lg\:translate-x-7 {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .lg\:translate-x-8 {
-    --transform-translate-x: 2rem;
-  }
-
-  .lg\:translate-x-10 {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .lg\:translate-x-12 {
-    --transform-translate-x: 3rem;
-  }
-
-  .lg\:translate-x-16 {
-    --transform-translate-x: 4rem;
-  }
-
-  .lg\:translate-x-20 {
-    --transform-translate-x: 5rem;
-  }
-
-  .lg\:translate-x-24 {
-    --transform-translate-x: 6rem;
-  }
-
-  .lg\:translate-x-32 {
-    --transform-translate-x: 8rem;
-  }
-
-  .lg\:translate-x-40 {
-    --transform-translate-x: 10rem;
-  }
-
-  .lg\:translate-x-48 {
-    --transform-translate-x: 12rem;
-  }
-
-  .lg\:translate-x-56 {
-    --transform-translate-x: 14rem;
-  }
-
-  .lg\:translate-x-64 {
-    --transform-translate-x: 16rem;
-  }
-
-  .lg\:translate-x-px {
-    --transform-translate-x: 1px;
-  }
-
-  .lg\:-translate-x-1 {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .lg\:-translate-x-2 {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .lg\:-translate-x-3 {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .lg\:-translate-x-4 {
-    --transform-translate-x: -1rem;
-  }
-
-  .lg\:-translate-x-5 {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .lg\:-translate-x-6 {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .lg\:-translate-x-7 {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .lg\:-translate-x-8 {
-    --transform-translate-x: -2rem;
-  }
-
-  .lg\:-translate-x-10 {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .lg\:-translate-x-12 {
-    --transform-translate-x: -3rem;
-  }
-
-  .lg\:-translate-x-16 {
-    --transform-translate-x: -4rem;
-  }
-
-  .lg\:-translate-x-20 {
-    --transform-translate-x: -5rem;
-  }
-
-  .lg\:-translate-x-24 {
-    --transform-translate-x: -6rem;
-  }
-
-  .lg\:-translate-x-32 {
-    --transform-translate-x: -8rem;
-  }
-
-  .lg\:-translate-x-40 {
-    --transform-translate-x: -10rem;
-  }
-
-  .lg\:-translate-x-48 {
-    --transform-translate-x: -12rem;
-  }
-
-  .lg\:-translate-x-56 {
-    --transform-translate-x: -14rem;
-  }
-
-  .lg\:-translate-x-64 {
-    --transform-translate-x: -16rem;
-  }
-
-  .lg\:-translate-x-px {
-    --transform-translate-x: -1px;
-  }
-
-  .lg\:-translate-x-full {
-    --transform-translate-x: -100%;
-  }
-
-  .lg\:-translate-x-1\/2 {
-    --transform-translate-x: -50%;
-  }
-
-  .lg\:translate-x-1\/2 {
-    --transform-translate-x: 50%;
-  }
-
-  .lg\:translate-x-full {
-    --transform-translate-x: 100%;
-  }
-
-  .lg\:translate-y-0 {
-    --transform-translate-y: 0;
-  }
-
-  .lg\:translate-y-1 {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .lg\:translate-y-2 {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .lg\:translate-y-3 {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .lg\:translate-y-4 {
-    --transform-translate-y: 1rem;
-  }
-
-  .lg\:translate-y-5 {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .lg\:translate-y-6 {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .lg\:translate-y-7 {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .lg\:translate-y-8 {
-    --transform-translate-y: 2rem;
-  }
-
-  .lg\:translate-y-10 {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .lg\:translate-y-12 {
-    --transform-translate-y: 3rem;
-  }
-
-  .lg\:translate-y-16 {
-    --transform-translate-y: 4rem;
-  }
-
-  .lg\:translate-y-20 {
-    --transform-translate-y: 5rem;
-  }
-
-  .lg\:translate-y-24 {
-    --transform-translate-y: 6rem;
-  }
-
-  .lg\:translate-y-32 {
-    --transform-translate-y: 8rem;
-  }
-
-  .lg\:translate-y-40 {
-    --transform-translate-y: 10rem;
-  }
-
-  .lg\:translate-y-48 {
-    --transform-translate-y: 12rem;
-  }
-
-  .lg\:translate-y-56 {
-    --transform-translate-y: 14rem;
-  }
-
-  .lg\:translate-y-64 {
-    --transform-translate-y: 16rem;
-  }
-
-  .lg\:translate-y-px {
-    --transform-translate-y: 1px;
-  }
-
-  .lg\:-translate-y-1 {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .lg\:-translate-y-2 {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .lg\:-translate-y-3 {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .lg\:-translate-y-4 {
-    --transform-translate-y: -1rem;
-  }
-
-  .lg\:-translate-y-5 {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .lg\:-translate-y-6 {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .lg\:-translate-y-7 {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .lg\:-translate-y-8 {
-    --transform-translate-y: -2rem;
-  }
-
-  .lg\:-translate-y-10 {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .lg\:-translate-y-12 {
-    --transform-translate-y: -3rem;
-  }
-
-  .lg\:-translate-y-16 {
-    --transform-translate-y: -4rem;
-  }
-
-  .lg\:-translate-y-20 {
-    --transform-translate-y: -5rem;
-  }
-
-  .lg\:-translate-y-24 {
-    --transform-translate-y: -6rem;
-  }
-
-  .lg\:-translate-y-32 {
-    --transform-translate-y: -8rem;
-  }
-
-  .lg\:-translate-y-40 {
-    --transform-translate-y: -10rem;
-  }
-
-  .lg\:-translate-y-48 {
-    --transform-translate-y: -12rem;
-  }
-
-  .lg\:-translate-y-56 {
-    --transform-translate-y: -14rem;
-  }
-
-  .lg\:-translate-y-64 {
-    --transform-translate-y: -16rem;
-  }
-
-  .lg\:-translate-y-px {
-    --transform-translate-y: -1px;
-  }
-
-  .lg\:-translate-y-full {
-    --transform-translate-y: -100%;
-  }
-
-  .lg\:-translate-y-1\/2 {
-    --transform-translate-y: -50%;
-  }
-
-  .lg\:translate-y-1\/2 {
-    --transform-translate-y: 50%;
-  }
-
-  .lg\:translate-y-full {
-    --transform-translate-y: 100%;
-  }
-
-  .lg\:hover\:translate-x-0:hover {
-    --transform-translate-x: 0;
-  }
-
-  .lg\:hover\:translate-x-1:hover {
-    --transform-translate-x: 0.25rem;
-  }
-
-  .lg\:hover\:translate-x-2:hover {
-    --transform-translate-x: 0.5rem;
-  }
-
-  .lg\:hover\:translate-x-3:hover {
-    --transform-translate-x: 0.75rem;
-  }
-
-  .lg\:hover\:translate-x-4:hover {
-    --transform-translate-x: 1rem;
-  }
-
-  .lg\:hover\:translate-x-5:hover {
-    --transform-translate-x: 1.25rem;
-  }
-
-  .lg\:hover\:translate-x-6:hover {
-    --transform-translate-x: 1.5rem;
-  }
-
-  .lg\:hover\:translate-x-7:hover {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .lg\:hover\:translate-x-8:hover {
-    --transform-translate-x: 2rem;
-  }
-
-  .lg\:hover\:translate-x-10:hover {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .lg\:hover\:translate-x-12:hover {
-    --transform-translate-x: 3rem;
-  }
-
-  .lg\:hover\:translate-x-16:hover {
-    --transform-translate-x: 4rem;
-  }
-
-  .lg\:hover\:translate-x-20:hover {
-    --transform-translate-x: 5rem;
-  }
-
-  .lg\:hover\:translate-x-24:hover {
-    --transform-translate-x: 6rem;
-  }
-
-  .lg\:hover\:translate-x-32:hover {
-    --transform-translate-x: 8rem;
-  }
-
-  .lg\:hover\:translate-x-40:hover {
-    --transform-translate-x: 10rem;
-  }
-
-  .lg\:hover\:translate-x-48:hover {
-    --transform-translate-x: 12rem;
-  }
-
-  .lg\:hover\:translate-x-56:hover {
-    --transform-translate-x: 14rem;
-  }
-
-  .lg\:hover\:translate-x-64:hover {
-    --transform-translate-x: 16rem;
-  }
-
-  .lg\:hover\:translate-x-px:hover {
-    --transform-translate-x: 1px;
-  }
-
-  .lg\:hover\:-translate-x-1:hover {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .lg\:hover\:-translate-x-2:hover {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .lg\:hover\:-translate-x-3:hover {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .lg\:hover\:-translate-x-4:hover {
-    --transform-translate-x: -1rem;
-  }
-
-  .lg\:hover\:-translate-x-5:hover {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .lg\:hover\:-translate-x-6:hover {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .lg\:hover\:-translate-x-7:hover {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .lg\:hover\:-translate-x-8:hover {
-    --transform-translate-x: -2rem;
-  }
-
-  .lg\:hover\:-translate-x-10:hover {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .lg\:hover\:-translate-x-12:hover {
-    --transform-translate-x: -3rem;
-  }
-
-  .lg\:hover\:-translate-x-16:hover {
-    --transform-translate-x: -4rem;
-  }
-
-  .lg\:hover\:-translate-x-20:hover {
-    --transform-translate-x: -5rem;
-  }
-
-  .lg\:hover\:-translate-x-24:hover {
-    --transform-translate-x: -6rem;
-  }
-
-  .lg\:hover\:-translate-x-32:hover {
-    --transform-translate-x: -8rem;
-  }
-
-  .lg\:hover\:-translate-x-40:hover {
-    --transform-translate-x: -10rem;
-  }
-
-  .lg\:hover\:-translate-x-48:hover {
-    --transform-translate-x: -12rem;
-  }
-
-  .lg\:hover\:-translate-x-56:hover {
-    --transform-translate-x: -14rem;
-  }
-
-  .lg\:hover\:-translate-x-64:hover {
-    --transform-translate-x: -16rem;
-  }
-
-  .lg\:hover\:-translate-x-px:hover {
-    --transform-translate-x: -1px;
-  }
-
-  .lg\:hover\:-translate-x-full:hover {
-    --transform-translate-x: -100%;
-  }
-
-  .lg\:hover\:-translate-x-1\/2:hover {
-    --transform-translate-x: -50%;
-  }
-
-  .lg\:hover\:translate-x-1\/2:hover {
-    --transform-translate-x: 50%;
-  }
-
-  .lg\:hover\:translate-x-full:hover {
-    --transform-translate-x: 100%;
-  }
-
-  .lg\:hover\:translate-y-0:hover {
-    --transform-translate-y: 0;
-  }
-
-  .lg\:hover\:translate-y-1:hover {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .lg\:hover\:translate-y-2:hover {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .lg\:hover\:translate-y-3:hover {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .lg\:hover\:translate-y-4:hover {
-    --transform-translate-y: 1rem;
-  }
-
-  .lg\:hover\:translate-y-5:hover {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .lg\:hover\:translate-y-6:hover {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .lg\:hover\:translate-y-7:hover {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .lg\:hover\:translate-y-8:hover {
-    --transform-translate-y: 2rem;
-  }
-
-  .lg\:hover\:translate-y-10:hover {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .lg\:hover\:translate-y-12:hover {
-    --transform-translate-y: 3rem;
-  }
-
-  .lg\:hover\:translate-y-16:hover {
-    --transform-translate-y: 4rem;
-  }
-
-  .lg\:hover\:translate-y-20:hover {
-    --transform-translate-y: 5rem;
-  }
-
-  .lg\:hover\:translate-y-24:hover {
-    --transform-translate-y: 6rem;
-  }
-
-  .lg\:hover\:translate-y-32:hover {
-    --transform-translate-y: 8rem;
-  }
-
-  .lg\:hover\:translate-y-40:hover {
-    --transform-translate-y: 10rem;
-  }
-
-  .lg\:hover\:translate-y-48:hover {
-    --transform-translate-y: 12rem;
-  }
-
-  .lg\:hover\:translate-y-56:hover {
-    --transform-translate-y: 14rem;
-  }
-
-  .lg\:hover\:translate-y-64:hover {
-    --transform-translate-y: 16rem;
-  }
-
-  .lg\:hover\:translate-y-px:hover {
-    --transform-translate-y: 1px;
-  }
-
-  .lg\:hover\:-translate-y-1:hover {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .lg\:hover\:-translate-y-2:hover {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .lg\:hover\:-translate-y-3:hover {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .lg\:hover\:-translate-y-4:hover {
-    --transform-translate-y: -1rem;
-  }
-
-  .lg\:hover\:-translate-y-5:hover {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .lg\:hover\:-translate-y-6:hover {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .lg\:hover\:-translate-y-7:hover {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .lg\:hover\:-translate-y-8:hover {
-    --transform-translate-y: -2rem;
-  }
-
-  .lg\:hover\:-translate-y-10:hover {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .lg\:hover\:-translate-y-12:hover {
-    --transform-translate-y: -3rem;
-  }
-
-  .lg\:hover\:-translate-y-16:hover {
-    --transform-translate-y: -4rem;
-  }
-
-  .lg\:hover\:-translate-y-20:hover {
-    --transform-translate-y: -5rem;
-  }
-
-  .lg\:hover\:-translate-y-24:hover {
-    --transform-translate-y: -6rem;
-  }
-
-  .lg\:hover\:-translate-y-32:hover {
-    --transform-translate-y: -8rem;
-  }
-
-  .lg\:hover\:-translate-y-40:hover {
-    --transform-translate-y: -10rem;
-  }
-
-  .lg\:hover\:-translate-y-48:hover {
-    --transform-translate-y: -12rem;
-  }
-
-  .lg\:hover\:-translate-y-56:hover {
-    --transform-translate-y: -14rem;
-  }
-
-  .lg\:hover\:-translate-y-64:hover {
-    --transform-translate-y: -16rem;
-  }
-
-  .lg\:hover\:-translate-y-px:hover {
-    --transform-translate-y: -1px;
-  }
-
-  .lg\:hover\:-translate-y-full:hover {
-    --transform-translate-y: -100%;
-  }
-
-  .lg\:hover\:-translate-y-1\/2:hover {
-    --transform-translate-y: -50%;
-  }
-
-  .lg\:hover\:translate-y-1\/2:hover {
-    --transform-translate-y: 50%;
-  }
-
-  .lg\:hover\:translate-y-full:hover {
-    --transform-translate-y: 100%;
+  .lg\:duration-1000 {
+    transition-duration: 1000ms;
   }
 }
 
@@ -28575,6 +26138,10 @@ video {
     height: 6rem;
   }
 
+  .xl\:h-26 {
+    height: 6.75rem;
+  }
+
   .xl\:h-32 {
     height: 8rem;
   }
@@ -28609,6 +26176,10 @@ video {
 
   .xl\:h-screen {
     height: 100vh;
+  }
+
+  .xl\:text-xxs {
+    font-size: 0.6875rem;
   }
 
   .xl\:text-xs {
@@ -28731,6 +26302,10 @@ video {
     margin: 6rem;
   }
 
+  .xl\:m-26 {
+    margin: 6.75rem;
+  }
+
   .xl\:m-32 {
     margin: 8rem;
   }
@@ -28809,6 +26384,10 @@ video {
 
   .xl\:-m-24 {
     margin: -6rem;
+  }
+
+  .xl\:-m-26 {
+    margin: -6.75rem;
   }
 
   .xl\:-m-32 {
@@ -28973,6 +26552,16 @@ video {
   .xl\:mx-24 {
     margin-left: 6rem;
     margin-right: 6rem;
+  }
+
+  .xl\:my-26 {
+    margin-top: 6.75rem;
+    margin-bottom: 6.75rem;
+  }
+
+  .xl\:mx-26 {
+    margin-left: 6.75rem;
+    margin-right: 6.75rem;
   }
 
   .xl\:my-32 {
@@ -29173,6 +26762,16 @@ video {
   .xl\:-mx-24 {
     margin-left: -6rem;
     margin-right: -6rem;
+  }
+
+  .xl\:-my-26 {
+    margin-top: -6.75rem;
+    margin-bottom: -6.75rem;
+  }
+
+  .xl\:-mx-26 {
+    margin-left: -6.75rem;
+    margin-right: -6.75rem;
   }
 
   .xl\:-my-32 {
@@ -29457,6 +27056,22 @@ video {
 
   .xl\:ml-24 {
     margin-left: 6rem;
+  }
+
+  .xl\:mt-26 {
+    margin-top: 6.75rem;
+  }
+
+  .xl\:mr-26 {
+    margin-right: 6.75rem;
+  }
+
+  .xl\:mb-26 {
+    margin-bottom: 6.75rem;
+  }
+
+  .xl\:ml-26 {
+    margin-left: 6.75rem;
   }
 
   .xl\:mt-32 {
@@ -29777,6 +27392,22 @@ video {
 
   .xl\:-ml-24 {
     margin-left: -6rem;
+  }
+
+  .xl\:-mt-26 {
+    margin-top: -6.75rem;
+  }
+
+  .xl\:-mr-26 {
+    margin-right: -6.75rem;
+  }
+
+  .xl\:-mb-26 {
+    margin-bottom: -6.75rem;
+  }
+
+  .xl\:-ml-26 {
+    margin-left: -6.75rem;
   }
 
   .xl\:-mt-32 {
@@ -30103,6 +27734,10 @@ video {
     padding: 6rem;
   }
 
+  .xl\:p-26 {
+    padding: 6.75rem;
+  }
+
   .xl\:p-32 {
     padding: 8rem;
   }
@@ -30265,6 +27900,16 @@ video {
   .xl\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .xl\:py-26 {
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+  }
+
+  .xl\:px-26 {
+    padding-left: 6.75rem;
+    padding-right: 6.75rem;
   }
 
   .xl\:py-32 {
@@ -30551,6 +28196,22 @@ video {
     padding-left: 6rem;
   }
 
+  .xl\:pt-26 {
+    padding-top: 6.75rem;
+  }
+
+  .xl\:pr-26 {
+    padding-right: 6.75rem;
+  }
+
+  .xl\:pb-26 {
+    padding-bottom: 6.75rem;
+  }
+
+  .xl\:pl-26 {
+    padding-left: 6.75rem;
+  }
+
   .xl\:pt-32 {
     padding-top: 8rem;
   }
@@ -30778,231 +28439,155 @@ video {
   }
 
   .xl\:text-black {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .xl\:text-white {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .xl\:text-gray-100 {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .xl\:text-gray-200 {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .xl\:text-gray-300 {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .xl\:text-gray-400 {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .xl\:text-gray-500 {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .xl\:text-gray-600 {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .xl\:text-gray-700 {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .xl\:text-gray-800 {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .xl\:text-gray-900 {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .xl\:text-red-100 {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .xl\:text-red-200 {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .xl\:text-red-300 {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .xl\:text-red-400 {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .xl\:text-red-500 {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .xl\:text-red-600 {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .xl\:text-red-700 {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .xl\:text-red-800 {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .xl\:text-red-900 {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .xl\:text-blue-100 {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .xl\:text-blue-200 {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .xl\:text-blue-300 {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .xl\:text-blue-400 {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .xl\:text-blue-500 {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .xl\:text-blue-600 {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .xl\:text-blue-700 {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .xl\:text-blue-800 {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .xl\:text-blue-900 {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .xl\:text-purple-100 {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .xl\:text-purple-200 {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .xl\:text-purple-300 {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .xl\:text-purple-400 {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .xl\:text-purple-500 {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .xl\:text-purple-600 {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .xl\:text-purple-700 {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .xl\:text-purple-800 {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .xl\:text-purple-900 {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -31014,231 +28599,155 @@ video {
   }
 
   .xl\:hover\:text-black:hover {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .xl\:hover\:text-white:hover {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-100:hover {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-200:hover {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-300:hover {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-400:hover {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-500:hover {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-600:hover {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-700:hover {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-800:hover {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .xl\:hover\:text-gray-900:hover {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-100:hover {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-200:hover {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-300:hover {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-400:hover {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-500:hover {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-600:hover {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-700:hover {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-800:hover {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .xl\:hover\:text-red-900:hover {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-100:hover {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-200:hover {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-300:hover {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-400:hover {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-500:hover {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-600:hover {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-700:hover {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .xl\:hover\:text-blue-800:hover {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .xl\:hover\:text-blue-900:hover {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-100:hover {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-200:hover {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-300:hover {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-400:hover {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-500:hover {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-600:hover {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-700:hover {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-800:hover {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .xl\:hover\:text-purple-900:hover {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .xl\:focus\:text-transparent:focus {
@@ -31250,231 +28759,155 @@ video {
   }
 
   .xl\:focus\:text-black:focus {
-    --text-opacity: 1;
     color: #000;
-    color: rgba(0, 0, 0, var(--text-opacity));
   }
 
   .xl\:focus\:text-white:focus {
-    --text-opacity: 1;
     color: #fff;
-    color: rgba(255, 255, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-100:focus {
-    --text-opacity: 1;
     color: #f7fafc;
-    color: rgba(247, 250, 252, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-200:focus {
-    --text-opacity: 1;
     color: #edf2f7;
-    color: rgba(237, 242, 247, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-300:focus {
-    --text-opacity: 1;
     color: #e2e8f0;
-    color: rgba(226, 232, 240, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-400:focus {
-    --text-opacity: 1;
     color: #cbd5e0;
-    color: rgba(203, 213, 224, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-500:focus {
-    --text-opacity: 1;
     color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-600:focus {
-    --text-opacity: 1;
     color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-700:focus {
-    --text-opacity: 1;
     color: #4a5568;
-    color: rgba(74, 85, 104, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-800:focus {
-    --text-opacity: 1;
     color: #2d3748;
-    color: rgba(45, 55, 72, var(--text-opacity));
   }
 
   .xl\:focus\:text-gray-900:focus {
-    --text-opacity: 1;
     color: #1a202c;
-    color: rgba(26, 32, 44, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-100:focus {
-    --text-opacity: 1;
     color: #fff5f5;
-    color: rgba(255, 245, 245, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-200:focus {
-    --text-opacity: 1;
     color: #fed7d7;
-    color: rgba(254, 215, 215, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-300:focus {
-    --text-opacity: 1;
     color: #feb2b2;
-    color: rgba(254, 178, 178, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-400:focus {
-    --text-opacity: 1;
     color: #ec5247;
-    color: rgba(236, 82, 71, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-500:focus {
-    --text-opacity: 1;
     color: #f56565;
-    color: rgba(245, 101, 101, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-600:focus {
-    --text-opacity: 1;
     color: #e53e3e;
-    color: rgba(229, 62, 62, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-700:focus {
-    --text-opacity: 1;
     color: #c53030;
-    color: rgba(197, 48, 48, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-800:focus {
-    --text-opacity: 1;
     color: #9b2c2c;
-    color: rgba(155, 44, 44, var(--text-opacity));
   }
 
   .xl\:focus\:text-red-900:focus {
-    --text-opacity: 1;
     color: #742a2a;
-    color: rgba(116, 42, 42, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-100:focus {
-    --text-opacity: 1;
     color: #ebf8ff;
-    color: rgba(235, 248, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-200:focus {
-    --text-opacity: 1;
     color: #bee3f8;
-    color: rgba(190, 227, 248, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-300:focus {
-    --text-opacity: 1;
     color: #43c0ff;
-    color: rgba(67, 192, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-400:focus {
-    --text-opacity: 1;
     color: #63b3ed;
-    color: rgba(99, 179, 237, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-500:focus {
-    --text-opacity: 1;
     color: #4299e1;
-    color: rgba(66, 153, 225, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-600:focus {
-    --text-opacity: 1;
     color: #3182ce;
-    color: rgba(49, 130, 206, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-700:focus {
-    --text-opacity: 1;
     color: #324456;
-    color: rgba(50, 68, 86, var(--text-opacity));
   }
 
   .xl\:focus\:text-blue-800:focus {
-    --text-opacity: 1;
-    color: #2c5282;
-    color: rgba(44, 82, 130, var(--text-opacity));
+    color: #363a47;
   }
 
   .xl\:focus\:text-blue-900:focus {
-    --text-opacity: 1;
     color: #303441;
-    color: rgba(48, 52, 65, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-100:focus {
-    --text-opacity: 1;
     color: #faf5ff;
-    color: rgba(250, 245, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-200:focus {
-    --text-opacity: 1;
     color: #6a8eff;
-    color: rgba(106, 142, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-300:focus {
-    --text-opacity: 1;
     color: #507bff;
-    color: rgba(80, 123, 255, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-400:focus {
-    --text-opacity: 1;
     color: #b794f4;
-    color: rgba(183, 148, 244, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-500:focus {
-    --text-opacity: 1;
     color: #9f7aea;
-    color: rgba(159, 122, 234, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-600:focus {
-    --text-opacity: 1;
     color: #805ad5;
-    color: rgba(128, 90, 213, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-700:focus {
-    --text-opacity: 1;
     color: #6b46c1;
-    color: rgba(107, 70, 193, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-800:focus {
-    --text-opacity: 1;
     color: #553c9a;
-    color: rgba(85, 60, 154, var(--text-opacity));
   }
 
   .xl\:focus\:text-purple-900:focus {
-    --text-opacity: 1;
     color: #44337a;
-    color: rgba(68, 51, 122, var(--text-opacity));
   }
 
   .xl\:italic {
@@ -31563,6 +28996,10 @@ video {
 
   .xl\:w-24 {
     width: 6rem;
+  }
+
+  .xl\:w-26 {
+    width: 6.75rem;
   }
 
   .xl\:w-32 {
@@ -31803,6 +29240,11 @@ video {
     gap: 6rem;
   }
 
+  .xl\:gap-26 {
+    grid-gap: 6.75rem;
+    gap: 6.75rem;
+  }
+
   .xl\:gap-32 {
     grid-gap: 8rem;
     gap: 8rem;
@@ -31903,6 +29345,11 @@ video {
     column-gap: 6rem;
   }
 
+  .xl\:col-gap-26 {
+    grid-column-gap: 6.75rem;
+    column-gap: 6.75rem;
+  }
+
   .xl\:col-gap-32 {
     grid-column-gap: 8rem;
     column-gap: 8rem;
@@ -32001,6 +29448,11 @@ video {
   .xl\:row-gap-24 {
     grid-row-gap: 6rem;
     row-gap: 6rem;
+  }
+
+  .xl\:row-gap-26 {
+    grid-row-gap: 6.75rem;
+    row-gap: 6.75rem;
   }
 
   .xl\:row-gap-32 {
@@ -32400,692 +29852,36 @@ video {
     transform: none;
   }
 
-  .xl\:translate-x-0 {
-    --transform-translate-x: 0;
+  .xl\:duration-75 {
+    transition-duration: 75ms;
   }
 
-  .xl\:translate-x-1 {
-    --transform-translate-x: 0.25rem;
+  .xl\:duration-100 {
+    transition-duration: 100ms;
   }
 
-  .xl\:translate-x-2 {
-    --transform-translate-x: 0.5rem;
+  .xl\:duration-150 {
+    transition-duration: 150ms;
   }
 
-  .xl\:translate-x-3 {
-    --transform-translate-x: 0.75rem;
+  .xl\:duration-200 {
+    transition-duration: 200ms;
   }
 
-  .xl\:translate-x-4 {
-    --transform-translate-x: 1rem;
+  .xl\:duration-300 {
+    transition-duration: 300ms;
   }
 
-  .xl\:translate-x-5 {
-    --transform-translate-x: 1.25rem;
+  .xl\:duration-500 {
+    transition-duration: 500ms;
   }
 
-  .xl\:translate-x-6 {
-    --transform-translate-x: 1.5rem;
+  .xl\:duration-700 {
+    transition-duration: 700ms;
   }
 
-  .xl\:translate-x-7 {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .xl\:translate-x-8 {
-    --transform-translate-x: 2rem;
-  }
-
-  .xl\:translate-x-10 {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .xl\:translate-x-12 {
-    --transform-translate-x: 3rem;
-  }
-
-  .xl\:translate-x-16 {
-    --transform-translate-x: 4rem;
-  }
-
-  .xl\:translate-x-20 {
-    --transform-translate-x: 5rem;
-  }
-
-  .xl\:translate-x-24 {
-    --transform-translate-x: 6rem;
-  }
-
-  .xl\:translate-x-32 {
-    --transform-translate-x: 8rem;
-  }
-
-  .xl\:translate-x-40 {
-    --transform-translate-x: 10rem;
-  }
-
-  .xl\:translate-x-48 {
-    --transform-translate-x: 12rem;
-  }
-
-  .xl\:translate-x-56 {
-    --transform-translate-x: 14rem;
-  }
-
-  .xl\:translate-x-64 {
-    --transform-translate-x: 16rem;
-  }
-
-  .xl\:translate-x-px {
-    --transform-translate-x: 1px;
-  }
-
-  .xl\:-translate-x-1 {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .xl\:-translate-x-2 {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .xl\:-translate-x-3 {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .xl\:-translate-x-4 {
-    --transform-translate-x: -1rem;
-  }
-
-  .xl\:-translate-x-5 {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .xl\:-translate-x-6 {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .xl\:-translate-x-7 {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .xl\:-translate-x-8 {
-    --transform-translate-x: -2rem;
-  }
-
-  .xl\:-translate-x-10 {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .xl\:-translate-x-12 {
-    --transform-translate-x: -3rem;
-  }
-
-  .xl\:-translate-x-16 {
-    --transform-translate-x: -4rem;
-  }
-
-  .xl\:-translate-x-20 {
-    --transform-translate-x: -5rem;
-  }
-
-  .xl\:-translate-x-24 {
-    --transform-translate-x: -6rem;
-  }
-
-  .xl\:-translate-x-32 {
-    --transform-translate-x: -8rem;
-  }
-
-  .xl\:-translate-x-40 {
-    --transform-translate-x: -10rem;
-  }
-
-  .xl\:-translate-x-48 {
-    --transform-translate-x: -12rem;
-  }
-
-  .xl\:-translate-x-56 {
-    --transform-translate-x: -14rem;
-  }
-
-  .xl\:-translate-x-64 {
-    --transform-translate-x: -16rem;
-  }
-
-  .xl\:-translate-x-px {
-    --transform-translate-x: -1px;
-  }
-
-  .xl\:-translate-x-full {
-    --transform-translate-x: -100%;
-  }
-
-  .xl\:-translate-x-1\/2 {
-    --transform-translate-x: -50%;
-  }
-
-  .xl\:translate-x-1\/2 {
-    --transform-translate-x: 50%;
-  }
-
-  .xl\:translate-x-full {
-    --transform-translate-x: 100%;
-  }
-
-  .xl\:translate-y-0 {
-    --transform-translate-y: 0;
-  }
-
-  .xl\:translate-y-1 {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .xl\:translate-y-2 {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .xl\:translate-y-3 {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .xl\:translate-y-4 {
-    --transform-translate-y: 1rem;
-  }
-
-  .xl\:translate-y-5 {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .xl\:translate-y-6 {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .xl\:translate-y-7 {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .xl\:translate-y-8 {
-    --transform-translate-y: 2rem;
-  }
-
-  .xl\:translate-y-10 {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .xl\:translate-y-12 {
-    --transform-translate-y: 3rem;
-  }
-
-  .xl\:translate-y-16 {
-    --transform-translate-y: 4rem;
-  }
-
-  .xl\:translate-y-20 {
-    --transform-translate-y: 5rem;
-  }
-
-  .xl\:translate-y-24 {
-    --transform-translate-y: 6rem;
-  }
-
-  .xl\:translate-y-32 {
-    --transform-translate-y: 8rem;
-  }
-
-  .xl\:translate-y-40 {
-    --transform-translate-y: 10rem;
-  }
-
-  .xl\:translate-y-48 {
-    --transform-translate-y: 12rem;
-  }
-
-  .xl\:translate-y-56 {
-    --transform-translate-y: 14rem;
-  }
-
-  .xl\:translate-y-64 {
-    --transform-translate-y: 16rem;
-  }
-
-  .xl\:translate-y-px {
-    --transform-translate-y: 1px;
-  }
-
-  .xl\:-translate-y-1 {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .xl\:-translate-y-2 {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .xl\:-translate-y-3 {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .xl\:-translate-y-4 {
-    --transform-translate-y: -1rem;
-  }
-
-  .xl\:-translate-y-5 {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .xl\:-translate-y-6 {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .xl\:-translate-y-7 {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .xl\:-translate-y-8 {
-    --transform-translate-y: -2rem;
-  }
-
-  .xl\:-translate-y-10 {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .xl\:-translate-y-12 {
-    --transform-translate-y: -3rem;
-  }
-
-  .xl\:-translate-y-16 {
-    --transform-translate-y: -4rem;
-  }
-
-  .xl\:-translate-y-20 {
-    --transform-translate-y: -5rem;
-  }
-
-  .xl\:-translate-y-24 {
-    --transform-translate-y: -6rem;
-  }
-
-  .xl\:-translate-y-32 {
-    --transform-translate-y: -8rem;
-  }
-
-  .xl\:-translate-y-40 {
-    --transform-translate-y: -10rem;
-  }
-
-  .xl\:-translate-y-48 {
-    --transform-translate-y: -12rem;
-  }
-
-  .xl\:-translate-y-56 {
-    --transform-translate-y: -14rem;
-  }
-
-  .xl\:-translate-y-64 {
-    --transform-translate-y: -16rem;
-  }
-
-  .xl\:-translate-y-px {
-    --transform-translate-y: -1px;
-  }
-
-  .xl\:-translate-y-full {
-    --transform-translate-y: -100%;
-  }
-
-  .xl\:-translate-y-1\/2 {
-    --transform-translate-y: -50%;
-  }
-
-  .xl\:translate-y-1\/2 {
-    --transform-translate-y: 50%;
-  }
-
-  .xl\:translate-y-full {
-    --transform-translate-y: 100%;
-  }
-
-  .xl\:hover\:translate-x-0:hover {
-    --transform-translate-x: 0;
-  }
-
-  .xl\:hover\:translate-x-1:hover {
-    --transform-translate-x: 0.25rem;
-  }
-
-  .xl\:hover\:translate-x-2:hover {
-    --transform-translate-x: 0.5rem;
-  }
-
-  .xl\:hover\:translate-x-3:hover {
-    --transform-translate-x: 0.75rem;
-  }
-
-  .xl\:hover\:translate-x-4:hover {
-    --transform-translate-x: 1rem;
-  }
-
-  .xl\:hover\:translate-x-5:hover {
-    --transform-translate-x: 1.25rem;
-  }
-
-  .xl\:hover\:translate-x-6:hover {
-    --transform-translate-x: 1.5rem;
-  }
-
-  .xl\:hover\:translate-x-7:hover {
-    --transform-translate-x: 1.75rem;
-  }
-
-  .xl\:hover\:translate-x-8:hover {
-    --transform-translate-x: 2rem;
-  }
-
-  .xl\:hover\:translate-x-10:hover {
-    --transform-translate-x: 2.5rem;
-  }
-
-  .xl\:hover\:translate-x-12:hover {
-    --transform-translate-x: 3rem;
-  }
-
-  .xl\:hover\:translate-x-16:hover {
-    --transform-translate-x: 4rem;
-  }
-
-  .xl\:hover\:translate-x-20:hover {
-    --transform-translate-x: 5rem;
-  }
-
-  .xl\:hover\:translate-x-24:hover {
-    --transform-translate-x: 6rem;
-  }
-
-  .xl\:hover\:translate-x-32:hover {
-    --transform-translate-x: 8rem;
-  }
-
-  .xl\:hover\:translate-x-40:hover {
-    --transform-translate-x: 10rem;
-  }
-
-  .xl\:hover\:translate-x-48:hover {
-    --transform-translate-x: 12rem;
-  }
-
-  .xl\:hover\:translate-x-56:hover {
-    --transform-translate-x: 14rem;
-  }
-
-  .xl\:hover\:translate-x-64:hover {
-    --transform-translate-x: 16rem;
-  }
-
-  .xl\:hover\:translate-x-px:hover {
-    --transform-translate-x: 1px;
-  }
-
-  .xl\:hover\:-translate-x-1:hover {
-    --transform-translate-x: -0.25rem;
-  }
-
-  .xl\:hover\:-translate-x-2:hover {
-    --transform-translate-x: -0.5rem;
-  }
-
-  .xl\:hover\:-translate-x-3:hover {
-    --transform-translate-x: -0.75rem;
-  }
-
-  .xl\:hover\:-translate-x-4:hover {
-    --transform-translate-x: -1rem;
-  }
-
-  .xl\:hover\:-translate-x-5:hover {
-    --transform-translate-x: -1.25rem;
-  }
-
-  .xl\:hover\:-translate-x-6:hover {
-    --transform-translate-x: -1.5rem;
-  }
-
-  .xl\:hover\:-translate-x-7:hover {
-    --transform-translate-x: -1.75rem;
-  }
-
-  .xl\:hover\:-translate-x-8:hover {
-    --transform-translate-x: -2rem;
-  }
-
-  .xl\:hover\:-translate-x-10:hover {
-    --transform-translate-x: -2.5rem;
-  }
-
-  .xl\:hover\:-translate-x-12:hover {
-    --transform-translate-x: -3rem;
-  }
-
-  .xl\:hover\:-translate-x-16:hover {
-    --transform-translate-x: -4rem;
-  }
-
-  .xl\:hover\:-translate-x-20:hover {
-    --transform-translate-x: -5rem;
-  }
-
-  .xl\:hover\:-translate-x-24:hover {
-    --transform-translate-x: -6rem;
-  }
-
-  .xl\:hover\:-translate-x-32:hover {
-    --transform-translate-x: -8rem;
-  }
-
-  .xl\:hover\:-translate-x-40:hover {
-    --transform-translate-x: -10rem;
-  }
-
-  .xl\:hover\:-translate-x-48:hover {
-    --transform-translate-x: -12rem;
-  }
-
-  .xl\:hover\:-translate-x-56:hover {
-    --transform-translate-x: -14rem;
-  }
-
-  .xl\:hover\:-translate-x-64:hover {
-    --transform-translate-x: -16rem;
-  }
-
-  .xl\:hover\:-translate-x-px:hover {
-    --transform-translate-x: -1px;
-  }
-
-  .xl\:hover\:-translate-x-full:hover {
-    --transform-translate-x: -100%;
-  }
-
-  .xl\:hover\:-translate-x-1\/2:hover {
-    --transform-translate-x: -50%;
-  }
-
-  .xl\:hover\:translate-x-1\/2:hover {
-    --transform-translate-x: 50%;
-  }
-
-  .xl\:hover\:translate-x-full:hover {
-    --transform-translate-x: 100%;
-  }
-
-  .xl\:hover\:translate-y-0:hover {
-    --transform-translate-y: 0;
-  }
-
-  .xl\:hover\:translate-y-1:hover {
-    --transform-translate-y: 0.25rem;
-  }
-
-  .xl\:hover\:translate-y-2:hover {
-    --transform-translate-y: 0.5rem;
-  }
-
-  .xl\:hover\:translate-y-3:hover {
-    --transform-translate-y: 0.75rem;
-  }
-
-  .xl\:hover\:translate-y-4:hover {
-    --transform-translate-y: 1rem;
-  }
-
-  .xl\:hover\:translate-y-5:hover {
-    --transform-translate-y: 1.25rem;
-  }
-
-  .xl\:hover\:translate-y-6:hover {
-    --transform-translate-y: 1.5rem;
-  }
-
-  .xl\:hover\:translate-y-7:hover {
-    --transform-translate-y: 1.75rem;
-  }
-
-  .xl\:hover\:translate-y-8:hover {
-    --transform-translate-y: 2rem;
-  }
-
-  .xl\:hover\:translate-y-10:hover {
-    --transform-translate-y: 2.5rem;
-  }
-
-  .xl\:hover\:translate-y-12:hover {
-    --transform-translate-y: 3rem;
-  }
-
-  .xl\:hover\:translate-y-16:hover {
-    --transform-translate-y: 4rem;
-  }
-
-  .xl\:hover\:translate-y-20:hover {
-    --transform-translate-y: 5rem;
-  }
-
-  .xl\:hover\:translate-y-24:hover {
-    --transform-translate-y: 6rem;
-  }
-
-  .xl\:hover\:translate-y-32:hover {
-    --transform-translate-y: 8rem;
-  }
-
-  .xl\:hover\:translate-y-40:hover {
-    --transform-translate-y: 10rem;
-  }
-
-  .xl\:hover\:translate-y-48:hover {
-    --transform-translate-y: 12rem;
-  }
-
-  .xl\:hover\:translate-y-56:hover {
-    --transform-translate-y: 14rem;
-  }
-
-  .xl\:hover\:translate-y-64:hover {
-    --transform-translate-y: 16rem;
-  }
-
-  .xl\:hover\:translate-y-px:hover {
-    --transform-translate-y: 1px;
-  }
-
-  .xl\:hover\:-translate-y-1:hover {
-    --transform-translate-y: -0.25rem;
-  }
-
-  .xl\:hover\:-translate-y-2:hover {
-    --transform-translate-y: -0.5rem;
-  }
-
-  .xl\:hover\:-translate-y-3:hover {
-    --transform-translate-y: -0.75rem;
-  }
-
-  .xl\:hover\:-translate-y-4:hover {
-    --transform-translate-y: -1rem;
-  }
-
-  .xl\:hover\:-translate-y-5:hover {
-    --transform-translate-y: -1.25rem;
-  }
-
-  .xl\:hover\:-translate-y-6:hover {
-    --transform-translate-y: -1.5rem;
-  }
-
-  .xl\:hover\:-translate-y-7:hover {
-    --transform-translate-y: -1.75rem;
-  }
-
-  .xl\:hover\:-translate-y-8:hover {
-    --transform-translate-y: -2rem;
-  }
-
-  .xl\:hover\:-translate-y-10:hover {
-    --transform-translate-y: -2.5rem;
-  }
-
-  .xl\:hover\:-translate-y-12:hover {
-    --transform-translate-y: -3rem;
-  }
-
-  .xl\:hover\:-translate-y-16:hover {
-    --transform-translate-y: -4rem;
-  }
-
-  .xl\:hover\:-translate-y-20:hover {
-    --transform-translate-y: -5rem;
-  }
-
-  .xl\:hover\:-translate-y-24:hover {
-    --transform-translate-y: -6rem;
-  }
-
-  .xl\:hover\:-translate-y-32:hover {
-    --transform-translate-y: -8rem;
-  }
-
-  .xl\:hover\:-translate-y-40:hover {
-    --transform-translate-y: -10rem;
-  }
-
-  .xl\:hover\:-translate-y-48:hover {
-    --transform-translate-y: -12rem;
-  }
-
-  .xl\:hover\:-translate-y-56:hover {
-    --transform-translate-y: -14rem;
-  }
-
-  .xl\:hover\:-translate-y-64:hover {
-    --transform-translate-y: -16rem;
-  }
-
-  .xl\:hover\:-translate-y-px:hover {
-    --transform-translate-y: -1px;
-  }
-
-  .xl\:hover\:-translate-y-full:hover {
-    --transform-translate-y: -100%;
-  }
-
-  .xl\:hover\:-translate-y-1\/2:hover {
-    --transform-translate-y: -50%;
-  }
-
-  .xl\:hover\:translate-y-1\/2:hover {
-    --transform-translate-y: 50%;
-  }
-
-  .xl\:hover\:translate-y-full:hover {
-    --transform-translate-y: 100%;
+  .xl\:duration-1000 {
+    transition-duration: 1000ms;
   }
 }
 

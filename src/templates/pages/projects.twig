@@ -3,12 +3,7 @@
 {% block content %}
   <div class="container">
     <div class="content-header flex flex-wrap items-center justify-between space-x-6">
-      <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Рекомендации АФР online</h1>
-
-      <a href="#" class="mb-4 button bg-purple-300 hover:bg-purple-200 sm:py-3 flex items-center justify-between space-x-5 lg:text-base text-tiny">
-        <span>Поиск по разделу</span>
-        {% include '../svg/arrow-right-svg.twig' with {classes: "text-white"} %}
-      </a>
+      <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Научно-практические проекты</h1>
     </div>
 
     <div class="md:my-12 my-6 grid gap-5 md:grid-cols-2">
@@ -17,7 +12,7 @@
           <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
 
           <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
-            <h5 class="md:w-1/2 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">{{item.title}}</h5>
+            <h5 class="md:w-5/6 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">{{item.title}}</h5>
             <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
               <span>Подробнее</span>
               {% include '../svg/arrow-right-svg.twig' with {classes: "text-purple-300"} %}
