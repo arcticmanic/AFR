@@ -11,7 +11,7 @@
 
 .shifted-shadow {
   box-shadow: 20px 20px 0px 0px #3d414e;
-  transition: all 0.15s ease
+  @apply ease-in-out duration-300;
 }
 
 a:hover {

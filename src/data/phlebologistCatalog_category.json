@@ -1,0 +1,42 @@
+{
+  "breadcrumbs": [
+    { "title": "Флебологу" },
+    { "title": "Диагностическая аппаратура" },
+    { "title": "Беспроводные УЗИ и УЗИ-планшеты" },
+    { "title": "УЗИ-планшеты" }
+  ],
+  "items": [
+    {
+      "title": "Philips VISIQ",
+      "img": 1
+    },
+    {
+      "title": "Vscan Extend",
+      "img": 2
+    },
+    {
+      "title": "Siemens Acuson Freestyle",
+      "img": 3
+    },
+    {
+      "title": "Philips VISIQ",
+      "img": 1
+    },
+    {
+      "title": "Vscan Extend",
+      "img": 2
+    },
+    {
+      "title": "Siemens Acuson Freestyle",
+      "img": 4
+    },
+    {
+      "title": "Philips VISIQ",
+      "img": 1
+    },
+    {
+      "title": "Vscan Extend",
+      "img": 2
+    }
+  ]
+}

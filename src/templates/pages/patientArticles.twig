@@ -1,9 +1,7 @@
 {% extends '../layout/default.twig' %}
 
 {% block content %}
-  <div class="container content-header flex flex-wrap items-center justify-between space-x-6">
-    <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Пациенту</h1>
-  </div>
+  {% include '../includes/content-header.twig' with {title: 'Пациенту'} %}
 
   <div class="container md:mt-12 lg:mb-26 md:mb-20 sm:mb-16 mb-12 my-6 pr-5 grid lg:row-gap-26 row-gap-12 col-gap-12 lg:grid-cols-3 md:grid-cols-2">
     {% for item in items %}
