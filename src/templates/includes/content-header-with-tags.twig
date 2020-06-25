@@ -1,0 +1,21 @@
+{% include './content-header.twig' with {title: title} %}
+
+<div class="container content-header md:mt-7 mt-3 mb-3 md:pr-12 flex sm:flex-row flex-col flex-wrap sm:items-center space-x-3">
+  <div class="lg:w-4/6 md:mb-6 mb-3 flex flex-wrap items-start space-x-2">
+    {% for tag in tags %}
+        {% if tag.enabled is defined %}
+          <a href="#" class="mb-3 button bg-purple-300 hover:bg-purple-200 py-3 lg:text-base text-tiny">{{tag.title}}</a>
+      
+        {% else %}
+          <a href="#" disabled class="mb-3 button bg-purple-300 hover:bg-purple-200 py-3 lg:text-base text-tiny disabled">{{tag.title}}</a>
+        {% endif %}
+    {% endfor %}
+  </div>
+  
+  
+
+  <a href="#" class="sm:mb-6 ml-auto flex items-center space-x-3 text-base underline group text-white hover:text-purple-300 ease-in-out duration-300">
+    {% include '../svg/book-svg.twig' with {classes: 'text-white ease-in-out duration-300 transform group-hover:text-purple-300 group-hover:-translate-y-1'} %}
+    <span>Условия сотрудничества</span>
+  </a>
+</div>
