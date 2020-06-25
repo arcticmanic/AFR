@@ -1,0 +1,46 @@
+{% extends '../layout/default.twig' %}
+
+{% block content %}
+  {% include '../includes/content-header-with-tags.twig' with {title: 'Сотрудничество'} %}
+
+  <div class="container">
+    <div class="md:mt-8 lg:mb-30 md:mb-20 sm:mb-16 mb-12 my-6 md:pr-8 pr-4 grid xl:row-gap-24 md:row-gap-20 row-gap-16 col-gap-12 lg:grid-cols-2 grid-cols-1">
+      {% for item in items %}
+        <div href="#" class="item flex sm:flex-row flex-col items-stretch">
+          <a href="#" class="relative xl:h-64 xl:w-64 sm:h-56 w-full h-48 sm:w-56 m-auto flex items-center justify-center bg-white shifted-shadow_patterned group">
+            <img data-src="./assets/images/collaboration_manufacturers-img-{{item.img}}.png" class="lazy m-auto object-contain" alt="">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="shifted-shadow__pattern absolute w-full h-full text-blue-800" >
+              <defs>
+                <pattern id="pattern_0gLSGx" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+                  <line x1="0" y="0" x2="0" y2="4" stroke="currentColor" stroke-width="4" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#pattern_0gLSGx)" :opacity="1" />
+            </svg>
+            
+            <div class="absolute right-0 bottom-0 p-7 ease-in-out duration-300 transform group-hover:translate-x-2">
+              {% include '../svg/arrow-right-svg.twig' with {classes: "text-purple-300"} %}
+            </div>
+          </a>
+
+          <div class="content sm:ml-5 sm:mt-0 mt-3 flex-1 flex flex-col justify-between">
+            <h5 class="text-3xl leading-tight font-serif font-light ease-in-out duration-300 group-hover:text-purple-300">
+              {{item.title}}
+            </h5>
+
+            <h6 class="text-tiny leading-loose font-serif font-light ease-in-out duration-300 group-hover:text-purple-300">
+              {{item.subtitle}}
+            </h6>
+
+            <div class="flex flex-col space-y-1">
+              <a href="tel:{{item.phone}}" class="block text-white text-tiny ease-in-out duration-300 hover:text-blue-300">{{item.phone}}</a>
+              <a href="mailto:{{item.email}}" class="block text-white text-tiny ease-in-out duration-300 hover:text-blue-300">{{item.email}}</a>
+              <a href="{{item.website}}" class="block text-white text-tiny ease-in-out duration-300 hover:text-blue-300">{{item.website}}</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

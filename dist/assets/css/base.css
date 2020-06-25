@@ -2994,7 +2994,7 @@ html {
 .space-y-0 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(0px * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(0px * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(0px * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-0 > :not(:last-child) {
@@ -3006,7 +3006,7 @@ html {
 .space-y-1 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(0.25rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(0.25rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(0.25rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-1 > :not(:last-child) {
@@ -3018,7 +3018,7 @@ html {
 .space-y-2 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(0.5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(0.5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(0.5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-2 > :not(:last-child) {
@@ -3030,7 +3030,7 @@ html {
 .space-y-3 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(0.75rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(0.75rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(0.75rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-3 > :not(:last-child) {
@@ -3042,7 +3042,7 @@ html {
 .space-y-4 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(1rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(1rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-4 > :not(:last-child) {
@@ -3054,7 +3054,7 @@ html {
 .space-y-5 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(1.25rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(1.25rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1.25rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-5 > :not(:last-child) {
@@ -3066,7 +3066,7 @@ html {
 .space-y-6 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(1.5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(1.5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1.5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-6 > :not(:last-child) {
@@ -3078,7 +3078,7 @@ html {
 .space-y-7 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(1.75rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(1.75rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1.75rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-7 > :not(:last-child) {
@@ -3090,7 +3090,7 @@ html {
 .space-y-8 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(2rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(2rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(2rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-8 > :not(:last-child) {
@@ -3102,7 +3102,7 @@ html {
 .space-y-10 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(2.5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(2.5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(2.5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-10 > :not(:last-child) {
@@ -3114,7 +3114,7 @@ html {
 .space-y-12 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(3rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(3rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(3rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-12 > :not(:last-child) {
@@ -3126,7 +3126,7 @@ html {
 .space-y-16 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(4rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(4rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(4rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-16 > :not(:last-child) {
@@ -3138,7 +3138,7 @@ html {
 .space-y-20 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-20 > :not(:last-child) {
@@ -3150,7 +3150,7 @@ html {
 .space-y-24 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(6rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(6rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(6rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-24 > :not(:last-child) {
@@ -3162,7 +3162,7 @@ html {
 .space-y-32 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(8rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(8rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(8rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-32 > :not(:last-child) {
@@ -3174,7 +3174,7 @@ html {
 .space-y-40 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(10rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(10rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(10rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-40 > :not(:last-child) {
@@ -3186,7 +3186,7 @@ html {
 .space-y-48 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(12rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(12rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(12rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-48 > :not(:last-child) {
@@ -3198,7 +3198,7 @@ html {
 .space-y-56 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(14rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(14rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(14rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-56 > :not(:last-child) {
@@ -3210,7 +3210,7 @@ html {
 .space-y-64 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(16rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(16rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(16rem * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-64 > :not(:last-child) {
@@ -3222,7 +3222,7 @@ html {
 .space-y-px > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(1px * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(1px * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(1px * calc(1 - var(--space-y-reverse)));
 }
 
 .space-x-px > :not(:last-child) {
@@ -3234,7 +3234,7 @@ html {
 .-space-y-1 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-0.25rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-0.25rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-0.25rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-1 > :not(:last-child) {
@@ -3246,7 +3246,7 @@ html {
 .-space-y-2 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-0.5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-0.5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-0.5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-2 > :not(:last-child) {
@@ -3258,7 +3258,7 @@ html {
 .-space-y-3 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-0.75rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-0.75rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-0.75rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-3 > :not(:last-child) {
@@ -3270,7 +3270,7 @@ html {
 .-space-y-4 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-1rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-1rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-1rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-4 > :not(:last-child) {
@@ -3282,7 +3282,7 @@ html {
 .-space-y-5 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-1.25rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-1.25rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-1.25rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-5 > :not(:last-child) {
@@ -3294,7 +3294,7 @@ html {
 .-space-y-6 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-1.5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-1.5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-1.5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-6 > :not(:last-child) {
@@ -3306,7 +3306,7 @@ html {
 .-space-y-7 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-1.75rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-1.75rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-1.75rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-7 > :not(:last-child) {
@@ -3318,7 +3318,7 @@ html {
 .-space-y-8 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-2rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-2rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-2rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-8 > :not(:last-child) {
@@ -3330,7 +3330,7 @@ html {
 .-space-y-10 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-2.5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-2.5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-2.5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-10 > :not(:last-child) {
@@ -3342,7 +3342,7 @@ html {
 .-space-y-12 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-3rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-3rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-3rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-12 > :not(:last-child) {
@@ -3354,7 +3354,7 @@ html {
 .-space-y-16 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-4rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-4rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-4rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-16 > :not(:last-child) {
@@ -3366,7 +3366,7 @@ html {
 .-space-y-20 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-5rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-5rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-5rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-20 > :not(:last-child) {
@@ -3378,7 +3378,7 @@ html {
 .-space-y-24 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-6rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-6rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-6rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-24 > :not(:last-child) {
@@ -3390,7 +3390,7 @@ html {
 .-space-y-32 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-8rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-8rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-8rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-32 > :not(:last-child) {
@@ -3402,7 +3402,7 @@ html {
 .-space-y-40 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-10rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-10rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-10rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-40 > :not(:last-child) {
@@ -3414,7 +3414,7 @@ html {
 .-space-y-48 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-12rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-12rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-12rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-48 > :not(:last-child) {
@@ -3426,7 +3426,7 @@ html {
 .-space-y-56 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-14rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-14rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-14rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-56 > :not(:last-child) {
@@ -3438,7 +3438,7 @@ html {
 .-space-y-64 > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-16rem * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-16rem * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-16rem * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-64 > :not(:last-child) {
@@ -3450,7 +3450,7 @@ html {
 .-space-y-px > :not(:last-child) {
   --space-y-reverse: 0;
   /* margin-top: calc(-1px * calc(1 - var(--space-y-reverse))); */
-  margin-bottom: calc(-1px * var(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-1px * calc(1 - var(--space-y-reverse)));
 }
 
 .-space-x-px > :not(:last-child) {
@@ -3481,8 +3481,26 @@ html {
   transition-duration: 300ms;
 }
 
+.shifted-shadow_patterned {
+  position: relative;
+}
+
+.shifted-shadow__pattern {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  z-index: -1;
+  position: absolute;
+  top: 20px;
+  right: -20px;
+}
+
 a:hover .shifted-shadow {
   box-shadow: 0px 0px 0px 0px #3d414e;
+}
+
+a:hover .shifted-shadow__pattern {
+  top: 0;
+  right: 0;
 }
 
 body {
@@ -9348,6 +9366,136 @@ video {
   --transform-scale-y: 1.5;
 }
 
+.group:hover .group-hover\:scale-0 {
+  --transform-scale-x: 0;
+  --transform-scale-y: 0;
+}
+
+.group:hover .group-hover\:scale-50 {
+  --transform-scale-x: .5;
+  --transform-scale-y: .5;
+}
+
+.group:hover .group-hover\:scale-75 {
+  --transform-scale-x: .75;
+  --transform-scale-y: .75;
+}
+
+.group:hover .group-hover\:scale-90 {
+  --transform-scale-x: .9;
+  --transform-scale-y: .9;
+}
+
+.group:hover .group-hover\:scale-95 {
+  --transform-scale-x: .95;
+  --transform-scale-y: .95;
+}
+
+.group:hover .group-hover\:scale-100 {
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+}
+
+.group:hover .group-hover\:scale-105 {
+  --transform-scale-x: 1.05;
+  --transform-scale-y: 1.05;
+}
+
+.group:hover .group-hover\:scale-110 {
+  --transform-scale-x: 1.1;
+  --transform-scale-y: 1.1;
+}
+
+.group:hover .group-hover\:scale-125 {
+  --transform-scale-x: 1.25;
+  --transform-scale-y: 1.25;
+}
+
+.group:hover .group-hover\:scale-150 {
+  --transform-scale-x: 1.5;
+  --transform-scale-y: 1.5;
+}
+
+.group:hover .group-hover\:scale-x-0 {
+  --transform-scale-x: 0;
+}
+
+.group:hover .group-hover\:scale-x-50 {
+  --transform-scale-x: .5;
+}
+
+.group:hover .group-hover\:scale-x-75 {
+  --transform-scale-x: .75;
+}
+
+.group:hover .group-hover\:scale-x-90 {
+  --transform-scale-x: .9;
+}
+
+.group:hover .group-hover\:scale-x-95 {
+  --transform-scale-x: .95;
+}
+
+.group:hover .group-hover\:scale-x-100 {
+  --transform-scale-x: 1;
+}
+
+.group:hover .group-hover\:scale-x-105 {
+  --transform-scale-x: 1.05;
+}
+
+.group:hover .group-hover\:scale-x-110 {
+  --transform-scale-x: 1.1;
+}
+
+.group:hover .group-hover\:scale-x-125 {
+  --transform-scale-x: 1.25;
+}
+
+.group:hover .group-hover\:scale-x-150 {
+  --transform-scale-x: 1.5;
+}
+
+.group:hover .group-hover\:scale-y-0 {
+  --transform-scale-y: 0;
+}
+
+.group:hover .group-hover\:scale-y-50 {
+  --transform-scale-y: .5;
+}
+
+.group:hover .group-hover\:scale-y-75 {
+  --transform-scale-y: .75;
+}
+
+.group:hover .group-hover\:scale-y-90 {
+  --transform-scale-y: .9;
+}
+
+.group:hover .group-hover\:scale-y-95 {
+  --transform-scale-y: .95;
+}
+
+.group:hover .group-hover\:scale-y-100 {
+  --transform-scale-y: 1;
+}
+
+.group:hover .group-hover\:scale-y-105 {
+  --transform-scale-y: 1.05;
+}
+
+.group:hover .group-hover\:scale-y-110 {
+  --transform-scale-y: 1.1;
+}
+
+.group:hover .group-hover\:scale-y-125 {
+  --transform-scale-y: 1.25;
+}
+
+.group:hover .group-hover\:scale-y-150 {
+  --transform-scale-y: 1.5;
+}
+
 .rotate-0 {
   --transform-rotate: 0;
 }
@@ -10557,6 +10705,382 @@ video {
 }
 
 .focus\:translate-y-full:focus {
+  --transform-translate-y: 100%;
+}
+
+.group:hover .group-hover\:translate-x-0 {
+  --transform-translate-x: 0;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  --transform-translate-x: 0.25rem;
+}
+
+.group:hover .group-hover\:translate-x-2 {
+  --transform-translate-x: 0.5rem;
+}
+
+.group:hover .group-hover\:translate-x-3 {
+  --transform-translate-x: 0.75rem;
+}
+
+.group:hover .group-hover\:translate-x-4 {
+  --transform-translate-x: 1rem;
+}
+
+.group:hover .group-hover\:translate-x-5 {
+  --transform-translate-x: 1.25rem;
+}
+
+.group:hover .group-hover\:translate-x-6 {
+  --transform-translate-x: 1.5rem;
+}
+
+.group:hover .group-hover\:translate-x-7 {
+  --transform-translate-x: 1.75rem;
+}
+
+.group:hover .group-hover\:translate-x-8 {
+  --transform-translate-x: 2rem;
+}
+
+.group:hover .group-hover\:translate-x-10 {
+  --transform-translate-x: 2.5rem;
+}
+
+.group:hover .group-hover\:translate-x-12 {
+  --transform-translate-x: 3rem;
+}
+
+.group:hover .group-hover\:translate-x-16 {
+  --transform-translate-x: 4rem;
+}
+
+.group:hover .group-hover\:translate-x-20 {
+  --transform-translate-x: 5rem;
+}
+
+.group:hover .group-hover\:translate-x-24 {
+  --transform-translate-x: 6rem;
+}
+
+.group:hover .group-hover\:translate-x-26 {
+  --transform-translate-x: 6.75rem;
+}
+
+.group:hover .group-hover\:translate-x-30 {
+  --transform-translate-x: 7.5rem;
+}
+
+.group:hover .group-hover\:translate-x-32 {
+  --transform-translate-x: 8rem;
+}
+
+.group:hover .group-hover\:translate-x-40 {
+  --transform-translate-x: 10rem;
+}
+
+.group:hover .group-hover\:translate-x-48 {
+  --transform-translate-x: 12rem;
+}
+
+.group:hover .group-hover\:translate-x-56 {
+  --transform-translate-x: 14rem;
+}
+
+.group:hover .group-hover\:translate-x-64 {
+  --transform-translate-x: 16rem;
+}
+
+.group:hover .group-hover\:translate-x-px {
+  --transform-translate-x: 1px;
+}
+
+.group:hover .group-hover\:-translate-x-1 {
+  --transform-translate-x: -0.25rem;
+}
+
+.group:hover .group-hover\:-translate-x-2 {
+  --transform-translate-x: -0.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-3 {
+  --transform-translate-x: -0.75rem;
+}
+
+.group:hover .group-hover\:-translate-x-4 {
+  --transform-translate-x: -1rem;
+}
+
+.group:hover .group-hover\:-translate-x-5 {
+  --transform-translate-x: -1.25rem;
+}
+
+.group:hover .group-hover\:-translate-x-6 {
+  --transform-translate-x: -1.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-7 {
+  --transform-translate-x: -1.75rem;
+}
+
+.group:hover .group-hover\:-translate-x-8 {
+  --transform-translate-x: -2rem;
+}
+
+.group:hover .group-hover\:-translate-x-10 {
+  --transform-translate-x: -2.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-12 {
+  --transform-translate-x: -3rem;
+}
+
+.group:hover .group-hover\:-translate-x-16 {
+  --transform-translate-x: -4rem;
+}
+
+.group:hover .group-hover\:-translate-x-20 {
+  --transform-translate-x: -5rem;
+}
+
+.group:hover .group-hover\:-translate-x-24 {
+  --transform-translate-x: -6rem;
+}
+
+.group:hover .group-hover\:-translate-x-26 {
+  --transform-translate-x: -6.75rem;
+}
+
+.group:hover .group-hover\:-translate-x-30 {
+  --transform-translate-x: -7.5rem;
+}
+
+.group:hover .group-hover\:-translate-x-32 {
+  --transform-translate-x: -8rem;
+}
+
+.group:hover .group-hover\:-translate-x-40 {
+  --transform-translate-x: -10rem;
+}
+
+.group:hover .group-hover\:-translate-x-48 {
+  --transform-translate-x: -12rem;
+}
+
+.group:hover .group-hover\:-translate-x-56 {
+  --transform-translate-x: -14rem;
+}
+
+.group:hover .group-hover\:-translate-x-64 {
+  --transform-translate-x: -16rem;
+}
+
+.group:hover .group-hover\:-translate-x-px {
+  --transform-translate-x: -1px;
+}
+
+.group:hover .group-hover\:-translate-x-full {
+  --transform-translate-x: -100%;
+}
+
+.group:hover .group-hover\:-translate-x-1\/2 {
+  --transform-translate-x: -50%;
+}
+
+.group:hover .group-hover\:translate-x-1\/2 {
+  --transform-translate-x: 50%;
+}
+
+.group:hover .group-hover\:translate-x-full {
+  --transform-translate-x: 100%;
+}
+
+.group:hover .group-hover\:translate-y-0 {
+  --transform-translate-y: 0;
+}
+
+.group:hover .group-hover\:translate-y-1 {
+  --transform-translate-y: 0.25rem;
+}
+
+.group:hover .group-hover\:translate-y-2 {
+  --transform-translate-y: 0.5rem;
+}
+
+.group:hover .group-hover\:translate-y-3 {
+  --transform-translate-y: 0.75rem;
+}
+
+.group:hover .group-hover\:translate-y-4 {
+  --transform-translate-y: 1rem;
+}
+
+.group:hover .group-hover\:translate-y-5 {
+  --transform-translate-y: 1.25rem;
+}
+
+.group:hover .group-hover\:translate-y-6 {
+  --transform-translate-y: 1.5rem;
+}
+
+.group:hover .group-hover\:translate-y-7 {
+  --transform-translate-y: 1.75rem;
+}
+
+.group:hover .group-hover\:translate-y-8 {
+  --transform-translate-y: 2rem;
+}
+
+.group:hover .group-hover\:translate-y-10 {
+  --transform-translate-y: 2.5rem;
+}
+
+.group:hover .group-hover\:translate-y-12 {
+  --transform-translate-y: 3rem;
+}
+
+.group:hover .group-hover\:translate-y-16 {
+  --transform-translate-y: 4rem;
+}
+
+.group:hover .group-hover\:translate-y-20 {
+  --transform-translate-y: 5rem;
+}
+
+.group:hover .group-hover\:translate-y-24 {
+  --transform-translate-y: 6rem;
+}
+
+.group:hover .group-hover\:translate-y-26 {
+  --transform-translate-y: 6.75rem;
+}
+
+.group:hover .group-hover\:translate-y-30 {
+  --transform-translate-y: 7.5rem;
+}
+
+.group:hover .group-hover\:translate-y-32 {
+  --transform-translate-y: 8rem;
+}
+
+.group:hover .group-hover\:translate-y-40 {
+  --transform-translate-y: 10rem;
+}
+
+.group:hover .group-hover\:translate-y-48 {
+  --transform-translate-y: 12rem;
+}
+
+.group:hover .group-hover\:translate-y-56 {
+  --transform-translate-y: 14rem;
+}
+
+.group:hover .group-hover\:translate-y-64 {
+  --transform-translate-y: 16rem;
+}
+
+.group:hover .group-hover\:translate-y-px {
+  --transform-translate-y: 1px;
+}
+
+.group:hover .group-hover\:-translate-y-1 {
+  --transform-translate-y: -0.25rem;
+}
+
+.group:hover .group-hover\:-translate-y-2 {
+  --transform-translate-y: -0.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-3 {
+  --transform-translate-y: -0.75rem;
+}
+
+.group:hover .group-hover\:-translate-y-4 {
+  --transform-translate-y: -1rem;
+}
+
+.group:hover .group-hover\:-translate-y-5 {
+  --transform-translate-y: -1.25rem;
+}
+
+.group:hover .group-hover\:-translate-y-6 {
+  --transform-translate-y: -1.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-7 {
+  --transform-translate-y: -1.75rem;
+}
+
+.group:hover .group-hover\:-translate-y-8 {
+  --transform-translate-y: -2rem;
+}
+
+.group:hover .group-hover\:-translate-y-10 {
+  --transform-translate-y: -2.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-12 {
+  --transform-translate-y: -3rem;
+}
+
+.group:hover .group-hover\:-translate-y-16 {
+  --transform-translate-y: -4rem;
+}
+
+.group:hover .group-hover\:-translate-y-20 {
+  --transform-translate-y: -5rem;
+}
+
+.group:hover .group-hover\:-translate-y-24 {
+  --transform-translate-y: -6rem;
+}
+
+.group:hover .group-hover\:-translate-y-26 {
+  --transform-translate-y: -6.75rem;
+}
+
+.group:hover .group-hover\:-translate-y-30 {
+  --transform-translate-y: -7.5rem;
+}
+
+.group:hover .group-hover\:-translate-y-32 {
+  --transform-translate-y: -8rem;
+}
+
+.group:hover .group-hover\:-translate-y-40 {
+  --transform-translate-y: -10rem;
+}
+
+.group:hover .group-hover\:-translate-y-48 {
+  --transform-translate-y: -12rem;
+}
+
+.group:hover .group-hover\:-translate-y-56 {
+  --transform-translate-y: -14rem;
+}
+
+.group:hover .group-hover\:-translate-y-64 {
+  --transform-translate-y: -16rem;
+}
+
+.group:hover .group-hover\:-translate-y-px {
+  --transform-translate-y: -1px;
+}
+
+.group:hover .group-hover\:-translate-y-full {
+  --transform-translate-y: -100%;
+}
+
+.group:hover .group-hover\:-translate-y-1\/2 {
+  --transform-translate-y: -50%;
+}
+
+.group:hover .group-hover\:translate-y-1\/2 {
+  --transform-translate-y: 50%;
+}
+
+.group:hover .group-hover\:translate-y-full {
   --transform-translate-y: 100%;
 }
 

@@ -1,0 +1,54 @@
+{
+  "breadcrumbs": [{ "title": "Партнеры" }],
+  "tags": [
+    {
+      "title": "Партнеры"
+    },
+    {
+      "title": "Производители",
+      "enabled": true
+    }
+  ],
+  "items": [
+    {
+      "title": "Active Medical Group ",
+      "subtitle": "Внутрибольничные системы связи. Операционные столы и каталки. Приборы для ударно-волновой терапии.",
+      "phone": "+49 8631 6156-0",
+      "email": "info@odu.de",
+      "website": "www.odu.ru",
+      "img": 1
+    },
+    {
+      "title": "Philips",
+      "subtitle": "УЗИ-планшеты",
+      "phone": "+49 8631 6156-0",
+      "email": "info@odu.de",
+      "website": "www.philips.ru/healthcare ",
+      "img": 2
+    },
+    {
+      "title": "Siemens",
+      "subtitle": "УЗИ-планшеты",
+      "phone": "+49 8631 6156-0",
+      "email": "info@odu.de",
+      "website": "www.philips.ru/healthcare ",
+      "img": 3
+    },
+    {
+      "title": "Clarius",
+      "subtitle": "УЗИ-планшеты",
+      "phone": "+49 8631 6156-0",
+      "email": "info@odu.de",
+      "website": "www.odu.ru",
+      "img": 4
+    },
+    {
+      "title": "SonoStar",
+      "subtitle": "УЗИ-планшеты",
+      "phone": "+49 8631 6156-0",
+      "email": "info@odu.de",
+      "website": "www.odu.ru",
+      "img": 5
+    }
+  ]
+}

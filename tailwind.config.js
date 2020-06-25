@@ -275,8 +275,8 @@ module.exports = {
     wordBreak: [],
     zIndex: [],
     transform: [],
-    scale: ['hover', 'focus'],
-    translate: ['hover', 'focus'],
+    scale: ['hover', 'focus', 'group-hover'],
+    translate: ['hover', 'focus', 'group-hover'],
   },
   plugins: [
     function ({ addComponents }) {
