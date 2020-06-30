@@ -1,7 +1,7 @@
 import IMask from 'imask'
 
 import lazyLoading from './lazyLoading'
-import 'mmenu-js/custom-build/dist/mmenu'
+import './plugins/mmenu'
 
 document.addEventListener('DOMContentLoaded', () => {
   lazyLoading()

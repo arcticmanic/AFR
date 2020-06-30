@@ -1,4 +1,4 @@
-<header class="page-header z-10 container md:py-4 py-2" id="page-header">
+<header class="page-header z-20 container md:py-4 py-2" id="page-header">
   <div class="header-top flex items-center justify-between md:mb-5 mb-2">
     <form class="search-field relative md:w-1/4 w-1/2 mr-4">
       <input class="search-field__input w-full py-1 px-3 bg-transparent border border-solid border-blue-700 rounded-full text-xs placeholder-white focus:outline-none focus:shadow-outline" type="text" placeholder="Поиск">
@@ -15,14 +15,14 @@
     <div class="header-top-right flex items-center justify-between">
       <a href="/recommendations.html" class="md:block hidden button mr-2 py-2 px-5 border border-solid border-red-500 rounded-full text-tiny leading-none focus:outline-none focus:shadow-outline hover:bg-red-500">Рекомендации АФР online</a>
 
-      <a href="#" class="md:block hidden button button_blue-300 mr-2">Личный кабинет</a>
+      <a href="#" class="md:block hidden button button_blue-300 mr-2 px-4">Личный кабинет</a>
 
-      <a href="#" class="md:block hidden button button_blue-300 mr-2">Выйти</a>
+      <a href="#" class="md:block hidden button button_blue-300 mr-2 px-4">Выйти</a>
        
-      <a href="#" class="md:block hidden button button_blue-300 mr-4">Вступить</a>
+      <a href="#" class="md:block hidden button button_blue-300 mr-4 px-4">Вступить</a>
 
       <a href="#" class="flex items-center ml-3 focus:outline-none focus:shadow-outline rounded-full hover:text-blue-300 space-x-2">
-        <span class="sm:block hidden whitespace-no-wrap text-tiny leading-none font-light">АФР в Facebook</span>
+        <span class="sm:block hidden whitespace-no-wrap text-tiny leading-none font-thin">АФР в Facebook</span>
 
         <svg xmlns="http://www.w3.org/2000/svg" class="facebook-icon-svg text" viewBox="0 0 30 30">
           <circle cx="15" cy="15" r="15" class="fill-blue-300"/>
@@ -50,23 +50,47 @@
         <path fill="#DBE3FF" d="M26.2 26.1h7v5.5h-7z"/>
       </svg>
     </a>
+
+    <div class="md:flex hidden items-center justify-between flex-1 ml-8">
+      <div class="relative text-white text-base font-thin tracking-wide group">
+        <a href="#" class="underline hover:text-blue-300">АФР</a>
+
+        <div class="submenu hidden absolute left-50 z-10 w-56 px-6 py-8 bg-gray-900 shadow-2xl group-hover:block hover:block">
+          <ul class="flex flex-col items-start list-disc pl-4 space-y-5">
+            <li class="text-sm text-white hover:text-blue-300"><a href="#">Об ассоциации</a></li>
+            <li class="text-sm text-white hover:text-blue-300"><a href="#">Члены АФР</a></li>
+            <li class="text-sm text-white hover:text-blue-300"><a href="#">Международное представительство</a></li>
+            <li class="text-sm text-white hover:text-blue-300"><a href="#">Контакты</a></li>
+            <li class="text-sm text-white hover:text-blue-300"><a href="#">История АФР</a></li>
+            <li class="text-sm text-white hover:text-blue-300"><a href="#">Основные документы АФР</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative text-white text-base font-thin tracking-wide group">
+        <a href="#" class="underline hover:text-blue-300">Журнал «Флебология»</a>
+      </div>
+
+      <div class="relative text-white text-base font-thin tracking-wide group">
+        <a href="#" class="underline hover:text-blue-300">Проекты</a>
+      </div>
+      
+      <div class="relative text-white text-base font-thin tracking-wide group">
+        <a href="#" class="underline hover:text-blue-300">Партнеры</a>
+      </div>
+
+      <div class="relative text-white text-base font-thin tracking-wide group">
+        <a href="#" class="underline hover:text-blue-300">Конференции</a>
+      </div>
+
+      <div class="relative text-white text-base font-thin tracking-wide group">
+        <a href="#" class="flex items-center underline space-x-7 hover:text-blue-300">
+          <span>Флебологу</span>
+          {% include '../svg/mindmap-svg.twig' with {classes: 'w-6 h-6 text-blue-300'} %}
+        </a>
+      </div>
+    </div>
     
-
-    <a href="#" class="md:block hidden text-white hover:text-blue-300 text-sm font-light underline tracking-wide">АФР</a>
-
-    <a href="#" class="md:block hidden text-white hover:text-blue-300 text-sm font-light underline tracking-wide">Проекты</a>
-
-    <a href="#" class="md:block hidden text-white hover:text-blue-300 text-sm font-light underline tracking-wide">Журнал «Флебология»</a>
-
-    <a href="#" class="md:block hidden text-white hover:text-blue-300 text-sm font-light underline tracking-wide">Партнеры</a>
-
-    <a href="#" class="md:block hidden text-white hover:text-blue-300 text-sm font-light underline tracking-wide">Конференции</a>
-
-    <a href="#" class="md:flex hidden items-center text-white hover:text-blue-300 text-tiny font-light underline tracking-wide space-x-4">
-      <span>Флебологу</span>
-      {% include '../svg/mindmap-svg.twig' with {classes: 'w-6 h-6 text-blue-300'} %}
-    </a>
-
     <a class="md:hidden block text-blue-300 mobile-menu-icon mburger mburger--collapse" href="#mobile-menu">
       <b></b>
       <b></b>
