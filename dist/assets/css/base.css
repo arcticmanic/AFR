@@ -2905,6 +2905,32 @@ html {
   font-weight: 300;
 }
 
+@font-face {
+  font-display: swap;
+
+  src: local('IBMPlexSerif-Regular'),
+    url('../fonts/IBMPlexSerif-Regular.ttf') format('truetype');
+
+  font-family: 'IBM Plex Serif';
+
+  font-style: normal;
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+
+  src: local('IBMPlexSerif-SemiBold'),
+    url('../fonts/IBMPlexSerif-SemiBold.ttf') format('truetype');
+
+  font-family: 'IBM Plex Serif';
+
+  font-style: normal;
+
+  font-weight: 500;
+}
+
 /* Sans */
 
 @font-face {
@@ -3601,6 +3627,115 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.modal {
+  z-index: 30;
+}
+
+.modal__overlay {
+  display: flex;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(48, 53, 65, 0.9);
+}
+
+.modal_side .modal__overlay {
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.modal_side .modal__container {
+  max-height: 100vh;
+}
+
+.modal__container {
+  box-sizing: border-box;
+  width: 790px;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 50px 40px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateX(15%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(10%);
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden='false'] .modal__overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden='false'] .modal__container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden='true'] .modal__overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden='true'] .modal__container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -4262,6 +4397,10 @@ video {
   background-color: #fff;
 }
 
+.bg-gray-200 {
+  background-color: #d6d6d9;
+}
+
 .bg-gray-500 {
   background-color: #a0aec0;
 }
@@ -4324,6 +4463,10 @@ video {
 
 .hover\:bg-white:hover {
   background-color: #fff;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #d6d6d9;
 }
 
 .hover\:bg-gray-500:hover {
@@ -4390,6 +4533,10 @@ video {
   border-color: #fff;
 }
 
+.border-gray-200 {
+  border-color: #d6d6d9;
+}
+
 .border-gray-500 {
   border-color: #a0aec0;
 }
@@ -4452,6 +4599,10 @@ video {
 
 .hover\:border-white:hover {
   border-color: #fff;
+}
+
+.hover\:border-gray-200:hover {
+  border-color: #d6d6d9;
 }
 
 .hover\:border-gray-500:hover {
@@ -5340,6 +5491,10 @@ video {
 
 .text-3xl {
   font-size: 1.75rem;
+}
+
+.text-3\.5xl {
+  font-size: 1.875rem;
 }
 
 .text-4xl {
@@ -7526,6 +7681,10 @@ video {
   color: #fff;
 }
 
+.placeholder-gray-200::placeholder {
+  color: #d6d6d9;
+}
+
 .placeholder-gray-500::placeholder {
   color: #a0aec0;
 }
@@ -7609,6 +7768,13 @@ video {
   left: 0;
 }
 
+.inset-3 {
+  top: 2.666rem;
+  right: 2.666rem;
+  bottom: 2.666rem;
+  left: 2.666rem;
+}
+
 .inset-auto {
   top: auto;
   right: auto;
@@ -7624,6 +7790,16 @@ video {
 .inset-x-0 {
   right: 0;
   left: 0;
+}
+
+.inset-y-3 {
+  top: 2.666rem;
+  bottom: 2.666rem;
+}
+
+.inset-x-3 {
+  right: 2.666rem;
+  left: 2.666rem;
 }
 
 .inset-y-auto {
@@ -7650,6 +7826,22 @@ video {
 
 .left-0 {
   left: 0;
+}
+
+.top-3 {
+  top: 2.666rem;
+}
+
+.right-3 {
+  right: 2.666rem;
+}
+
+.bottom-3 {
+  bottom: 2.666rem;
+}
+
+.left-3 {
+  left: 2.666rem;
 }
 
 .top-auto {
@@ -7872,6 +8064,10 @@ video {
   color: #fff;
 }
 
+.text-gray-200 {
+  color: #d6d6d9;
+}
+
 .text-gray-500 {
   color: #a0aec0;
 }
@@ -7936,6 +8132,10 @@ video {
   color: #fff;
 }
 
+.hover\:text-gray-200:hover {
+  color: #d6d6d9;
+}
+
 .hover\:text-gray-500:hover {
   color: #a0aec0;
 }
@@ -7998,6 +8198,10 @@ video {
 
 .group:hover .group-hover\:text-white {
   color: #fff;
+}
+
+.group:hover .group-hover\:text-gray-200 {
+  color: #d6d6d9;
 }
 
 .group:hover .group-hover\:text-gray-500 {
@@ -11329,24 +11533,28 @@ video {
 }
 
 .border-b-gray borderBottomColor {
+  200: #d6d6d9;
   500: #a0aec0;
   700: #4a5568;
   900: #282c39;
 }
 
 .border-t-gray borderTopColor {
+  200: #d6d6d9;
   500: #a0aec0;
   700: #4a5568;
   900: #282c39;
 }
 
 .border-l-gray borderLeftColor {
+  200: #d6d6d9;
   500: #a0aec0;
   700: #4a5568;
   900: #282c39;
 }
 
 .border-r-gray borderRightColor {
+  200: #d6d6d9;
   500: #a0aec0;
   700: #4a5568;
   900: #282c39;
@@ -11847,6 +12055,10 @@ video {
 
   .sm\:text-3xl {
     font-size: 1.75rem;
+  }
+
+  .sm\:text-3\.5xl {
+    font-size: 1.875rem;
   }
 
   .sm\:text-4xl {
@@ -15293,6 +15505,10 @@ video {
     font-size: 1.75rem;
   }
 
+  .md\:text-3\.5xl {
+    font-size: 1.875rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
   }
@@ -18737,6 +18953,10 @@ video {
     font-size: 1.75rem;
   }
 
+  .lg\:text-3\.5xl {
+    font-size: 1.875rem;
+  }
+
   .lg\:text-4xl {
     font-size: 2.25rem;
   }
@@ -22179,6 +22399,10 @@ video {
 
   .xl\:text-3xl {
     font-size: 1.75rem;
+  }
+
+  .xl\:text-3\.5xl {
+    font-size: 1.875rem;
   }
 
   .xl\:text-4xl {

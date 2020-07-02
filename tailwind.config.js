@@ -11,7 +11,7 @@ module.exports = {
 
       gray: {
         // 100: '#f7fafc',
-        // 200: '#edf2f7',
+        200: '#d6d6d9',
         // 300: '#e2e8f0',
         // 400: '#cbd5e0',
         500: '#a0aec0',
@@ -186,6 +186,7 @@ module.exports = {
       xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.75rem',
+      '3.5xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '3.75rem',
@@ -200,6 +201,11 @@ module.exports = {
       bold: '700',
       // extrabold: '800',
       // black: '900',
+    },
+    inset: {
+      '0': 0,
+      auto: 'auto',
+      '3': '2.666rem',
     },
     lineHeight: {
       none: '1',
@@ -347,7 +353,6 @@ module.exports = {
     flexShrink: false,
     fontSmoothing: false,
     listStylePosition: false,
-    // listStyleType: false,
     maxHeight: false,
     maxWidth: false,
     minHeight: false,

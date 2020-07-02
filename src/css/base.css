@@ -12,6 +12,8 @@
 
 @import './blocks_unique/_blocks_unique.css';
 
+@import './plugins/_plugins.css';
+
 @tailwind base;
 
 @tailwind components;
