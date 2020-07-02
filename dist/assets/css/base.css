@@ -3644,13 +3644,17 @@ body::-webkit-scrollbar-thumb {
   background: rgba(48, 53, 65, 0.9);
 }
 
-.modal_side .modal__overlay {
+.modal-side .modal__overlay {
   align-items: stretch;
   justify-content: flex-end;
 }
 
-.modal_side .modal__container {
+.modal-side .modal__container {
   max-height: 100vh;
+}
+
+.modal-side_big .modal__container {
+  width: 1185px;
 }
 
 .modal__container {

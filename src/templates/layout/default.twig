@@ -37,7 +37,11 @@
 
     {% include '../layout/footer.twig' %}
 
-    {% embed '../includes/modal_side.twig' with {id: 'modal-autorization'} %}
+    {% block afterFooter %}
+
+    {% endblock %}
+
+    {% embed '../includes/modal-side.twig' with {id: 'modal-autorization'} %}
       {% block content %}
         <h2 class="font-serif text-3.5xl font-regular text-blue-900">Авторизация</h2>
 
@@ -59,7 +63,7 @@
       {% endblock %}
     {% endembed %}
 
-    {% embed '../includes/modal_side.twig' with {id: 'modal-recovery'} %}
+    {% embed '../includes/modal-side.twig' with {id: 'modal-recovery'} %}
       {% block content %}
         <h2 class="font-serif text-3.5xl font-regular text-blue-900">Восстановление пароля</h2>
 

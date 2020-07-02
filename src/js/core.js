@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   MicroModal.init({ disableScroll: true, awaitCloseAnimation: true })
 
+  const modalTriggers = document.querySelectorAll('[data-micromodal-trigger]')
+
+  modalTriggers?.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault()
+    })
+  })
+
   const inputPhones = document.querySelectorAll(
     'input[data-input-type="phone"]'
   )

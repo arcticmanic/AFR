@@ -5,7 +5,7 @@
 
   <div class="container md:mt-12 lg:mb-26 md:mb-20 sm:mb-16 mb-12 my-6 pr-5 grid lg:row-gap-26 row-gap-12 col-gap-12 lg:grid-cols-3 md:grid-cols-2">
     {% for item in items %}
-      <a href="#" class="item group">
+      <a href="#" class="item group" data-micromodal-trigger="patientArticles">
         <div>
           <img data-src="./assets/images/patientArticles-img-{{item.img}}.png" class="lazy shifted-shadow h-56 w-full object-cover" alt="">
         </div>
@@ -18,4 +18,24 @@
   </div>
 
   {% include '../includes/paginaton.twig' %}
+{% endblock %}
+
+{% block afterFooter %}
+  {% embed '../includes/modal-side_big.twig' with {id: 'patientArticles'} %}
+    {% block content %}
+      <h2 class="font-serif text-6xl leading-none font-regular text-blue-900">Отек и покраснение ног – что делать?</h2>
+
+      <div class="text text-gray-900">
+        <p>Как приятно чувствовать себя легко, не испытывать тяжести в ногах даже к вечеру сложного дня. К сожалению, похвастаться этим могут немногие. Большинство из нас после целого дня на ногах или в офисе чувствуют боли, тяжесть, усталость... А если ноги еще и отекают, приятного вечера не получается.
+        <br><br>
+        Так что же делать, если у вас регулярно отекают и краснеют ноги? Конечно, обратиться за помощью!</p>
+      </div>
+
+      <div class="flex items-center justify-between mt-12">
+        <button type="sibmit" class="button px-5 bg-purple-300">Войти в кабинет</button>
+
+        <a href="#" class="text-purple-300 text-tiny underline" data-micromodal-trigger="modal-recovery">Забыли пароль?</a>
+      </div>
+    {% endblock %}
+  {% endembed %}
 {% endblock %}

@@ -15,7 +15,7 @@
     align-items: center;
   }
 
-  &_side {
+  &-side {
     .modal__overlay {
       justify-content: flex-end;
       align-items: stretch;
@@ -23,6 +23,12 @@
 
     .modal__container {
       max-height: 100vh;
+    }
+
+    &_big {
+      .modal__container {
+        width: 1185px;
+      }
     }
   }
 
