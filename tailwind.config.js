@@ -205,6 +205,7 @@ module.exports = {
     inset: {
       '0': 0,
       auto: 'auto',
+      '1': '1rem',
       '3': '2.666rem',
     },
     lineHeight: {
@@ -255,7 +256,7 @@ module.exports = {
     fill: [],
     flexGrow: [],
     flexWrap: [],
-    inset: [],
+    inset: ['responsive'],
     letterSpacing: [],
     lineHeight: ['responsive'],
     objectFit: [],
