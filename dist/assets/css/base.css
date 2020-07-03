@@ -2972,6 +2972,106 @@ html {
   font-weight: 500;
 }
 
+.text .text-6xl,.text h2,.text-6xl.append-line,h2.append-line {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.text .text-6xl:after,.text h2:after,.text-6xl.append-line:after,h2.append-line:after {
+  z-index: 10;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 57px;
+  height: 1px;
+  border-bottom: 3px solid var(--purple-300);
+  border-radius: 3px;
+  content: '';
+}
+
+.text .text-3-5xl,.text h5,.text-3-5xl.append-line,h5.append-line {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.text .text-3-5xl:after,.text h5:after,.text-3-5xl.append-line:after,h5.append-line:after {
+  z-index: 10;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 57px;
+  height: 1px;
+  border-bottom: 3px solid var(--purple-300);
+  border-radius: 3px;
+  content: '';
+}
+
+@media (max-width: 1024px) {
+  .text .text-6xl,.text h2,.text-6xl.append-line,h2.append-line {
+    margin-bottom: 35px;
+  }
+
+  .text .text-6xl:after,.text h2:after,.text-6xl.append-line:after,h2.append-line:after {
+    bottom: -20px;
+    width: 50px;
+  }
+}
+
+.text h2 {
+  font-family: IBM Plex Serif, Cambria, "Times New Roman", Times, serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #303441;
+}
+
+.text p {
+  font-size: 1.0625rem;
+  line-height: 1.47;
+  margin-bottom: 2.5rem;
+}
+
+.text img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .text h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+  }
+}
+
+ul.styled_docs > li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+ul.styled_docs > li:before {
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 22px;
+  background: url('../images/svg/docs-svg.svg');
+  content: '';
+}
+
+ul.styled_docs > li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .icon-search-svg {
   width: 13px;
   height: 13px;
@@ -3020,6 +3120,31 @@ html {
 .book-svg {
   width: 18px;
   height: 22px;
+}
+
+.fb-icon-svg {
+  width: 8px;
+  height: 14px;
+}
+
+.vk-icon-svg {
+  width: 16px;
+  height: 9px;
+}
+
+.ok-icon-svg {
+  width: 10px;
+  height: 17px;
+}
+
+.tw-icon-svg {
+  width: 14px;
+  height: 13px;
+}
+
+.wa-icon-svg {
+  width: 16px;
+  height: 16px;
 }
 
 .space-y-0 > :not(:last-child) {
@@ -4352,6 +4477,9 @@ video {
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1.25rem;
@@ -5480,6 +5608,10 @@ video {
   font-size: 0.9375rem;
 }
 
+.text-md {
+  font-size: 1.0625rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
 }
@@ -5496,7 +5628,7 @@ video {
   font-size: 1.75rem;
 }
 
-.text-3\.5xl {
+.text-3-5xl {
   font-size: 1.875rem;
 }
 
@@ -5521,7 +5653,7 @@ video {
 }
 
 .leading-snug {
-  line-height: 1.375;
+  line-height: 1.47;
 }
 
 .leading-normal {
@@ -12077,6 +12209,10 @@ video {
     font-size: 0.9375rem;
   }
 
+  .sm\:text-md {
+    font-size: 1.0625rem;
+  }
+
   .sm\:text-lg {
     font-size: 1.125rem;
   }
@@ -12093,7 +12229,7 @@ video {
     font-size: 1.75rem;
   }
 
-  .sm\:text-3\.5xl {
+  .sm\:text-3-5xl {
     font-size: 1.875rem;
   }
 
@@ -12118,7 +12254,7 @@ video {
   }
 
   .sm\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.47;
   }
 
   .sm\:leading-normal {
@@ -15657,6 +15793,10 @@ video {
     font-size: 0.9375rem;
   }
 
+  .md\:text-md {
+    font-size: 1.0625rem;
+  }
+
   .md\:text-lg {
     font-size: 1.125rem;
   }
@@ -15673,7 +15813,7 @@ video {
     font-size: 1.75rem;
   }
 
-  .md\:text-3\.5xl {
+  .md\:text-3-5xl {
     font-size: 1.875rem;
   }
 
@@ -15698,7 +15838,7 @@ video {
   }
 
   .md\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.47;
   }
 
   .md\:leading-normal {
@@ -19237,6 +19377,10 @@ video {
     font-size: 0.9375rem;
   }
 
+  .lg\:text-md {
+    font-size: 1.0625rem;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
   }
@@ -19253,7 +19397,7 @@ video {
     font-size: 1.75rem;
   }
 
-  .lg\:text-3\.5xl {
+  .lg\:text-3-5xl {
     font-size: 1.875rem;
   }
 
@@ -19278,7 +19422,7 @@ video {
   }
 
   .lg\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.47;
   }
 
   .lg\:leading-normal {
@@ -22817,6 +22961,10 @@ video {
     font-size: 0.9375rem;
   }
 
+  .xl\:text-md {
+    font-size: 1.0625rem;
+  }
+
   .xl\:text-lg {
     font-size: 1.125rem;
   }
@@ -22833,7 +22981,7 @@ video {
     font-size: 1.75rem;
   }
 
-  .xl\:text-3\.5xl {
+  .xl\:text-3-5xl {
     font-size: 1.875rem;
   }
 
@@ -22858,7 +23006,7 @@ video {
   }
 
   .xl\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.47;
   }
 
   .xl\:leading-normal {

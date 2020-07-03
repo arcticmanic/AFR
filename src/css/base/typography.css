@@ -1,59 +1,64 @@
-html {
-  /* font-size: 13px; */
+@custom-selector :--h2-styled
+  .text .text-6xl,
+  .text h2,
+  .text-6xl.append-line,
+  h2.append-line;
+
+@custom-selector :--h5-styled
+  .text .text-3-5xl,
+  .text h5,
+  .text-3-5xl.append-line,
+  h5.append-line;
+
+:--h2-styled {
+  position: relative;
+
+  margin-bottom: 70px;
+
+  &:after {
+    position: absolute;
+    z-index: 10;
+    bottom: -40px;
+    left: 0;
+
+    width: 57px;
+    height: 1px;
+
+    border-bottom: 3px solid var(--purple-300);
+    border-radius: 3px;
+
+    content: '';
+  }
 }
 
-/* Serif */
-@font-face {
-  font-weight: 300;
-  font-family: 'IBM Plex Serif';
-  font-style: normal;
-  font-display: swap;
-  src: local('IBMPlexSerif-Light'),
-    url('../fonts/IBMPlexSerif-Light.ttf') format('truetype');
+:--h5-styled {
+  position: relative;
+
+  margin-bottom: 60px;
+
+  &:after {
+    position: absolute;
+    z-index: 10;
+    bottom: -30px;
+    left: 0;
+
+    width: 57px;
+    height: 1px;
+
+    border-bottom: 3px solid var(--purple-300);
+    border-radius: 3px;
+
+    content: '';
+  }
 }
 
-@font-face {
-  font-weight: 400;
-  font-family: 'IBM Plex Serif';
-  font-style: normal;
-  font-display: swap;
-  src: local('IBMPlexSerif-Regular'),
-    url('../fonts/IBMPlexSerif-Regular.ttf') format('truetype');
-}
+@media (max-width: 1024px) {
+  :--h2-styled {
+    margin-bottom: 35px;
 
-@font-face {
-  font-weight: 500;
-  font-family: 'IBM Plex Serif';
-  font-style: normal;
-  font-display: swap;
-  src: local('IBMPlexSerif-SemiBold'),
-    url('../fonts/IBMPlexSerif-SemiBold.ttf') format('truetype');
-}
-
-/* Sans */
-@font-face {
-  font-weight: 200;
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-display: swap;
-  src: local('IBMPlexSans-ExtraLight'),
-    url('../fonts/IBMPlexSans-ExtraLight.ttf') format('truetype');
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-display: swap;
-  src: local('IBMPlexSans-Regular'),
-    url('../fonts/IBMPlexSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-weight: 500;
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-display: swap;
-  src: local('IBMPlexSans-SemiBold'),
-    url('../fonts/IBMPlexSans-SemiBold.ttf') format('truetype');
+    &:after {
+      bottom: -20px;
+      width: 50px;
+    }
+  }
 }

@@ -23,18 +23,68 @@
 {% block afterFooter %}
   {% embed '../includes/modal-side_big.twig' with {id: 'patientArticles'} %}
     {% block content %}
-      <h2 class="font-serif text-6xl leading-none font-regular text-blue-900">Отек и покраснение ног – что делать?</h2>
-
       <div class="text text-gray-900">
+        <h2>Отек и покраснение ног – что делать?</h2>
+
         <p>Как приятно чувствовать себя легко, не испытывать тяжести в ногах даже к вечеру сложного дня. К сожалению, похвастаться этим могут немногие. Большинство из нас после целого дня на ногах или в офисе чувствуют боли, тяжесть, усталость... А если ноги еще и отекают, приятного вечера не получается.
         <br><br>
         Так что же делать, если у вас регулярно отекают и краснеют ноги? Конечно, обратиться за помощью!</p>
+
+        <img src="./assets/images/patienceArticle_detail-img.png" alt="">
+
+        <p>Если ноги (или одна нога) отекли и покраснели, рекомендуем обратиться к врачу. Особенно если отеки возникают регулярно. Как считают специалисты, отеки — это не норма. Даже если вы весь день стоите на ногах и устаете, наличие повторяющихся отеков все равно говорит об определенных нарушениях.
+        <br><br>
+        Не занимайтесь самолечением, особенно если отмечаете покраснение на ноге и боль. Подобное состояние может быть следствием травмы на которую вы в первый момент не обратили внимания. А может говорить о наличии серьезного заболевания (в том числе тромбофлебита), при котором надо как можно быстрее получить профессиональную медицинскую помощь.
+        Причин для отека и покраснения ноги может быть несколько.
+        <br><br>
+        Некоторые заболевания суставов сопровождаются отеками и покраснениями кожи в области больного сустава. Если это хроническое заболевание, то пациенты знают о нем и обращают внимание. Но бывают и травмы, которые проявляются этими симптомами.
+        <br><br>
+        Травмы сустава всегда сопровождаются болью. Если она не сильная, если сустав не распух и контуры его не изменены, можете забинтовать ногу эластичным бинтом и обратиться к врачу. Если боль сильная, не проходит в покое, если сустав деформирован, нога сильно покраснела и отекла, это говорит о том, что за медицинской помощью надо обратиться незамедлительно.
+        </p>
       </div>
 
-      <div class="flex items-center justify-between mt-12">
-        <button type="sibmit" class="button px-5 bg-purple-300">Войти в кабинет</button>
+      <ul class="text-gray-900 styled_docs">
+        <li>Телеангиэктазии и/или ретикулярные вены</li>
+        <li>Большая подкожная вена бедра</li>
+        <li>Большая подкожная вена голени</li>
+        <li>Малая подкожная вена</li>
+      </ul>
 
-        <a href="#" class="text-purple-300 text-tiny underline" data-micromodal-trigger="modal-recovery">Забыли пароль?</a>
+      <div class="flex flex-wrap items-center justify-between mt-12">
+        <div class="mb-3 flex items-center justify-between space-x-1">
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/fb-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/vk-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/ok-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/tw-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/wa-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+        </div>
+
+        <div class="mb-3 flex flex-wrap items-center justify-between space-x-1">
+          <a href="#" class="button mb-1 px-3 bg-purple-300 space-x-4 group">
+            <span>Все статьи</span>
+            {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform group-hover:translate-x-1'} %}
+          </a>
+
+          <a href="#" class="button mb-1 px-3 bg-purple-300 space-x-4 group">
+            <span>Рекомендации</span>
+            {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform group-hover:translate-x-1'} %}
+          </a>
+        </div>
+
       </div>
     {% endblock %}
   {% endembed %}

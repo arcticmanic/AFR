@@ -17,20 +17,21 @@ const gulp = require('gulp'),
 const rollup = require('gulp-better-rollup'),
   babel = require('rollup-plugin-babel'),
   resolve = require('rollup-plugin-node-resolve'),
-  commonjs = require('rollup-plugin-commonjs'),
-  nodeResolve = require('rollup-plugin-node-resolve'),
-  globals = require('rollup-plugin-node-globals'),
+  // commonjs = require('rollup-plugin-commonjs'),
+  // nodeResolve = require('rollup-plugin-node-resolve'),
+  // globals = require('rollup-plugin-node-globals'),
   uglify = require('gulp-uglify-es').default
 
 const postcss = require('gulp-postcss'),
   postcssPresetEnv = require('postcss-preset-env'),
   cssDeclarationSorter = require('css-declaration-sorter'),
-  stylelint = require('stylelint'),
+  // stylelint = require('stylelint'),
   atImport = require('postcss-import'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   nested = require('postcss-nested'),
-  tailwindcss = require('tailwindcss')
+  tailwindcss = require('tailwindcss'),
+  customSelectors = require('postcss-custom-selectors')
 
 const templateEngine = require('gulp-twig'),
   data = require('gulp-data')
@@ -57,6 +58,7 @@ const postcssPlugins = [
   nested(),
   cssDeclarationSorter({ order: 'smacss' }),
   postcssPresetEnv({ stage: 3, autoprefixer: false }),
+  customSelectors(),
   tailwindcss(),
 ]
 
