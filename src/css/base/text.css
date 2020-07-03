@@ -1,6 +1,14 @@
 .text {
   h2 {
-    @apply font-serif text-6xl leading-none font-regular text-blue-900;
+    @apply mb-10 font-serif text-6xl leading-none font-regular;
+  }
+
+  h3 {
+    @apply mb-10 font-serif text-4xl leading-tight font-regular;
+  }
+
+  h5 {
+    @apply mb-8 font-serif text-3-5xl font-regular;
   }
 
   p {
@@ -13,15 +21,22 @@
     @apply mb-10;
   }
 
-  @media (max-width: 1024px) {
+  @media (--max-tablet) {
     h2 {
       @apply text-3xl;
     }
+    h3 {
+      @apply text-2xl;
+    }
   }
 
-  @media (max-width: 500px) {
+  @media (--max-mobile) {
     h2 {
       @apply text-2xl;
+    }
+
+    h3 {
+      @apply text-xl;
     }
 
     p {

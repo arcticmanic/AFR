@@ -31,7 +31,8 @@ const postcss = require('gulp-postcss'),
   cssnano = require('cssnano'),
   nested = require('postcss-nested'),
   tailwindcss = require('tailwindcss'),
-  customSelectors = require('postcss-custom-selectors')
+  customSelectors = require('postcss-custom-selectors'),
+  customMedia = require('postcss-custom-media')
 
 const templateEngine = require('gulp-twig'),
   data = require('gulp-data')
@@ -56,9 +57,10 @@ const paths = {
 const postcssPlugins = [
   atImport(),
   nested(),
-  cssDeclarationSorter({ order: 'smacss' }),
   postcssPresetEnv({ stage: 3, autoprefixer: false }),
   customSelectors(),
+  customMedia(),
+  cssDeclarationSorter({ order: 'smacss' }),
   tailwindcss(),
 ]
 
@@ -160,8 +162,10 @@ const js = () => {
 
 const clean = () => {
   const files = [
-    path.join(paths.dist.js, '*.js'),
-    paths.dist.css,
+    path.join(paths.dist.js, 'core.js'),
+    path.join(paths.dist.js, 'core.js.map'),
+    path.join(paths.dist.css, 'style.css'),
+    path.join(paths.dist.css, 'style.css.map'),
     path.join(paths.dist.root, '*.html'),
   ]
 
@@ -186,7 +190,10 @@ const watchFiles = () => {
   watch(
     './src/js/**/*',
     gulp.series(
-      selectedClean.bind(this, [path.join(paths.dist.js, '*.js')]),
+      selectedClean.bind(this, [
+        path.join(paths.dist.js, 'core.js'),
+        path.join(paths.dist.js, 'core.js.map'),
+      ]),
       js
     )
   )
@@ -194,7 +201,10 @@ const watchFiles = () => {
   watch(
     ['./src/css/**/*', './tailwind.config.js', './.stylelintrc.json'],
     gulp.series(
-      selectedClean.bind(this, [path.join(paths.dist.css, '*.css')]),
+      selectedClean.bind(this, [
+        path.join(paths.dist.css, 'style.css'),
+        path.join(paths.dist.css, 'style.css.map'),
+      ]),
       styles
     )
   )

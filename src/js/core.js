@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modalTriggers = document.querySelectorAll('[data-micromodal-trigger]')
 
-  modalTriggers?.forEach(el => {
-    el.addEventListener('click', e => {
+  modalTriggers?.forEach((el) => {
+    el.addEventListener('click', (e) => {
       e.preventDefault()
     })
   })
@@ -44,7 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       })
     })
-
-
   }
 })

@@ -1,5 +1,5 @@
-@import './variables.css';
+@import './custom-media.css';
 @import './root.css';
 @import './fonts.css';
-@import './typography.css';
 @import './text.css';
+@import './typography.css';

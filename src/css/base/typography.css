@@ -1,63 +1,110 @@
-@custom-selector :--h2-styled
+@custom-selector :--h h1, h2, h3, h4, h5, h6;
+
+:--h {
+  @apply font-serif  font-regular;
+}
+
+h2:not([class^='text']) {
+  @apply text-6xl leading-none;
+}
+
+h3:not([class^='text']) {
+  @apply text-4xl leading-tight;
+}
+
+h5:not([class^='text']) {
+  @apply text-3-5xl leading-tight;
+}
+
+@custom-selector :--h-append-line
+  .text .text-6xl.append-line,
+  .text h2.append-line,
+  .text-6xl.append-line,
+  h2.append-line,
+  .text .text-4xl.append-line,
+  .text h3.append-line,
+  .text-4xl.append-line,
+  h3.append-line,
+  .text .text-3-5xl.append-line,
+  .text h5.append-line,
+  .text-3-5xl.append-line,
+  h5.append-line;
+
+@custom-selector :--h2-append-line
   .text .text-6xl,
   .text h2,
   .text-6xl.append-line,
   h2.append-line;
 
-@custom-selector :--h5-styled
-  .text .text-3-5xl,
-  .text h5,
+@custom-selector :--h3-append-line
+  .text .text-4xl.append-line,
+  .text h3.append-line,
+  .text-4xl.append-line,
+  h3.append-line;
+
+@custom-selector :--h5-append-line
+  .text .text-3-5xl.append-line,
+  .text h5.append-line,
   .text-3-5xl.append-line,
   h5.append-line;
 
-:--h2-styled {
+:--h-append-line {
   position: relative;
 
+  &:after {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+
+    width: 57px;
+    height: 1px;
+
+    border-bottom: 3px solid var(--purple-300);
+    border-radius: 3px;
+
+    content: '';
+  }
+}
+
+:--h2-append-line {
   margin-bottom: 70px;
 
   &:after {
-    position: absolute;
-    z-index: 10;
     bottom: -40px;
-    left: 0;
-
-    width: 57px;
-    height: 1px;
-
-    border-bottom: 3px solid var(--purple-300);
-    border-radius: 3px;
-
-    content: '';
   }
 }
 
-:--h5-styled {
-  position: relative;
+:--h3-append-line {
+  margin-bottom: 70px;
 
+  &:after {
+    bottom: -40px;
+  }
+}
+
+:--h5-append-line {
   margin-bottom: 60px;
 
   &:after {
-    position: absolute;
-    z-index: 10;
     bottom: -30px;
-    left: 0;
-
-    width: 57px;
-    height: 1px;
-
-    border-bottom: 3px solid var(--purple-300);
-    border-radius: 3px;
-
-    content: '';
   }
 }
 
-@media (max-width: 1024px) {
-  :--h2-styled {
+@media (--max-tablet) {
+  :--h2-append-line {
     margin-bottom: 35px;
 
     &:after {
       bottom: -20px;
+      width: 50px;
+    }
+  }
+
+  :--h5-append-line {
+    margin-bottom: 25px;
+
+    &:after {
+      bottom: -15px;
       width: 50px;
     }
   }

@@ -1,0 +1,10 @@
+:root {
+  --blue-900: #303441;
+  --purple-300: #507bff;
+}
+
+@custom-media --min-tablet (min-width: 1024px);
+@custom-media --max-tablet (max-width: 1024px);
+
+@custom-media --min-mobile (min-width: 500px);
+@custom-media --max-mobile (max-width: 500px);

@@ -38,7 +38,22 @@
     max-width: 85vw;
     max-height: 90vh;
     overflow-y: auto;
-    box-sizing: border-box;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue-900) var(--purple-300);
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--blue-900);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--purple-300);
+      border: 0px solid var(--blue-900);
+    }
   }
 }
 
