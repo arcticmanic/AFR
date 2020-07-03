@@ -1,18 +1,3 @@
-@custom-selector :--h
-  h1:not([class^='text']),
-  h2:not([class^='text']),
-  h3:not([class^='text']),
-  h4:not([class^='text']),
-  h5:not([class^='text']),
-  h6:not([class^='text']);
-
-@custom-selector :--h1 h1:not([class^='text']);
-@custom-selector :--h2 h2:not([class^='text']);
-@custom-selector :--h3 h3:not([class^='text']);
-@custom-selector :--h4 h4:not([class^='text']);
-@custom-selector :--h5 h5:not([class^='text']);
-@custom-selector :--h6 h6:not([class^='text']);
-
 :--h {
   @apply font-serif  font-regular;
 }
@@ -29,6 +14,10 @@
   @apply text-3-5xl leading-tight;
 }
 
+:--h6 {
+  @apply text-2xl leading-tight;
+}
+
 @media (--max-tablet) {
   :--h2 {
     @apply text-4xl;
@@ -37,14 +26,30 @@
   :--h3 {
     @apply text-3xl;
   }
+
+  :--h5 {
+    @apply text-2xl;
+  }
+
+  :--h6 {
+    @apply text-xl;
+  }
 }
 
 @media (--max-mobile) {
   :--h2 {
-    @apply text-2xl;
+    @apply text-3xl;
   }
 
   :--h3 {
+    @apply text-2xl;
+  }
+
+  :--h5 {
+    @apply text-xl;
+  }
+
+  :--h6 {
     @apply text-xl;
   }
 }
@@ -125,6 +130,15 @@
 
 @media (--max-tablet) {
   :--h2-append-line {
+    margin-bottom: 35px;
+
+    &:after {
+      bottom: -20px;
+      width: 50px;
+    }
+  }
+
+  :--h3-append-line {
     margin-bottom: 35px;
 
     &:after {

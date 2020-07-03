@@ -1,18 +1,26 @@
 .text {
-  h2 {
-    @apply mb-10 font-serif text-6xl leading-none font-regular;
+  :--h {
+    @apply font-serif  font-regular;
   }
 
-  h3 {
-    @apply mb-10 font-serif text-4xl leading-tight font-regular;
+  :--h2 {
+    @apply mb-10 text-6xl;
   }
 
-  h5 {
-    @apply mb-8 font-serif text-3-5xl font-regular;
+  :--h3 {
+    @apply mb-10 text-4xl;
+  }
+
+  :--h5 {
+    @apply mb-8 text-3-5xl;
+  }
+
+  :--h6 {
+    @apply mb-6 text-2xl;
   }
 
   p {
-    @apply text-md leading-snug mb-10;
+    @apply mb-10 text-md leading-snug;
   }
 
   img {
@@ -21,26 +29,112 @@
     @apply mb-10;
   }
 
-  @media (--max-tablet) {
-    h2 {
-      @apply text-3xl;
+  :--lists {
+    @apply mb-10;
+
+    li {
+      @apply pl-8 text-md leading-snug;
+
+      &:not(:last-child) {
+        @apply mb-6;
+      }
     }
-    h3 {
-      @apply text-2xl;
+  }
+
+  :--ul {
+    li {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0.65rem;
+
+        width: 4px;
+        height: 4px;
+
+        @apply bg-gray-900;
+
+        border-radius: 50%;
+
+        content: '';
+      }
+    }
+  }
+
+  @media (--max-tablet) {
+    :--h2 {
+      @apply mb-8 text-4xl;
+    }
+
+    :--h3 {
+      @apply mb-8 text-3xl;
+    }
+
+    :--h5 {
+      @apply mb-6 text-2xl;
+    }
+
+    :--h6 {
+      @apply mb-6 text-xl;
+    }
+
+    :--lists {
+      @apply mb-8;
+
+      li {
+        @apply pl-6;
+
+        &:not(:last-child) {
+          @apply mb-6;
+        }
+      }
+    }
+
+    p {
+      @apply mb-8;
+    }
+
+    img {
+      @apply mb-8;
     }
   }
 
   @media (--max-mobile) {
-    h2 {
-      @apply text-2xl;
+    :--h2 {
+      @apply mb-6 text-3xl;
     }
 
-    h3 {
-      @apply text-xl;
+    :--h3 {
+      @apply mb-6 text-2xl;
+    }
+
+    :--h5 {
+      @apply mb-4 text-xl;
+    }
+
+    :--h6 {
+      @apply mb-4 text-xl;
+    }
+
+    :--lists {
+      @apply mb-6;
+
+      li {
+        @apply pl-4 text-base;
+
+        &:not(:last-child) {
+          @apply mb-4;
+        }
+      }
+    }
+
+    img {
+      @apply mb-6;
     }
 
     p {
-      @apply text-base mb-8;
+      @apply mb-6 text-base;
     }
   }
 }

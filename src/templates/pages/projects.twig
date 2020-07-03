@@ -6,10 +6,8 @@
   <div class="container">
     <div class="md:my-12 my-6 grid gap-5 md:grid-cols-2 grid-cols-1">
       {% for item in items %}
-        <a href="#" class="item relative h-64 bg-blue-900 shadow-lg  duration-300 hover:shadow-2xl group">
-          <div>
-            <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
-          </div>
+        <a href="#" class="item relative h-64 bg-blue-900 shadow-lg  duration-300 hover:shadow-2xl group" data-micromodal-trigger="projectsDetail">
+          <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
 
           <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
             <h5 class="md:w-5/6 lg:text-3xl sm:text-2xl text-xl leading-tight font-serif font-light">{{item.title}}</h5>
@@ -22,4 +20,75 @@
       {% endfor %}
     </div>
   </div>
+{% endblock %}
+
+{% block afterFooter %}
+  {% embed '../includes/modal-side_big.twig' with {id: 'projectsDetail'} %}
+    {% block content %}
+      <div class="text text-gray-900">
+        <h3 class="append-line">Регистр методов лечения хронических заболеваний вен</h3>
+
+        <p>Под эгидой Ассоциации флебологов России разработаны два регистра в сфере флебологии: Регистр методов лечения хронических заболеваний вен и Регистр методов лечения венозных тромбоэмболических осложнений.
+        <br><br>
+        Вы находитесь на странице Регистра ХЗВ.</p>
+
+        <img src="./assets/images/projects_detail-img.png" alt="">
+
+        <p>Регистр — это база данных и несколько удобных вспомогательных инструментов. Регистр может быть полезен:
+        
+        <ul>
+          <li>Тем, кто хочет проанализировать результаты лечения своих пациентов.</li>
+          <li>Тем, кто проводит научную работу (клинические исследование) и нуждается в удобной платформе для сбора, предварительной обработки и экспорта данных. Платформа пригодна для проведения любого типа исследований, в том числе для РКИ.</li>
+          <li>Тем, кто нуждается в удобных вспомогательных инструментах для повседневной работы, например, кодировщик диагноза в CEAP, шкала Caprini для оценки риска венозных тромбоэмболических осложнений у хирургических больных. </li>
+        </ul>
+
+        <div class="mt-12 flex flex-wrap items-center">
+          <a href="#" class="mr-10 mb-3 flex items-center justify-between space-x-1 underline">
+            <div href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+              {% include '../svg/globe-icon-svg.twig' with {classes: 'text-white'} %}
+            </div>
+            <span>venousregistry.org</span>
+          </a>
+
+          <div class="mb-3 flex items-center justify-between space-x-1">
+
+            <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+              {% include '../svg/fb-icon-svg.twig' with {classes: 'text-white'} %}
+            </a>
+
+            <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+              {% include '../svg/vk-icon-svg.twig' with {classes: 'text-white'} %}
+            </a>
+
+            <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+              {% include '../svg/ok-icon-svg.twig' with {classes: 'text-white'} %}
+            </a>
+
+            <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+              {% include '../svg/tw-icon-svg.twig' with {classes: 'text-white'} %}
+            </a>
+
+            <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+              {% include '../svg/wa-icon-svg.twig' with {classes: 'text-white'} %}
+            </a>
+          </div>
+        </div>
+
+        <h6 class="mt-10">Документы</h6>
+
+         <ul class="unstyled text-gray-900 styled_docs">
+            <li>Телеангиэктазии и/или ретикулярные вены</li>
+            <li>Большая подкожная вена бедра</li>
+            <li>Большая подкожная вена голени</li>
+            <li>Малая подкожная вена</li>
+          </ul>
+      </div>
+
+
+      <a href="#" class="button mt-16 mb-3 px-3 bg-purple-300 space-x-4 group">
+        <span>Вернуться к проектам</span>
+        {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform group-hover:translate-x-1'} %}
+      </a>
+    {% endblock %}
+  {% endembed %}
 {% endblock %}
