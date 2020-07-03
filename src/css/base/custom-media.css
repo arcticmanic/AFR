@@ -6,6 +6,9 @@
 @custom-media --min-tablet (min-width: 1024px);
 @custom-media --max-tablet (max-width: 1024px);
 
+@custom-media --min-mobile-landscape (min-width: 768px);
+@custom-media --max-mobile-landscape (max-width: 768px);
+
 @custom-media --min-mobile (min-width: 500px);
 @custom-media --max-mobile (max-width: 500px);
 
