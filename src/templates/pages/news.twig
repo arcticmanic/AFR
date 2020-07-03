@@ -1,7 +1,6 @@
 {% extends '../layout/default.twig' %}
 
 {% block scripts %}
-  <script src="./assets/js/jquery-3.5.1.min.js" defer></script>
   <script src="./assets/js/slick.min.js" defer></script>
 {% endblock %}
 
@@ -10,12 +9,12 @@
 
   <div class="container md:mt-12 lg:mb-26 md:mb-20 sm:mb-16 mb-12 my-6 pr-5 grid lg:row-gap-26 row-gap-12 col-gap-12 lg:grid-cols-3 md:grid-cols-2">
     {% for item in items %}
-      <a href="#" class="item" data-micromodal-trigger="newsDetail">
+      <a href="#" class="item group" data-micromodal-trigger="newsDetail">
         <img data-src="./assets/images/news-img-{{item.img}}.png" class="lazy shifted-shadow h-56 w-full object-cover" alt="">
 
         <div class="content mt-10 flex flex-col">
           <p class="text-blue-300 text-xxs">{{item.date}}</p>
-          <p class="md:w-5/6 mt-2 text-xl leading-tight font-serif font-light">{{item.title}}</p>
+          <p class="md:w-5/6 mt-2 text-xl leading-tight font-serif font-light transform duration-300 ease-in-out group-hover:text-blue-300">{{item.title}}</p>
         </div>
       </a>
     {% endfor %}
@@ -30,6 +29,8 @@
       <div class="text text-gray-900">
         <h3>О Научно-практической конференции «Актуальные вопросы флебологии» рассказал Илюхин Евгений Аркадьевич</h3>
 
+        <span class="block mb-8 text-tiny font-bold text-purple-300">04/02/2020</span>
+
         <p>28-31 мая 2020 года в Ярославле состоится XIII Научно-практическая конференция «Актуальные вопросы флебологии» Съезд Ассоциации флебологов России.
         <br><br>
         О том, какую пользу мероприятие принесет практикующим врачам, среди которых ожидаются сосудистые хирурги, флебологи, хирурги, а также врачи УЗД и терапевты, и о том, какие темы будут подняты, рассказал Член Исполнительного Совета Ассоцицации Флебологов России, руководитель направления флебологии сети медицинских центров Reaclinic, главный врач клиники «Медальп», к.м.н. Илюхин Евгений Аркадьевич.</p>
@@ -43,12 +44,30 @@
         Венозные тромбоэмболические осложнения являются проблемой практически для всех специальностей – от госпитальной терапии до любой хирургии. Пожалуй, особенно актуально взаимодействие с онкологами, акушерами-гинекологами: нужно разрабатывать детальные рекомендации по профилактике и лечению ВТЭО как общей направленности, так и под различные группы пациентов и клинические ситуации.</p>
       </div>
 
-      <ul class="text-gray-900 styled_docs">
-        <li>Телеангиэктазии и/или ретикулярные вены</li>
-        <li>Большая подкожная вена бедра</li>
-        <li>Большая подкожная вена голени</li>
-        <li>Малая подкожная вена</li>
-      </ul>
+      <div class="relative carousel-container">
+        <div class="carousel">
+          <img src="./assets/images/news-carousel-img-1.png" alt="">
+          <img src="./assets/images/news-carousel-img-2.png" alt="">
+          <img src="./assets/images/news-carousel-img-3.png" alt="">
+          <img src="./assets/images/news-carousel-img-4.png" alt="">
+          <img src="./assets/images/news-carousel-img-5.png" alt="">
+          <img src="./assets/images/news-carousel-img-1.png" alt="">
+          <img src="./assets/images/news-carousel-img-2.png" alt="">
+          <img src="./assets/images/news-carousel-img-3.png" alt="">
+          <img src="./assets/images/news-carousel-img-4.png" alt="">
+          <img src="./assets/images/news-carousel-img-5.png" alt="">
+        </div>
+
+        <div class="absolute center-50 carousel-arrows flex items-center justify-between">
+          <button class="carousel-arrow rounded-sm focus:outline-none focus:shadow-outline">
+            {% include '../svg/arrow-left-svg.twig' with {classes: 'carousel-arrow carousel-arrow_left text-blue-300'} %}
+          </button>
+          <button class="carousel-arrow rounded-sm focus:outline-none focus:shadow-outline">
+            {% include '../svg/arrow-right-svg.twig' with {classes: 'carousel-arrow carousel-arrow_right text-blue-300'} %}
+          </button>
+        </div>
+      </div>
+
 
       <div class="flex flex-wrap items-center justify-between mt-12">
         <div class="mb-3 flex items-center justify-between space-x-1">

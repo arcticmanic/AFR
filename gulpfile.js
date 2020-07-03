@@ -17,9 +17,6 @@ const gulp = require('gulp'),
 const rollup = require('gulp-better-rollup'),
   babel = require('rollup-plugin-babel'),
   resolve = require('rollup-plugin-node-resolve'),
-  // commonjs = require('rollup-plugin-commonjs'),
-  // nodeResolve = require('rollup-plugin-node-resolve'),
-  // globals = require('rollup-plugin-node-globals'),
   uglify = require('gulp-uglify-es').default
 
 const postcss = require('gulp-postcss'),
@@ -30,9 +27,7 @@ const postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   nested = require('postcss-nested'),
-  tailwindcss = require('tailwindcss'),
-  customSelectors = require('postcss-custom-selectors'),
-  customMedia = require('postcss-custom-media')
+  tailwindcss = require('tailwindcss')
 
 const templateEngine = require('gulp-twig'),
   data = require('gulp-data')
@@ -57,9 +52,7 @@ const paths = {
 const postcssPlugins = [
   atImport(),
   nested(),
-  postcssPresetEnv({ stage: 3, autoprefixer: false }),
-  customSelectors(),
-  customMedia(),
+  postcssPresetEnv({ stage: 1, autoprefixer: false }),
   cssDeclarationSorter({ order: 'smacss' }),
   tailwindcss(),
 ]

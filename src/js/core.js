@@ -7,7 +7,14 @@ import MicroModal from 'micromodal'
 document.addEventListener('DOMContentLoaded', () => {
   lazyLoading()
 
-  MicroModal.init({ disableScroll: true, awaitCloseAnimation: true })
+  MicroModal.init({
+    onShow: (modal) =>
+      document.dispatchEvent(
+        new CustomEvent('modal-opens', { detail: { modal: modal } })
+      ),
+    disableScroll: true,
+    awaitCloseAnimation: true,
+  })
 
   const modalTriggers = document.querySelectorAll('[data-micromodal-trigger]')
 
