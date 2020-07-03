@@ -1,0 +1,42 @@
+{% extends '../layout/default.twig' %}
+
+{% block content %}
+  {% include '../includes/content-header.twig' with {title: 'Международное представительство '} %}
+
+  <div class="container">
+    <div class="text text-on-page prepend-line md:mt-20 mt-10 md:mb-12 mb-10">
+      <p>Ассоциация Флебологов России является членом International Union of Phlebology и European College of Phlebology, а также имеет представителей в European Venous Forum, American Venous Forum и в Venous-lymphatics World International Network foundation (vWIN) </p>
+    </div>
+  </div>
+
+  <div class="relative py-20">
+    <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 w-full h-full text-blue-800 z-0" >
+      <defs>
+        <pattern id="pattern_0gLSGx" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+          <line x1="0" y="0" x2="0" y2="4" stroke="currentColor" stroke-width="4" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#pattern_0gLSGx)" :opacity="1" />
+    </svg>
+
+    <div class="container">
+      <div class="grid gap-5 md:grid-cols-2 grid-cols-1">
+        {% for item in items %}
+          <a href="#" class="item relative h-48 bg-blue-900 shadow-lg  duration-300 hover:shadow-2xl group" data-micromodal-trigger="projectsDetail">
+            <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
+
+            <div class="absolute content inset-0 left-0 lg:py-6 lg:px-8 px-4 pb-5 flex">
+              <img data-src="./assets/images/international-img-{{loop.index}}.png" class="lazy my-auto" alt="">
+
+              <div class="flex flex-col w-5/6 ml-10 py-2">
+                <p class="lg:text-xl sm:text-2xl text-xl leading-tight font-serif font-light">{{item.title}}</p>
+                <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">Перейти</div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
