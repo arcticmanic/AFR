@@ -281,3 +281,38 @@ ul.styled_docs {
     }
   }
 }
+
+ol.decimal {
+  counter-reset: my-awesome-counter;
+
+  & > li {
+    position: relative;
+
+    counter-increment: my-awesome-counter;
+
+    @apply pl-10;
+
+    &:before {
+      position: absolute;
+      left: 0;
+
+      content: counter(my-awesome-counter) '. ';
+    }
+  }
+}
+
+@media (--max-tablet) {
+  ol.decimal {
+    & > li {
+      @apply pl-8;
+    }
+  }
+}
+
+@media (--max-mobile-landscape) {
+  ol.decimal {
+    & > li {
+      @apply pl-6;
+    }
+  }
+}

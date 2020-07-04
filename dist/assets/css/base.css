@@ -3251,6 +3251,34 @@ ul.styled_docs > li:not(:last-child) {
   margin-bottom: 15px;
 }
 
+ol.decimal {
+  counter-reset: my-awesome-counter;
+}
+
+ol.decimal > li {
+  position: relative;
+  counter-increment: my-awesome-counter;
+  padding-left: 2.5rem;
+}
+
+ol.decimal > li:before {
+  position: absolute;
+  left: 0;
+  content: counter(my-awesome-counter) '. ';
+}
+
+@media (max-width: 1024px) {
+  ol.decimal > li {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  ol.decimal > li {
+    padding-left: 1.5rem;
+  }
+}
+
 h1:not([class^='text']),h2:not([class^='text']),h3:not([class^='text']),h4:not([class^='text']),h5:not([class^='text']),h6:not([class^='text']) {
   font-family: IBM Plex Serif, Cambria, "Times New Roman", Times, serif;
   font-weight: 400;

@@ -1,0 +1,43 @@
+{% extends '../layout/default.twig' %}
+
+{% block content %}
+  {% include '../includes/content-header.twig' with {title: 'Результаты поиска'} %}
+
+  <div class="container lg:mb-16 md:mb-10 mb-6">
+    <div class="my-5">
+      <form class="relative w-full mr-4">
+        <input class="w-full py-1 px-5 bg-transparent border border-solid border-blue-700 rounded-full text-md text-gray-500 placeholder-gray-500 focus:outline-none focus:shadow-outline" type="text" value="Процесс">
+
+        <button type="submit" class="absolute inset-y-0 right-0 flex items-center justify-between px-5 focus:outline-none focus:shadow-outline rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-search-svg text-blue-300 stroke-current" viewBox="0 0 16 16">
+            <path stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+              d="M11.5 11.5L15 15" />
+            <circle cx="7" cy="7" r="6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+          </svg>
+        </button>
+      </form>
+
+      <ol class="decimal mt-10 md:pl-5 pl-2 text-white text-md leading-tight">
+        <li class="mb-8">
+          <span class="block mb-2">Тромботический и сопутствующий воспалительный <span class="text-blue-300">процесс</span> может поражать не только варикозно измененные, но и не варикозные вены.</span>
+          <a href="#" class="text-tiny hover:text-blue-300">https://phlebounion.ru/magazine/</a>
+        </li>
+        <li class="mb-8">
+          <span class="block mb-2">Тромботический <span class="text-blue-300">процесс</span> в поверхностных венах может сопровождаться поражением глубоких вен (тромбоз глубоких вен, ТГВ). </span>
+          <a href="#" class="text-tiny hover:text-blue-300">https://phlebounion.ru/magazine/</a>
+        </li>
+        <li class="mb-8">
+          <span class="block mb-2">Считается, что чем ближе проксимальный уровень тромба в поверхностной вене к соустью, тем выше риск перехода <span class="text-blue-300">процесс</span> в глубокие вены...</span>
+          <a href="#" class="text-tiny hover:text-blue-300">https://phlebounion.ru/magazine/</a>
+        </li>
+        <li class="mb-8">
+          <a href="#" class="block mb-2 text-blue-300 hover:underline">...выраженность его и склонность к прогрессированию процесса в проксимальном направлении, в сравнении с поражением вен нижних конечностей, существенно ниже</a>
+          <a href="#" class="text-tiny hover:text-blue-300">https://phlebounion.ru/magazine/</a>
+        </li>
+      </ol>
+  </div>
+</div>
+
+{% include '../includes/pagination.twig' %}
+
+{% endblock %}
