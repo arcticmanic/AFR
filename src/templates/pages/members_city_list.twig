@@ -125,6 +125,33 @@
   </div>
 
   <div id="map" class="w-full my-auto" style="height: 790px;">
-
+    <a href="#" data-micromodal-trigger="modal-city">Открыть</a>
   </div>
+{% endblock %}
+
+{% block afterFooter %}
+  {% embed '../includes/modal-side.twig' with {id: 'modal-city', classes: 'h-full'} %}
+    {% block content %}
+      <div class="flex flex-col flex-1 h-full">
+        <h5 class="append-line font-serif md:text-6xl text-2xl leading-tight text-blue-900">Санкт-Петербург</h5>
+
+        <div class="flex flex-col mt-2">
+          {% for member in members %}
+            <div class="mb-8 flex item-center md:space-x-8 space-x-4">
+              <img data-src="./assets/images/member-city-img-{{loop.index}}.png" alt="" class="lazy h-16 w-16">
+              <div class="flex flex-col justify-center text-gray-900">
+                <p class="mb-2 font-serif leading-none md:text-1-5xl text-lg">{{member.name}}</p>
+                <p class="text-base leading-tight">{{member.position}}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <a href="#" class="button mt-auto mb-3 px-3 bg-purple-300 space-x-4 group" data-micromodal-close>
+          <span class="pointer-events-none">Вернуться к рекомендациям</span>
+          {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform pointer-events-none group-hover:translate-x-1'} %}
+        </a>
+      </div>
+    {% endblock %}
+  {% endembed %}
 {% endblock %}

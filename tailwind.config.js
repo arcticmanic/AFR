@@ -186,6 +186,7 @@ module.exports = {
       md: '1.0625rem', // 17px
       lg: '1.125rem', // 18px
       xl: '1.25rem', // 20px
+      '1-5xl': '1.375rem', // 22px,
       '2xl': '1.5rem', // 24px
       '3xl': '1.75rem', // 28px
       '3-5xl': '1.875rem', // 30px
@@ -244,7 +245,7 @@ module.exports = {
     fill: {
       current: 'currentColor',
     },
-    fill: (theme) => ({
+    fill: theme => ({
       current: 'currentColor',
       'blue-300': theme('colors.blue.300'),
       'blue-900': theme('colors.blue.900'),
@@ -329,7 +330,7 @@ module.exports = {
     function ({ addUtilities, theme, config }) {
       const themeColors = theme('colors')
       const individualBorderColors = Object.keys(themeColors).map(
-        (colorName) => ({
+        colorName => ({
           [`.border-b-${colorName}`]: {
             borderBottomColor: themeColors[colorName],
           },
