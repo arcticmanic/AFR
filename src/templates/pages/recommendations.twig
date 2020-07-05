@@ -34,9 +34,9 @@
   {% embed '../includes/modal-side_big.twig' with {id: 'modal-recommendations-search', classes: 'modal-side_bigger'} %}
     {% block content %}
       <div class="h-full flex flex-col">
-        <h2 class="mb-10 font-serif text-6xl text-gray-900">Поиск по разделу</h2>
+        <h2 class="mb-12 font-serif lg:text-6xl md:text-5xl sm:text-3-5xl text-3xl leading-none text-gray-900">Поиск по разделу</h2>
 
-        <form class="relative w-full mr-4 text-gray-900">
+        <form class="relative w-full mb-10 text-gray-900">
           <input class="w-full py-1 px-5 bg-blue-100 border border-solid border-purple-300 border-opacity-10 rounded-full text-md placeholder-gray-500 focus:outline-none focus:shadow-outline" type="text" value="Процесс">
 
           <button type="submit" class="absolute inset-y-0 right-0 flex items-center justify-between px-5 focus:outline-none focus:shadow-outline rounded-full">
@@ -44,8 +44,36 @@
           </button>
 
           <span class="absolute sm:top-50 top-3 right-0 sm:mr-12 mr-1 sm:mb-0 text-purple-300 text-opacity-50">Найдено <span class="font-bold">22</span> совпадения</span>
-
         </form>
+
+        {% for accordionItem in accordionItems %}
+          <div class="mb-8">
+            <div class="accordion-title flex items-center">
+              <button class="accordion__button h-10 w-10 md:mr-6 mr-3 flex items-center justify-center rounded-full bg-gray-100 text-gray-900 focus:outline-none focus:shadow-outline">
+                {% include '../svg/accordion-svg.twig' %}
+
+              </button>
+
+              <h6 class="w-5/6 font-serif leading-none md:text-2xl text-xl text-gray-900">{{accordionItem.title}}</h6>
+            </div>
+
+
+            <ol class="accordion-content decimal mt-10 md:pl-5 pl-2 text-gray-900 text-md leading-tight">
+              <li class="mb-8">
+                <span class="block mb-2">Тромботический и сопутствующий воспалительный <span class="px-1 bg-purple-300 bg-opacity-10 text-purple-300">процесс</span> может поражать не только варикозно измененные, но и не варикозные вены.</span>
+              </li>
+              <li class="mb-8">
+                <span class="block mb-2">Тромботический <span class="px-1 bg-purple-300 bg-opacity-10 text-purple-300">процесс</span> в поверхностных венах может сопровождаться поражением глубоких вен (тромбоз глубоких вен, ТГВ). </span>
+              </li>
+              <li class="mb-8">
+                <span class="block mb-2">Считается, что чем ближе проксимальный уровень тромба в поверхностной вене к соустью, тем выше риск перехода <span class="px-1 bg-purple-300 bg-opacity-10 text-purple-300">процесс</span> в глубокие вены...</span>
+              </li>
+              <li class="mb-8">
+                <a href="#" class="block mb-2 text-purple-300 hover:underline">...выраженность его и склонность к прогрессированию процесса в проксимальном направлении, в сравнении с поражением вен нижних конечностей, существенно ниже</a>
+              </li>
+            </ol>
+          </div>
+        {% endfor %}
 
         <a href="#" class="button mt-auto mb-3 px-3 bg-purple-300 space-x-4 group" data-micromodal-close>
           <span class="pointer-events-none">Вернуться к рекомендациям</span>

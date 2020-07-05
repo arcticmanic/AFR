@@ -33,7 +33,12 @@
 
     &.modal-side_bigger {
       .modal__container {
+        max-width: unset;
         width: 87.5vw;
+
+        @media (max-width: 370px) {
+          width: 100vw;
+        }
       }
     }
   }
@@ -47,6 +52,11 @@
 
     scrollbar-width: thin;
     scrollbar-color: var(--blue-900) var(--purple-300);
+
+    @media (max-width: 370px) {
+      max-width: unset;
+      width: 100vw;
+    }
 
     &::-webkit-scrollbar {
       width: 7px;

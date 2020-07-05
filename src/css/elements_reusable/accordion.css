@@ -1,0 +1,40 @@
+.accordion__button {
+  &:not(.active) {
+    .accordion-svg .plus {
+      display: block;
+    }
+    .accordion-svg .minus {
+      display: none;
+    }
+  }
+
+  &.active {
+    .accordion-svg .plus {
+      display: none;
+    }
+
+    .accordion-svg .minus {
+      display: block;
+    }
+  }
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .accord__button {
+    marign-right: 2rem;
+  }
+}
+
+.accordion-content {
+  &:not(.active) {
+    display: none;
+  }
+
+  &.active {
+    display: block;
+  }
+}

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   lazyLoading()
 
   MicroModal.init({
-    onShow: (modal) =>
+    onShow: modal =>
       document.dispatchEvent(
         new CustomEvent('modal-opens', { detail: { modal: modal } })
       ),
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modalTriggers = document.querySelectorAll('[data-micromodal-trigger]')
 
-  modalTriggers?.forEach((el) => {
-    el.addEventListener('click', (e) => {
+  modalTriggers?.forEach(el => {
+    el.addEventListener('click', e => {
       e.preventDefault()
     })
   })
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'input[data-input-type="phone"]'
   )
 
-  inputPhones?.forEach((inputPhone) => {
+  inputPhones?.forEach(inputPhone => {
     IMask(inputPhone, { mask: '+{7} (000) 000-00-00' })
   })
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const api = menu.API
 
-    mobileMenu.querySelectorAll('[data-micromodal-trigger]')?.forEach((el) => {
+    mobileMenu.querySelectorAll('[data-micromodal-trigger]')?.forEach(el => {
       el.addEventListener('click', () => {
         api.close({
           panel: menu,
@@ -52,4 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
+
+  const accordButtons = document.querySelectorAll('.accordion__button')
+
+  accordButtons?.forEach(accordButton =>
+    accordButton.addEventListener(
+      'click',
+      e => (
+        e.target.classList.toggle('active'),
+        e.target
+          ?.closest('.accordion-title')
+          .nextElementSibling.classList.toggle('active')
+      )
+    )
+  )
 })

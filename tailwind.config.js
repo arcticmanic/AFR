@@ -10,7 +10,7 @@ module.exports = {
       white: '#fff',
 
       gray: {
-        // 100: '#f7fafc',
+        100: '#f0f3ff', //custom
         200: '#d6d6d9',
         // 300: '#e2e8f0',
         // 400: '#cbd5e0',
@@ -217,7 +217,7 @@ module.exports = {
       none: '1',
       tight: '1.25',
       snug: '1.47',
-      normal: '1.5',
+      // normal: '1.5',
       relaxed: '1.875',
       loose: '2',
       // '3': '.75rem',
@@ -355,7 +355,6 @@ module.exports = {
     alignSelf: false,
     appearance: false,
     backgroundAttachment: false,
-    backgroundOpacity: false,
     backgroundPosition: false,
     backgroundRepeat: false,
     backgroundSize: false,
