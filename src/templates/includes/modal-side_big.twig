@@ -1,4 +1,4 @@
-<div id="{{id}}" aria-hidden="true" class="modal modal-side modal-side_big micromodal-slide">
+<div id="{{id}}" aria-hidden="true" class="modal modal-side micromodal-slide {{classes}}">
   <div tabindex="-1" data-micromodal-close class="modal__overlay">
     <div role="dialog" aria-modal="true" class="relative modal__container">
         <button class="modal__close absolute z-30 md:top-2-5 md:right-2-5 top-1 right-1 flex items-center justify-center p-2 rounded-full bg-purple-300 focus:outline-none focus:shadow-outline" aria-label="Close modal" data-micromodal-close>
@@ -14,7 +14,7 @@
           </svg>
         </button>
 
-      <div class="modal-inner-content lg:pl-24 lg:pr-52 lg:pt-18 lg:mt-6 md:p-10 p-6 pt-12">
+      <div class="modal-inner-content h-full lg:pl-24 lg:pr-52 lg:pt-18 lg:mt-6 md:p-10 p-6 pt-12">
         {% block content %}
         {% endblock %}
       </div>

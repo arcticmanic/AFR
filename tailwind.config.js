@@ -76,7 +76,7 @@ module.exports = {
       //   900: '#234e52',
       // },
       blue: {
-        // 100: '#ebf8ff',
+        100: '#f7f9ff', //custom
         // 200: '#bee3f8',
         300: '#43c0ff', //custom
         400: '#63b3ed',
@@ -186,13 +186,13 @@ module.exports = {
       md: '1.0625rem', // 17px
       lg: '1.125rem', // 18px
       xl: '1.25rem', // 20px
-      '2xl': '1.5rem',
-      '3xl': '1.75rem',
-      '3-5xl': '1.875rem',
-      '4xl': '2.25rem',
-      '4-5xl': '2.8125rem',
-      '5xl': '3rem',
-      '6xl': '3.75rem',
+      '2xl': '1.5rem', // 24px
+      '3xl': '1.75rem', // 28px
+      '3-5xl': '1.875rem', // 30px
+      '4xl': '2.25rem', // 36px
+      '4-5xl': '2.8125rem', // 45px
+      '5xl': '3rem', // 48px
+      '6xl': '3.75rem', // 60px
     },
     fontWeight: {
       // hairline: '100',
@@ -229,6 +229,18 @@ module.exports = {
       // '9': '2.25rem',
       // '10': '2.5rem',
     },
+    borderWidth: {
+      default: '1px',
+    },
+    borderRadius: {
+      sm: '0.125rem',
+      full: '9999px',
+    },
+    opacity: {
+      '10': '0.1',
+      '25': '0.25',
+      '50': '0.5',
+    },
     fill: {
       current: 'currentColor',
     },
@@ -255,7 +267,6 @@ module.exports = {
     borderStyle: [],
     borderWidth: [],
     boxShadow: ['hover', 'focus'],
-    boxSizing: [],
     cursor: [],
     display: ['responsive', 'group-hover'],
     fill: [],
@@ -348,8 +359,8 @@ module.exports = {
     backgroundPosition: false,
     backgroundRepeat: false,
     backgroundSize: false,
-    borderOpacity: false,
     borderCollapse: false,
+    boxSizing: false,
     container: false,
     clear: false,
     divideColor: false,
@@ -366,8 +377,7 @@ module.exports = {
     placeholderOpacity: false,
     skew: false,
     space: false,
-    rotate: [],
-    textOpacity: false,
+    rotate: false,
     transitionProperty: false,
     transitionDelay: false,
     transformOrigin: false,

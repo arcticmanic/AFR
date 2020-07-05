@@ -25,9 +25,15 @@
       max-height: 100vh;
     }
 
-    &_big {
+    &.modal-side_big {
       .modal__container {
         width: 1185px;
+      }
+    }
+
+    &.modal-side_bigger {
+      .modal__container {
+        width: 87.5vw;
       }
     }
   }
