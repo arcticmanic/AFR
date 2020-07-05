@@ -85,5 +85,144 @@
         </div>
       {% endblock %}
     {% endembed %}
+
+    {% embed '../includes/modal-side_big.twig' with {id: 'modal-registration', classes: 'modal-side_big'} %}
+      {% block content %}
+        <h2 class="append-line font-serif md:text-6xl text-3xl leading-none  font-regular text-blue-900">Заявка на вступление в ассоциацию</h2>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">E-mail: <span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-tiny border border-red-400 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+        
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Резервный e-mail: <span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+        
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Фамилия:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+        
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Имя:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+        
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Отчество:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+        
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Дата рождения:<span class="text-purple-300">*</span></label>
+          <div class='flex flex-1 items-center space-x-4'>
+            <input type="text" class="w-1/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="День">
+            <input type="text" class="w-1/2 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Месяц">
+            <input type="text" class="w-1/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Год">
+          </div>
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Страна:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Россия">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Город:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Санкт-Петербург">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Домашний адрес:</label>
+          <div class='flex flex-1 items-center space-x-4'>
+            <input type="text" class="w-3/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Адрес">
+            <input type="text" class="w-1/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Индекс">
+          </div>
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Мобильный телефон:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Дополнительный телефон:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">ВУЗ:<span class="text-purple-300">*</span></label>
+          <div class='flex flex-1 items-center space-x-4'>
+            <input type="text" class="w-3/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Наименование">
+            <input type="text" class="w-1/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Год окончания">
+          </div>
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Рабочая специальность:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Место работы:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Должность:<span class="text-purple-300">*</span></label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Адрес места работы:</label>
+          <div class='flex flex-1 items-center space-x-4'>
+            <input type="text" class="w-3/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Адрес">
+            <input type="text" class="w-1/4 p-2 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Индекс">
+          </div>
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Сайт организации:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Личный сайт:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Ссылка на резюме:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">ORCID:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">ScopusID:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">SPIN-код:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+        <div class="flex items-center mt-8 space-x-4">
+          <label class="w-1/6 text-right text-blue-900 text-tiny">Контакты для АФР:</label>
+          <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900">
+        </div>
+
+
+        <div class="flex items-center justify-between mt-12">
+          <button type="sibmit" class="button px-5 bg-purple-300">Выслать новый пароль</button>
+        </div>
+      {% endblock %}
+    {% endembed %}
   </div>
 </body>
