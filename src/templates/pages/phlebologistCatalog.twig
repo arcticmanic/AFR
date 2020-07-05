@@ -4,17 +4,16 @@
   {% include '../includes/content-header-with-scheme-btn.twig' with {title: 'Флебологу'} %}
 
   <div class="container">
-    <div class="md:my-8 my-6 grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <div class="xl:mb-26 lg:mb-20 md:mb-16 mb-12 mt-2 grid gap-8 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       {% for item in items %}
         <a href="#" class="item relative h-40 bg-blue-900 shadow-lg ease-in-out duration-300 hover:shadow-2xl group">
-          <div>
-            <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto h-full w-full object-cover opacity-25" alt="">
-          </div>
+          <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto max-h-full w-full object-cover opacity-25" alt="">
+          
 
           <div class="absolute content inset-0 left-0 lg:pt-8 pt-4 lg:pl-10 px-4 lg:pb-5 pb-3 flex flex-col">
-            <h5 class="lg:w-2/3 text-xl leading-tight font-serif font-light">{{item.title}}</h5>
+            <h6 class="lg:w-5/6 text-xl leading-tight font-serif font-light">{{item.title}}</h6>
             <div class="mt-auto py-3 max-w-fit flex items-center justify-between space-x-3 text-tiny">
-              <span>Подробнее</span>
+              <span>Посмотреть</span>
               {% include '../svg/arrow-right-svg.twig' with {classes: "text-purple-300 ease-in-out duration-300 transform group-hover:translate-x-3"} %}
             </div>
           </div>

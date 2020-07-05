@@ -209,7 +209,9 @@ module.exports = {
       '0': 0,
       auto: 'auto',
       '1': '1rem',
-      '3': '2.666rem',
+      '2-5': '2.666rem',
+      '3': '3rem',
+      '50': '50%',
     },
     lineHeight: {
       none: '1',
@@ -357,7 +359,6 @@ module.exports = {
     flexShrink: false,
     fontSmoothing: false,
     listStylePosition: false,
-    maxHeight: false,
     maxWidth: false,
     minWidth: false,
     objectPosition: false,
