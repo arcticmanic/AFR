@@ -17,7 +17,9 @@ const gulp = require('gulp'),
 const rollup = require('gulp-better-rollup'),
   babel = require('rollup-plugin-babel'),
   resolve = require('rollup-plugin-node-resolve'),
-  uglify = require('gulp-uglify-es').default
+  uglify = require('gulp-uglify-es').default,
+  nodeResolve = require('rollup-plugin-node-resolve'),
+  globals = require('rollup-plugin-node-globals')
 
 const postcss = require('gulp-postcss'),
   postcssPresetEnv = require('postcss-preset-env'),
@@ -136,6 +138,8 @@ const js = () => {
       rollup(
         {
           plugins: [
+            nodeResolve({ preferBuiltins: false }),
+            globals(),
             babel({
               presets: ['@babel/preset-env'],
             }),
@@ -165,7 +169,7 @@ const clean = () => {
   return del(files)
 }
 
-const selectedClean = (files) => {
+const selectedClean = files => {
   return del(files)
 }
 
