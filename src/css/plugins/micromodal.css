@@ -29,6 +29,15 @@
       .modal__container {
         width: 1185px;
       }
+
+      &#modal-registration {
+        @media (--max-tablet) {
+          .modal__container {
+            max-width: unset;
+            width: 100vw;
+          }
+        }
+      }
     }
 
     &.modal-side_bigger {

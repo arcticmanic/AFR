@@ -36,6 +36,12 @@ $(document).ready(function () {
     }
   })
 
+  $('.datepicker-here').datepicker({
+    language: 'ru',
+    minDate: new Date(),
+    autoClose: true,
+  })
+
   if ($('#map').length > 0 && $('#init-map').length > 0) {
     $('#init-map').one('click', () => {
       ymaps.ready(init)

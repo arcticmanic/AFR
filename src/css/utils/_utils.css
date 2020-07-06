@@ -53,3 +53,14 @@ a:hover {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+.checkbox {
+  input[type='checkbox']:checked + svg.tick-icon-svg {
+    opacity: 1;
+  }
+
+  svg.tick-icon-svg {
+    opacity: 0;
+    @apply transform duration-300 ease-in-out;
+  }
+}

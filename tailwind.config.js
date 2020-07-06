@@ -238,6 +238,7 @@ module.exports = {
       full: '9999px',
     },
     opacity: {
+      '0': '0',
       '10': '0.1',
       '25': '0.25',
       '50': '0.5',
@@ -351,7 +352,6 @@ module.exports = {
   ],
   corePlugins: {
     accessibility: false,
-    appearance: false,
     alignContent: false,
     alignSelf: false,
     appearance: false,

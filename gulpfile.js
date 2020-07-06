@@ -6,7 +6,8 @@ const path = require('path'),
   fs = require('fs')
 
 const browserSync = require('browser-sync').create(),
-  reload = browserSync.reload
+  reload = browserSync.reload,
+  merge = require('merge-stream')
 
 const gulp = require('gulp'),
   watch = require('gulp-watch'),
@@ -31,6 +32,9 @@ const postcss = require('gulp-postcss'),
   nested = require('postcss-nested'),
   tailwindcss = require('tailwindcss')
 
+const sass = require('gulp-sass')
+sass.compiler = require('node-sass')
+
 const templateEngine = require('gulp-twig'),
   data = require('gulp-data')
 
@@ -41,6 +45,7 @@ const paths = {
     data: path.join(__dirname, 'src', 'data'),
     js: path.join(__dirname, 'src', 'js'),
     css: path.join(__dirname, 'src', 'css'),
+    scss: path.join(__dirname, 'src', 'scss'),
     images: path.join(__dirname, 'src', 'images'),
   },
   dist: {
@@ -110,16 +115,24 @@ const templating = () => {
 }
 
 const styles = () => {
+  const scssStream = gulp
+    .src(path.join(paths.src.scss, 'style.scss'))
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(postcssPlugins))
+
   const cssStream = gulp
     .src(path.join(paths.src.css, 'base.css'))
     .pipe(sourcemaps.init())
     .pipe(postcss(postcssPlugins))
+
+  const mergedStream = merge(cssStream, scssStream)
     .pipe(size({ title: 'css' }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(browserSync.stream())
 
-  return cssStream
+  return mergedStream
 }
 
 const js = () => {
@@ -196,7 +209,12 @@ const watchFiles = () => {
   )
 
   watch(
-    ['./src/css/**/*', './tailwind.config.js', './.stylelintrc.json'],
+    [
+      './src/css/**/*',
+      './src/scss/**/*',
+      './tailwind.config.js',
+      './.stylelintrc.json',
+    ],
     gulp.series(
       selectedClean.bind(this, [
         path.join(paths.dist.css, 'style.css'),
