@@ -1,3 +1,1441 @@
+.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-, .-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  background: #a2ddf6;
+  color: #fff;
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-, .-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: #8ad5f4;
+}
+
+.-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.1);
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-, .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
+  border: none;
+  background: none;
+}
+
+.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-, .-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  background: #a2ddf6;
+  color: #fff;
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-, .-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: #8ad5f4;
+}
+
+.-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.1);
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-, .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
+  border: none;
+  background: none;
+}
+
+/* -------------------------------------------------
+    Datepicker cells
+   ------------------------------------------------- */
+
+.datepicker--cells {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.datepicker--cell {
+  box-sizing: border-box;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.datepicker--cell.-focus- {
+  background: #f0f0f0;
+}
+
+.datepicker--cell.-current- {
+  color: #4EB5E6;
+}
+
+.datepicker--cell.-current-.-focus- {
+  color: #4a4a4a;
+}
+
+.datepicker--cell.-current-.-in-range- {
+  color: #4EB5E6;
+}
+
+.datepicker--cell.-in-range- {
+  border-radius: 0;
+  background: rgba(92, 196, 239, 0.1);
+  color: #4a4a4a;
+}
+
+.datepicker--cell.-in-range-.-focus- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell.-disabled- {
+  color: #aeaeae;
+  cursor: default;
+}
+
+.datepicker--cell.-disabled-.-focus- {
+  color: #aeaeae;
+}
+
+.datepicker--cell.-disabled-.-in-range- {
+  color: #a1a1a1;
+}
+
+.datepicker--cell.-disabled-.-current-.-focus- {
+  color: #aeaeae;
+}
+
+.datepicker--cell.-range-from- {
+  border: 1px solid rgba(92, 196, 239, 0.5);
+  border-radius: 4px 0 0 4px;
+  background-color: rgba(92, 196, 239, 0.1);
+}
+
+.datepicker--cell.-range-to- {
+  border: 1px solid rgba(92, 196, 239, 0.5);
+  border-radius: 0 4px 4px 0;
+  background-color: rgba(92, 196, 239, 0.1);
+}
+
+.datepicker--cell.-range-from-.-range-to- {
+  border-radius: 4px;
+}
+
+.datepicker--cell.-selected- {
+  border: none;
+  background: #5cc4ef;
+  color: #fff;
+}
+
+.datepicker--cell.-selected-.-current- {
+  background: #5cc4ef;
+  color: #fff;
+}
+
+.datepicker--cell.-selected-.-focus- {
+  background: #45bced;
+}
+
+.datepicker--cell:empty {
+  cursor: default;
+}
+
+.datepicker--days-names {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0 3px;
+}
+
+.datepicker--day-name {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: #FF9A19;
+  font-size: .8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.datepicker--cell-day {
+  width: 14.28571%;
+}
+
+.datepicker--cells-months {
+  height: 170px;
+}
+
+.datepicker--cell-month {
+  width: 33.33%;
+  height: 25%;
+}
+
+.datepicker--years {
+  height: 170px;
+}
+
+.datepicker--cells-years {
+  height: 170px;
+}
+
+.datepicker--cell-year {
+  width: 25%;
+  height: 33.33%;
+}
+
+.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-, .-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  background: #a2ddf6;
+  color: #fff;
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-, .-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: #8ad5f4;
+}
+
+.-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.1);
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-, .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
+  border: none;
+  background: none;
+}
+
+/* -------------------------------------------------
+    Navigation
+   ------------------------------------------------- */
+
+.datepicker--nav {
+  display: flex;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 4px;
+  border-bottom: 1px solid #efefef;
+}
+
+.-only-timepicker- .datepicker--nav {
+  display: none;
+}
+
+.datepicker--nav-title,
+.datepicker--nav-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.datepicker--nav-action {
+  width: 32px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.datepicker--nav-action:hover {
+  background: #f0f0f0;
+}
+
+.datepicker--nav-action.-disabled- {
+  visibility: hidden;
+}
+
+.datepicker--nav-action svg {
+  width: 32px;
+  height: 32px;
+}
+
+.datepicker--nav-action path {
+  fill: none;
+  stroke: #9c9c9c;
+  stroke-width: 2px;
+}
+
+.datepicker--nav-title {
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.datepicker--nav-title i {
+  margin-left: 5px;
+  color: #9c9c9c;
+  font-style: normal;
+}
+
+.datepicker--nav-title:hover {
+  background: #f0f0f0;
+}
+
+.datepicker--nav-title.-disabled- {
+  background: none;
+  cursor: default;
+}
+
+.datepicker--buttons {
+  display: flex;
+  padding: 4px;
+  border-top: 1px solid #efefef;
+}
+
+.datepicker--button {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 4px;
+  color: #4EB5E6;
+  cursor: pointer;
+}
+
+.datepicker--button:hover {
+  background: #f0f0f0;
+  color: #4a4a4a;
+}
+
+.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-, .-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  background: #a2ddf6;
+  color: #fff;
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-, .-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: #8ad5f4;
+}
+
+.-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.1);
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-, .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
+  border: none;
+  background: none;
+}
+
+/* -------------------------------------------------
+    Timepicker
+   ------------------------------------------------- */
+
+.datepicker--time {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 4px;
+  border-top: 1px solid #efefef;
+}
+
+.datepicker--time.-am-pm- .datepicker--time-sliders {
+  flex: 0 1 138px;
+  max-width: 138px;
+}
+
+.-only-timepicker- .datepicker--time {
+  border-top: none;
+}
+
+.datepicker--time-sliders {
+  flex: 0 1 153px;
+  max-width: 153px;
+  margin-right: 10px;
+}
+
+.datepicker--time-label {
+  display: none;
+  font-size: 12px;
+}
+
+.datepicker--time-current {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: 0 0 0 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.datepicker--time-current-colon {
+  margin: 0 2px 3px;
+  line-height: 1;
+}
+
+.datepicker--time-current-hours,
+.datepicker--time-current-minutes {
+  z-index: 1;
+  position: relative;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.datepicker--time-current-hours:after,
+  .datepicker--time-current-minutes:after {
+  z-index: -1;
+  position: absolute;
+  top: -3px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: 4px;
+  background: #f0f0f0;
+  content: '';
+  opacity: 0;
+}
+
+.datepicker--time-current-hours.-focus-:after,
+  .datepicker--time-current-minutes.-focus-:after {
+  opacity: 1;
+}
+
+.datepicker--time-current-ampm {
+  align-self: flex-end;
+  margin-bottom: 1px;
+  margin-left: 6px;
+  color: #9c9c9c;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.datepicker--time-row {
+  display: flex;
+  align-items: center;
+  height: 17px;
+  background: linear-gradient(to right, #dedede, #dedede) left 50%/100% 1px no-repeat;
+  font-size: 11px;
+}
+
+.datepicker--time-row:first-child {
+  margin-bottom: 4px;
+}
+
+.datepicker--time-row input[type='range'] {
+  -webkit-appearance: none;
+  flex: 1;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.datepicker--time-row input[type='range']::-ms-tooltip {
+  display: none;
+}
+
+.datepicker--time-row input[type='range']:hover::-webkit-slider-thumb {
+  border-color: #b8b8b8;
+}
+
+.datepicker--time-row input[type='range']:hover::-moz-range-thumb {
+  border-color: #b8b8b8;
+}
+
+.datepicker--time-row input[type='range']:hover::-ms-thumb {
+  border-color: #b8b8b8;
+}
+
+.datepicker--time-row input[type='range']:focus {
+  outline: none;
+}
+
+.datepicker--time-row input[type='range']:focus::-webkit-slider-thumb {
+  border-color: #5cc4ef;
+  background: #5cc4ef;
+}
+
+.datepicker--time-row input[type='range']:focus::-moz-range-thumb {
+  border-color: #5cc4ef;
+  background: #5cc4ef;
+}
+
+.datepicker--time-row input[type='range']:focus::-ms-thumb {
+  border-color: #5cc4ef;
+  background: #5cc4ef;
+}
+
+.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.datepicker--time-row input[type='range']::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.datepicker--time-row input[type='range']::-ms-thumb {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.datepicker--time-row input[type='range']::-webkit-slider-thumb {
+  margin-top: -6px;
+}
+
+.datepicker--time-row input[type='range']::-webkit-slider-runnable-track {
+  height: 1px;
+  border: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+.datepicker--time-row input[type='range']::-moz-range-track {
+  height: 1px;
+  border: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+.datepicker--time-row input[type='range']::-ms-track {
+  height: 1px;
+  border: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+.datepicker--time-row input[type='range']::-ms-fill-lower {
+  background: transparent;
+}
+
+.datepicker--time-row input[type='range']::-ms-fill-upper {
+  background: transparent;
+}
+
+.datepicker--time-row span {
+  padding: 0 12px;
+}
+
+.datepicker--time-icon {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0 5px -1px 0;
+  border: 1px solid;
+  border-radius: 50%;
+  color: #9c9c9c;
+  font-size: 16px;
+}
+
+.datepicker--time-icon:after, .datepicker--time-icon:before {
+  position: absolute;
+  background: currentColor;
+  content: '';
+}
+
+.datepicker--time-icon:after {
+  top: calc(50% + 1px);
+  left: calc(50% - 1px);
+  width: 1px;
+  height: .4em;
+  transform: translateY(-100%);
+}
+
+.datepicker--time-icon:before {
+  top: calc(50% + 1px);
+  left: calc(50% - 1px);
+  width: .4em;
+  height: 1px;
+}
+
+/* -------------------------------------------------
+    Datepicker
+   ------------------------------------------------- */
+
+.datepickers-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media print {
+  .datepickers-container {
+    display: none;
+  }
+}
+
+.datepicker {
+  box-sizing: content-box;
+  z-index: 100;
+  position: absolute;
+  left: -100000px;
+  width: 250px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #4a4a4a;
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
+}
+
+.datepicker.-from-top- {
+  transform: translateY(-8px);
+}
+
+.datepicker.-from-right- {
+  transform: translateX(8px);
+}
+
+.datepicker.-from-bottom- {
+  transform: translateY(8px);
+}
+
+.datepicker.-from-left- {
+  transform: translateX(-8px);
+}
+
+.datepicker.active {
+  transform: translate(0);
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s;
+}
+
+.datepicker-inline .datepicker {
+  position: static;
+  right: auto;
+  left: auto;
+  transform: none;
+  border-color: #d7d7d7;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.datepicker-inline .datepicker--pointer {
+  display: none;
+}
+
+.datepicker--content {
+  box-sizing: content-box;
+  padding: 4px;
+}
+
+.-only-timepicker- .datepicker--content {
+  display: none;
+}
+
+.datepicker--pointer {
+  z-index: -1;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  background: #fff;
+}
+
+.-top-left- .datepicker--pointer,
+  .-top-center- .datepicker--pointer,
+  .-top-right- .datepicker--pointer {
+  top: calc(100% - 4px);
+  transform: rotate(135deg);
+}
+
+.-right-top- .datepicker--pointer,
+  .-right-center- .datepicker--pointer,
+  .-right-bottom- .datepicker--pointer {
+  right: calc(100% - 4px);
+  transform: rotate(225deg);
+}
+
+.-bottom-left- .datepicker--pointer,
+  .-bottom-center- .datepicker--pointer,
+  .-bottom-right- .datepicker--pointer {
+  bottom: calc(100% - 4px);
+  transform: rotate(315deg);
+}
+
+.-left-top- .datepicker--pointer,
+  .-left-center- .datepicker--pointer,
+  .-left-bottom- .datepicker--pointer {
+  left: calc(100% - 4px);
+  transform: rotate(45deg);
+}
+
+.-top-left- .datepicker--pointer,
+  .-bottom-left- .datepicker--pointer {
+  left: 10px;
+}
+
+.-top-right- .datepicker--pointer,
+  .-bottom-right- .datepicker--pointer {
+  right: 10px;
+}
+
+.-top-center- .datepicker--pointer,
+  .-bottom-center- .datepicker--pointer {
+  left: calc(50% - 10px / 2);
+}
+
+.-left-top- .datepicker--pointer,
+  .-right-top- .datepicker--pointer {
+  top: 10px;
+}
+
+.-left-bottom- .datepicker--pointer,
+  .-right-bottom- .datepicker--pointer {
+  bottom: 10px;
+}
+
+.-left-center- .datepicker--pointer,
+  .-right-center- .datepicker--pointer {
+  top: calc(50% - 10px / 2);
+}
+
+.datepicker--body {
+  display: none;
+}
+
+.datepicker--body.active {
+  display: block;
+}
+
+.select2-container {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.select2-container .select2-selection--single {
+  -webkit-user-select: none;
+  box-sizing: border-box;
+  display: block;
+  height: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  display: block;
+  padding-right: 20px;
+  padding-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.select2-container .select2-selection--single .select2-selection__clear {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+}
+
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+  padding-right: 8px;
+  padding-left: 20px;
+}
+
+.select2-container .select2-selection--multiple {
+  -webkit-user-select: none;
+  box-sizing: border-box;
+  display: block;
+  min-height: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: inline;
+  padding: 0;
+  list-style: none;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__clear {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 0;
+  border: none;
+  font-size: 100%;
+}
+
+.select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.select2-dropdown {
+  box-sizing: border-box;
+  display: block;
+  z-index: 1051;
+  position: absolute;
+  left: -100000px;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.select2-results {
+  display: block;
+}
+
+.select2-results__options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.select2-results__option {
+  -webkit-user-select: none;
+  padding: 6px;
+  user-select: none;
+}
+
+.select2-results__option--selectable {
+  cursor: pointer;
+}
+
+.select2-container--open .select2-dropdown {
+  left: 0;
+}
+
+.select2-container--open .select2-dropdown--above {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.select2-container--open .select2-dropdown--below {
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.select2-search--dropdown {
+  display: block;
+  padding: 4px;
+}
+
+.select2-search--dropdown .select2-search__field {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px;
+}
+
+.select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.select2-search--dropdown.select2-search--hide {
+  display: none;
+}
+
+.select2-close-mask {
+  display: block;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.select2-hidden-accessible {
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(50%) !important;
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 28px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+  height: 26px;
+  margin-right: 20px;
+  padding-right: 0px;
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #999;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+  height: 26px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  margin-left: -4px;
+  border-width: 5px 4px 0 4px;
+  border-style: solid;
+  border-color: #888 transparent transparent transparent;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
+  float: left;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  right: auto;
+  left: 1px;
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single {
+  background-color: #eee;
+  cursor: default;
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {
+  display: none;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-width: 0 4px 5px 4px;
+  border-color: transparent transparent #888 transparent;
+}
+
+.select2-container--default .select2-selection--multiple {
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: white;
+  cursor: text;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+  height: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  padding: 1px;
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #e4e4e4;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+  padding-right: 5px;
+  padding-left: 2px;
+  cursor: default;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  padding: 0 4px;
+  border: none;
+  border-right: 1px solid #aaa;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: transparent;
+  color: #999;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover, .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+  outline: none;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__display {
+  padding-right: 2px;
+  padding-left: 5px;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+  border-right: none;
+  border-left: 1px solid #aaa;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__clear {
+  margin-right: auto;
+  margin-left: 10px;
+  float: left;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: solid black 1px;
+  outline: 0;
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--multiple {
+  background-color: #eee;
+  cursor: default;
+}
+
+.select2-container--default.select2-container--disabled .select2-selection__choice__remove {
+  display: none;
+}
+
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  -webkit-appearance: textfield;
+  border: none;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select2-container--default .select2-results__option .select2-results__option {
+  padding-left: 1em;
+}
+
+.select2-container--default .select2-results__option .select2-results__option .select2-results__group {
+  padding-left: 0;
+}
+
+.select2-container--default .select2-results__option .select2-results__option .select2-results__option {
+  margin-left: -1em;
+  padding-left: 2em;
+}
+
+.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+  margin-left: -2em;
+  padding-left: 3em;
+}
+
+.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+  margin-left: -3em;
+  padding-left: 4em;
+}
+
+.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+  margin-left: -4em;
+  padding-left: 5em;
+}
+
+.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+  margin-left: -5em;
+  padding-left: 6em;
+}
+
+.select2-container--default .select2-results__option--group {
+  padding: 0;
+}
+
+.select2-container--default .select2-results__option--disabled {
+  color: #999;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: #ddd;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #5897fb;
+  color: white;
+}
+
+.select2-container--default .select2-results__group {
+  display: block;
+  padding: 6px;
+  cursor: default;
+}
+
+.select2-container--classic .select2-selection--single {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: 0;
+  background-color: #f7f7f7;
+  background-image: -webkit-linear-gradient(top, white 50%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, white 50%, #eeeeee 100%);
+  background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
+}
+
+.select2-container--classic .select2-selection--single:focus {
+  border: 1px solid #5897fb;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 28px;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__clear {
+  height: 26px;
+  margin-right: 20px;
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__placeholder {
+  color: #999;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__arrow {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+  height: 26px;
+  border: none;
+  border-left: 1px solid #aaa;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+  background-image: -o-linear-gradient(top, #eeeeee 50%, #cccccc 100%);
+  background-image: linear-gradient(to bottom, #eeeeee 50%, #cccccc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0);
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__arrow b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  margin-left: -4px;
+  border-width: 5px 4px 0 4px;
+  border-style: solid;
+  border-color: #888 transparent transparent transparent;
+}
+
+.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear {
+  float: left;
+}
+
+.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+  right: auto;
+  left: 1px;
+  border: none;
+  border-right: 1px solid #aaa;
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.select2-container--classic.select2-container--open .select2-selection--single {
+  border: 1px solid #5897fb;
+}
+
+.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow {
+  border: none;
+  background: transparent;
+}
+
+.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-width: 0 4px 5px 4px;
+  border-color: transparent transparent #888 transparent;
+}
+
+.select2-container--classic.select2-container--open.select2-container--above .select2-selection--single {
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-image: -webkit-linear-gradient(top, white 0%, #eeeeee 50%);
+  background-image: -o-linear-gradient(top, white 0%, #eeeeee 50%);
+  background-image: linear-gradient(to bottom, white 0%, #eeeeee 50%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
+}
+
+.select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-image: -webkit-linear-gradient(top, #eeeeee 50%, white 100%);
+  background-image: -o-linear-gradient(top, #eeeeee 50%, white 100%);
+  background-image: linear-gradient(to bottom, #eeeeee 50%, white 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0);
+}
+
+.select2-container--classic .select2-selection--multiple {
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: 0;
+  background-color: white;
+  cursor: text;
+}
+
+.select2-container--classic .select2-selection--multiple:focus {
+  border: 1px solid #5897fb;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__clear {
+  display: none;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #e4e4e4;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__display {
+  padding-right: 5px;
+  padding-left: 2px;
+  cursor: default;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove {
+  padding: 0 4px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: transparent;
+  color: #888;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover {
+  outline: none;
+  color: #555;
+}
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__display {
+  padding-right: 2px;
+  padding-left: 5px;
+}
+
+.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+}
+
+.select2-container--classic.select2-container--open .select2-selection--multiple {
+  border: 1px solid #5897fb;
+}
+
+.select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple {
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.select2-container--classic .select2-search--dropdown .select2-search__field {
+  border: 1px solid #aaa;
+  outline: 0;
+}
+
+.select2-container--classic .select2-search--inline .select2-search__field {
+  outline: 0;
+  box-shadow: none;
+}
+
+.select2-container--classic .select2-dropdown {
+  border: 1px solid transparent;
+  background-color: white;
+}
+
+.select2-container--classic .select2-dropdown--above {
+  border-bottom: none;
+}
+
+.select2-container--classic .select2-dropdown--below {
+  border-top: none;
+}
+
+.select2-container--classic .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select2-container--classic .select2-results__option--group {
+  padding: 0;
+}
+
+.select2-container--classic .select2-results__option--disabled {
+  color: grey;
+}
+
+.select2-container--classic .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #3875d7;
+  color: white;
+}
+
+.select2-container--classic .select2-results__group {
+  display: block;
+  padding: 6px;
+  cursor: default;
+}
+
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: #5897fb;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

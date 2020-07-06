@@ -34,12 +34,24 @@ $(document).ready(function () {
           ],
         })
     }
+
+    if ($(modal).find('.select-here').length > 0) {
+      $('.select-here').select2({
+        language: 'ru',
+        minimumResultsForSearch: Infinity,
+      })
+    }
   })
 
-  $('.datepicker-here').datepicker({
+  // $('.datepicker-here').datepicker({
+  //   language: 'ru',
+  //   minDate: new Date(),
+  //   autoClose: true,
+  // })
+
+  $('.select-here').select2({
     language: 'ru',
-    minDate: new Date(),
-    autoClose: true,
+    minimumResultsForSearch: Infinity,
   })
 
   if ($('#map').length > 0 && $('#init-map').length > 0) {

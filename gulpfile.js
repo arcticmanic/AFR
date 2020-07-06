@@ -13,6 +13,7 @@ const gulp = require('gulp'),
   watch = require('gulp-watch'),
   sourcemaps = require('gulp-sourcemaps'),
   plumber = require('gulp-plumber'),
+  concat = require('gulp-concat'),
   size = require('gulp-size')
 
 const rollup = require('gulp-better-rollup'),
@@ -127,6 +128,7 @@ const styles = () => {
     .pipe(postcss(postcssPlugins))
 
   const mergedStream = merge(cssStream, scssStream)
+    .pipe(concat('base.css'))
     .pipe(size({ title: 'css' }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dist.css))
