@@ -43,11 +43,39 @@ $(document).ready(function () {
     }
   })
 
-  // $('.datepicker-here').datepicker({
-  //   language: 'ru',
-  //   minDate: new Date(),
-  //   autoClose: true,
-  // })
+  const datepickerDefaultOptions = { autoClose: true }
+
+  $('.datepicker-days').datepicker({
+    language: 'ru',
+    view: 'days',
+    minView: 'days',
+    dateFormat: 'd',
+    classes: 'datepicker-type-days',
+    ...datepickerDefaultOptions,
+  })
+
+  $('.datepicker-months').datepicker({
+    language: 'ru',
+    view: 'months',
+    minView: 'months',
+    dateFormat: 'MM',
+    classes: 'datepicker-type-months',
+    ...datepickerDefaultOptions,
+  })
+
+  $('.datepicker-years').datepicker({
+    language: 'ru',
+    view: 'years',
+    minView: 'years',
+    dateFormat: 'yyyy',
+    ...datepickerDefaultOptions,
+  })
+
+  $('input[type="tel"]').each(function () {
+    IMask(this, {
+      mask: '+{7} (000) 000-00-00',
+    })
+  })
 
   $('.select-here').select2({
     language: 'ru',

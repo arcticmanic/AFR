@@ -162,3 +162,10 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
     display: block;
   }
 }
+
+
+.datepicker-type-months, .datepicker-type-days {
+  .datepicker--nav {
+    display: none !important;
+  }
+}

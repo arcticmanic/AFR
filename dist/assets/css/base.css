@@ -774,6 +774,10 @@
   display: block;
 }
 
+.datepicker-type-months .datepicker--nav, .datepicker-type-days .datepicker--nav {
+  display: none !important;
+}
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -786,7 +790,7 @@
   -webkit-user-select: none;
   box-sizing: border-box;
   display: block;
-  height: 28px;
+  height: 40px;
   cursor: pointer;
   user-select: none;
 }
@@ -944,14 +948,14 @@
 }
 
 .select2-container--default .select2-selection--single {
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  border: 1px solid #d5d5da;
+  border-radius: 2px;
   background-color: #fff;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #444;
-  line-height: 28px;
+  line-height: 37px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__clear {
@@ -968,31 +972,32 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: flex;
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 50%;
+  right: 10px;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 26px;
+  transform: translateY(-50%);
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-top: -2px;
-  margin-left: -4px;
-  border-width: 5px 4px 0 4px;
-  border-style: solid;
-  border-color: #888 transparent transparent transparent;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("../images/svg/chevron-down.svg");
+  background-position: center/center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
+.select2-container--default[dir='rtl'] .select2-selection--single .select2-selection__clear {
   float: left;
 }
 
-.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+.select2-container--default[dir='rtl'] .select2-selection--single .select2-selection__arrow {
   right: auto;
   left: 1px;
 }
@@ -1007,8 +1012,7 @@
 }
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-width: 0 4px 5px 4px;
-  border-color: transparent transparent #888 transparent;
+  transform: rotate(180deg);
 }
 
 .select2-container--default .select2-selection--multiple {
@@ -1176,9 +1180,10 @@
   background-color: #ddd;
 }
 
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+.select2-container--default .select2-results__option--highlighted {
   background-color: #5897fb;
   color: white;
+  cursor: pointer;
 }
 
 .select2-container--default .select2-results__group {

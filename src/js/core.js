@@ -1,5 +1,4 @@
 import IMask from 'imask'
-
 import lazyLoading from './lazyLoading'
 import './plugins/mmenu'
 import MicroModal from 'micromodal'

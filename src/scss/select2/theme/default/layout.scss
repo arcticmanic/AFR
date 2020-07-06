@@ -84,9 +84,10 @@
     background-color: #ddd;
   }
 
-  .select2-results__option--highlighted.select2-results__option--selectable {
+  .select2-results__option--highlighted {
     background-color: #5897fb;
     color: white;
+    cursor: pointer;
   }
 
   .select2-results__group {
