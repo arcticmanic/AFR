@@ -473,3 +473,11 @@
 .space-x-reverse > :not(:last-child) {
   --space-x-reverse: 1;
 }
+
+@media (min-width: 1024px) {
+  .md\:space-x-10 > :not(:last-child) {
+    --space-x-reverse: 0;
+    /* margin-left: calc(2.5rem * var(--space-x-reverse)); */
+    margin-right: calc(2.5rem * calc(1 - var(--space-x-reverse)));
+  }
+}

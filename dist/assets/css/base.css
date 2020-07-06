@@ -5435,6 +5435,14 @@ h6:not([class*='text-']) {
   --space-x-reverse: 1;
 }
 
+@media (min-width: 1024px) {
+  .md\:space-x-10 > :not(:last-child) {
+    --space-x-reverse: 0;
+    /* margin-left: calc(2.5rem * var(--space-x-reverse)); */
+    margin-right: calc(2.5rem * calc(1 - var(--space-x-reverse)));
+  }
+}
+
 .max-w-fit {
   max-width: fit-content;
 }
@@ -5501,6 +5509,19 @@ a:hover .shifted-shadow__pattern {
   transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vertical-text {
+  transform: translateY(0) rotateX(0) translateY(-1rem);
+}
+
+@media (min-width: 1024px) {
+  .vertical-text {
+    transform: translateY(0) rotateZ(-180deg);
+    text-orientation: mixed;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+  }
 }
 
 body {
@@ -12603,6 +12624,90 @@ video {
 
 .group:hover .group-hover\:scale-y-150 {
   --transform-scale-y: 1.5;
+}
+
+.rotate-0 {
+  --transform-rotate: 0;
+}
+
+.rotate-45 {
+  --transform-rotate: 45deg;
+}
+
+.rotate-90 {
+  --transform-rotate: 90deg;
+}
+
+.rotate-180 {
+  --transform-rotate: 180deg;
+}
+
+.-rotate-180 {
+  --transform-rotate: -180deg;
+}
+
+.-rotate-90 {
+  --transform-rotate: -90deg;
+}
+
+.-rotate-45 {
+  --transform-rotate: -45deg;
+}
+
+.hover\:rotate-0:hover {
+  --transform-rotate: 0;
+}
+
+.hover\:rotate-45:hover {
+  --transform-rotate: 45deg;
+}
+
+.hover\:rotate-90:hover {
+  --transform-rotate: 90deg;
+}
+
+.hover\:rotate-180:hover {
+  --transform-rotate: 180deg;
+}
+
+.hover\:-rotate-180:hover {
+  --transform-rotate: -180deg;
+}
+
+.hover\:-rotate-90:hover {
+  --transform-rotate: -90deg;
+}
+
+.hover\:-rotate-45:hover {
+  --transform-rotate: -45deg;
+}
+
+.group:hover .group-hover\:rotate-0 {
+  --transform-rotate: 0;
+}
+
+.group:hover .group-hover\:rotate-45 {
+  --transform-rotate: 45deg;
+}
+
+.group:hover .group-hover\:rotate-90 {
+  --transform-rotate: 90deg;
+}
+
+.group:hover .group-hover\:rotate-180 {
+  --transform-rotate: 180deg;
+}
+
+.group:hover .group-hover\:-rotate-180 {
+  --transform-rotate: -180deg;
+}
+
+.group:hover .group-hover\:-rotate-90 {
+  --transform-rotate: -90deg;
+}
+
+.group:hover .group-hover\:-rotate-45 {
+  --transform-rotate: -45deg;
 }
 
 .translate-x-0 {

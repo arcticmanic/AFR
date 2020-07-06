@@ -64,3 +64,14 @@ a:hover {
     @apply transform duration-300 ease-in-out;
   }
 }
+
+.vertical-text {
+  @media (min-width: 1024px) {
+    text-orientation: mixed;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: translateY(0) rotateZ(-180deg);
+  }
+
+  transform: translateY(0) rotateX(0) translateY(-1rem);
+}
