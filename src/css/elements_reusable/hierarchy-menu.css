@@ -1,31 +1,110 @@
 .hierarchy-menu {
   & > li {
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+
+    a {
+      display: block;
+    }
+
     & > a {
       position: relative;
+
       padding-left: 25px;
 
-      &:before {
-        position: absolute;
-        left: 0;
-        top: 4px;
-
-        display: block;
-        width: 7px;
-        height: 7px;
-
-        border-bottom: 1px solid var(--purple-300);
-        border-right: 1px solid var(--purple-300);
-        transform: rotate(45deg);
-
-        content: '';
+      &:not(.with-nested-items) {
+        &:hover {
+          color: var(--purple-300);
+        }
       }
 
-      &.opened {
-        color: var(--purple-300);
+      &.with-nested-items {
+        margin-bottom: 0.6rem;
 
         &:before {
-          top: 8px;
-          transform: rotate(-135deg);
+          position: absolute;
+          left: 0;
+          top: 4px;
+
+          display: block;
+          width: 7px;
+          height: 7px;
+
+          border-bottom: 1px solid var(--purple-300);
+          border-right: 1px solid var(--purple-300);
+          transform: rotate(45deg);
+
+          content: '';
+        }
+
+        &.opened {
+          color: var(--purple-300);
+
+          &:before {
+            top: 8px;
+            transform: rotate(-135deg);
+          }
+
+          & + ul {
+            display: block;
+          }
+        }
+
+        & + ul {
+          display: none;
+          padding-left: 25px;
+
+          & > li {
+            position: relative;
+
+            margin-bottom: 8px;
+            margin-left: 4px;
+            padding-left: 18px;
+
+            &:before {
+              position: absolute;
+              top: 0.6em;
+              left: 0;
+
+              height: 4px;
+              width: 4px;
+
+              background: var(--gray-900);
+              border-radius: 9999px;
+
+              content: '';
+            }
+
+            & > a {
+              margin-bottom: 10px;
+            }
+
+            & > ul {
+              /* padding-left: 10px; */
+
+              & > li {
+                position: relative;
+
+                margin-bottom: 6px;
+                margin-left: 4px;
+                padding-left: 14px;
+
+                &:before {
+                  position: absolute;
+                  top: 0.6em;
+                  left: 0;
+
+                  height: 0px;
+                  width: 6px;
+
+                  border: 1px solid var(--gray-900);
+
+                  content: '';
+                }
+              }
+            }
+          }
         }
       }
     }

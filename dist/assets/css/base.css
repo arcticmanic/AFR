@@ -4319,6 +4319,7 @@ body.modal-open .mm-slideout{
 :root {
   --blue-900: #303441;
   --purple-300: #507bff;
+  --gray-900: #303441;
 }
 
 :root {
@@ -4421,7 +4422,7 @@ html {
 }
 
 .text h2:not([class*='text-']) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   font-size: 3.75rem;
 }
 
@@ -5655,12 +5656,28 @@ body::-webkit-scrollbar-thumb {
   display: block;
 }
 
+.hierarchy-menu > li:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.hierarchy-menu > li a {
+  display: block;
+}
+
 .hierarchy-menu > li > a {
   position: relative;
   padding-left: 25px;
 }
 
-.hierarchy-menu > li > a:before {
+.hierarchy-menu > li > a:not(.with-nested-items):hover {
+  color: var(--purple-300);
+}
+
+.hierarchy-menu > li > a.with-nested-items {
+  margin-bottom: 0.6rem;
+}
+
+.hierarchy-menu > li > a.with-nested-items:before {
   display: block;
   position: absolute;
   top: 4px;
@@ -5673,13 +5690,63 @@ body::-webkit-scrollbar-thumb {
   content: '';
 }
 
-.hierarchy-menu > li > a.opened {
+.hierarchy-menu > li > a.with-nested-items.opened {
   color: var(--purple-300);
 }
 
-.hierarchy-menu > li > a.opened:before {
+.hierarchy-menu > li > a.with-nested-items.opened:before {
   top: 8px;
   transform: rotate(-135deg);
+}
+
+.hierarchy-menu > li > a.with-nested-items.opened + ul {
+  display: block;
+}
+
+.hierarchy-menu > li > a.with-nested-items + ul {
+  display: none;
+  padding-left: 25px;
+}
+
+.hierarchy-menu > li > a.with-nested-items + ul > li {
+  position: relative;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  padding-left: 18px;
+}
+
+.hierarchy-menu > li > a.with-nested-items + ul > li:before {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--gray-900);
+  content: '';
+}
+
+.hierarchy-menu > li > a.with-nested-items + ul > li > a {
+  margin-bottom: 10px;
+}
+
+/* padding-left: 10px; */
+
+.hierarchy-menu > li > a.with-nested-items + ul > li > ul > li {
+  position: relative;
+  margin-bottom: 6px;
+  margin-left: 4px;
+  padding-left: 14px;
+}
+
+.hierarchy-menu > li > a.with-nested-items + ul > li > ul > li:before {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 6px;
+  height: 0px;
+  border: 1px solid var(--gray-900);
+  content: '';
 }
 
 .modal {
@@ -5724,7 +5791,7 @@ body::-webkit-scrollbar-thumb {
   max-width: unset;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 420px) {
   .modal-side.modal-side_bigger .modal__container {
     width: 100vw
   }

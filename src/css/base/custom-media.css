@@ -1,6 +1,7 @@
 :root {
   --blue-900: #303441;
   --purple-300: #507bff;
+  --gray-900: #303441;
 }
 
 @custom-media --min-tablet (min-width: 1024px);

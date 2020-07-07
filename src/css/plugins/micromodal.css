@@ -45,7 +45,7 @@
         max-width: unset;
         width: 87.5vw;
 
-        @media (max-width: 370px) {
+        @media (max-width: 420px) {
           width: 100vw;
         }
       }
