@@ -6054,6 +6054,29 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.carousel-for-nav {
+  min-width: 680px;
+  height: 680px;
+}
+
+@media (max-width: 1024px) {
+  .carousel-for-nav {
+    min-width: unset;
+    height: auto
+  }
+}
+
+.carousel-nav {
+  height: 680px;
+}
+
+@media (max-width: 1024px) {
+  .carousel-nav {
+    max-width: 100%;
+    height: auto
+  }
+}
+
 /* @import './slick-theme.css'; */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -7658,6 +7681,24 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .font-sans {
@@ -15031,6 +15072,24 @@ video {
     flex: none;
   }
 
+  .sm\:float-right {
+    float: right;
+  }
+
+  .sm\:float-left {
+    float: left;
+  }
+
+  .sm\:float-none {
+    float: none;
+  }
+
+  .sm\:clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .sm\:font-sans {
     font-family: IBM Plex Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
@@ -18769,6 +18828,90 @@ video {
     grid-row-end: auto;
   }
 
+  .sm\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .sm\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .sm\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .sm\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .sm\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .sm\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .sm\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
+  .sm\:hover\:rotate-0:hover {
+    --transform-rotate: 0;
+  }
+
+  .sm\:hover\:rotate-45:hover {
+    --transform-rotate: 45deg;
+  }
+
+  .sm\:hover\:rotate-90:hover {
+    --transform-rotate: 90deg;
+  }
+
+  .sm\:hover\:rotate-180:hover {
+    --transform-rotate: 180deg;
+  }
+
+  .sm\:hover\:-rotate-180:hover {
+    --transform-rotate: -180deg;
+  }
+
+  .sm\:hover\:-rotate-90:hover {
+    --transform-rotate: -90deg;
+  }
+
+  .sm\:hover\:-rotate-45:hover {
+    --transform-rotate: -45deg;
+  }
+
+  .group:hover .sm\:group-hover\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .group:hover .sm\:group-hover\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .group:hover .sm\:group-hover\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .group:hover .sm\:group-hover\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .group:hover .sm\:group-hover\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .group:hover .sm\:group-hover\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .group:hover .sm\:group-hover\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
   .sm\:duration-300 {
     transition-duration: 300ms;
   }
@@ -19113,6 +19256,24 @@ video {
 
   .md\:flex-none {
     flex: none;
+  }
+
+  .md\:float-right {
+    float: right;
+  }
+
+  .md\:float-left {
+    float: left;
+  }
+
+  .md\:float-none {
+    float: none;
+  }
+
+  .md\:clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
   .md\:font-sans {
@@ -22853,6 +23014,90 @@ video {
     grid-row-end: auto;
   }
 
+  .md\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .md\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .md\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .md\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .md\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .md\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .md\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
+  .md\:hover\:rotate-0:hover {
+    --transform-rotate: 0;
+  }
+
+  .md\:hover\:rotate-45:hover {
+    --transform-rotate: 45deg;
+  }
+
+  .md\:hover\:rotate-90:hover {
+    --transform-rotate: 90deg;
+  }
+
+  .md\:hover\:rotate-180:hover {
+    --transform-rotate: 180deg;
+  }
+
+  .md\:hover\:-rotate-180:hover {
+    --transform-rotate: -180deg;
+  }
+
+  .md\:hover\:-rotate-90:hover {
+    --transform-rotate: -90deg;
+  }
+
+  .md\:hover\:-rotate-45:hover {
+    --transform-rotate: -45deg;
+  }
+
+  .group:hover .md\:group-hover\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .group:hover .md\:group-hover\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .group:hover .md\:group-hover\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .group:hover .md\:group-hover\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .group:hover .md\:group-hover\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .group:hover .md\:group-hover\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .group:hover .md\:group-hover\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
   .md\:duration-300 {
     transition-duration: 300ms;
   }
@@ -23197,6 +23442,24 @@ video {
 
   .lg\:flex-none {
     flex: none;
+  }
+
+  .lg\:float-right {
+    float: right;
+  }
+
+  .lg\:float-left {
+    float: left;
+  }
+
+  .lg\:float-none {
+    float: none;
+  }
+
+  .lg\:clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
   .lg\:font-sans {
@@ -26937,6 +27200,90 @@ video {
     grid-row-end: auto;
   }
 
+  .lg\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .lg\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .lg\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .lg\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .lg\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .lg\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .lg\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
+  .lg\:hover\:rotate-0:hover {
+    --transform-rotate: 0;
+  }
+
+  .lg\:hover\:rotate-45:hover {
+    --transform-rotate: 45deg;
+  }
+
+  .lg\:hover\:rotate-90:hover {
+    --transform-rotate: 90deg;
+  }
+
+  .lg\:hover\:rotate-180:hover {
+    --transform-rotate: 180deg;
+  }
+
+  .lg\:hover\:-rotate-180:hover {
+    --transform-rotate: -180deg;
+  }
+
+  .lg\:hover\:-rotate-90:hover {
+    --transform-rotate: -90deg;
+  }
+
+  .lg\:hover\:-rotate-45:hover {
+    --transform-rotate: -45deg;
+  }
+
+  .group:hover .lg\:group-hover\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .group:hover .lg\:group-hover\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .group:hover .lg\:group-hover\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .group:hover .lg\:group-hover\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .group:hover .lg\:group-hover\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .group:hover .lg\:group-hover\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .group:hover .lg\:group-hover\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
   .lg\:duration-300 {
     transition-duration: 300ms;
   }
@@ -27281,6 +27628,24 @@ video {
 
   .xl\:flex-none {
     flex: none;
+  }
+
+  .xl\:float-right {
+    float: right;
+  }
+
+  .xl\:float-left {
+    float: left;
+  }
+
+  .xl\:float-none {
+    float: none;
+  }
+
+  .xl\:clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
   .xl\:font-sans {
@@ -31019,6 +31384,90 @@ video {
 
   .xl\:row-end-auto {
     grid-row-end: auto;
+  }
+
+  .xl\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .xl\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .xl\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .xl\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .xl\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .xl\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .xl\:-rotate-45 {
+    --transform-rotate: -45deg;
+  }
+
+  .xl\:hover\:rotate-0:hover {
+    --transform-rotate: 0;
+  }
+
+  .xl\:hover\:rotate-45:hover {
+    --transform-rotate: 45deg;
+  }
+
+  .xl\:hover\:rotate-90:hover {
+    --transform-rotate: 90deg;
+  }
+
+  .xl\:hover\:rotate-180:hover {
+    --transform-rotate: 180deg;
+  }
+
+  .xl\:hover\:-rotate-180:hover {
+    --transform-rotate: -180deg;
+  }
+
+  .xl\:hover\:-rotate-90:hover {
+    --transform-rotate: -90deg;
+  }
+
+  .xl\:hover\:-rotate-45:hover {
+    --transform-rotate: -45deg;
+  }
+
+  .group:hover .xl\:group-hover\:rotate-0 {
+    --transform-rotate: 0;
+  }
+
+  .group:hover .xl\:group-hover\:rotate-45 {
+    --transform-rotate: 45deg;
+  }
+
+  .group:hover .xl\:group-hover\:rotate-90 {
+    --transform-rotate: 90deg;
+  }
+
+  .group:hover .xl\:group-hover\:rotate-180 {
+    --transform-rotate: 180deg;
+  }
+
+  .group:hover .xl\:group-hover\:-rotate-180 {
+    --transform-rotate: -180deg;
+  }
+
+  .group:hover .xl\:group-hover\:-rotate-90 {
+    --transform-rotate: -90deg;
+  }
+
+  .group:hover .xl\:group-hover\:-rotate-45 {
+    --transform-rotate: -45deg;
   }
 
   .xl\:duration-300 {

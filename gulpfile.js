@@ -199,6 +199,8 @@ const watchFiles = () => {
     ghostMode: false,
   })
 
+  watch('./dist/assets/js/common.js', gulp.series(reload))
+
   watch(
     './src/js/**/*',
     gulp.series(

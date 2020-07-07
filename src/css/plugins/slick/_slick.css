@@ -104,4 +104,23 @@
   }
 }
 
+.carousel-for-nav {
+  min-width: 680px;
+  height: 680px;
+
+  @media (--max-tablet) {
+    min-width: unset;
+    height: auto;
+  }
+}
+
+.carousel-nav {
+  height: 680px;
+
+  @media (--max-tablet) {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
 /* @import './slick-theme.css'; */

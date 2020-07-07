@@ -50,6 +50,7 @@ $(document).ready(function () {
         asNavFor: '.carousel-nav',
         infinite: true,
         dots: false,
+        arrows: false,
       })
 
       $(modal)
@@ -61,24 +62,25 @@ $(document).ready(function () {
           dots: false,
           centerMode: true,
           focusOnSelect: true,
+          vertical: true,
           asNavFor: '.carousel-for-nav',
+          prevArrow: $('.carousel-arrow_left'),
+          nextArrow: $('.carousel-arrow_right'),
           responsive: [
             {
               breakpoint: 1024,
               settings: {
+                centerMode: true,
+                vertical: false,
                 slidesToShow: 3,
               },
             },
             {
               breakpoint: 768,
               settings: {
+                centerMode: true,
+                vertical: false,
                 slidesToShow: 2,
-              },
-            },
-            {
-              breakpoint: 500,
-              settings: {
-                slidesToShow: 1,
               },
             },
           ],
