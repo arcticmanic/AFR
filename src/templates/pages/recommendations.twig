@@ -13,7 +13,7 @@
 
     <div class="mt-6 md:mb-12 mb-6 grid gap-5 md:grid-cols-2 grid-cols-1">
       {% for item in items %}
-        <a href="#" class="item relative h-64 bg-blue-900 shadow-lg ease-in-out  duration-300 hover:shadow-2xl group">
+        <a href="#" class="item relative h-64 bg-blue-900 shadow-lg ease-in-out  duration-300 hover:shadow-2xl group" data-micromodal-trigger="modal-recommendations-detail">
           <img data-src="./assets/images/item-bg-{{item.bg}}.png" class="lazy dimmed-img ml-auto max-h-full w-full object-cover opacity-25" alt="">
 
           <div class="absolute content inset-0 left-0 lg:pt-12 pt-4 lg:px-12 px-4 pb-5 flex flex-col">
@@ -80,6 +80,110 @@
           {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform pointer-events-none group-hover:translate-x-1'} %}
         </a>
       </div>
+    {% endblock %}
+  {% endembed %}
+
+  {% embed '../includes/modal-side_big.twig' with {id: 'modal-recommendations-detail', classes: 'modal-side_bigger'} %}
+    {% block content %}
+    <div class="h-full flex ">
+      <div class="w-5/6 text text-gray-900">
+        <h2 class="append-line">Варикозное расширение вен нижних конечностей. </h2>
+
+        <p>При описании флебологического статуса пациента можно использовать базовый или расширенный варианты классификации. Для лечебных учреждений и врачей, специализирующихся на лечении ХЗВ, предпочтителен расширенный вариант.</p>
+
+        <h2>Краткая информация. H2</h2>
+
+        <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
+        <br><br>
+        В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [10]. </p>
+        
+        <h3>Классификация. H3</h3>
+
+        <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
+        <br><br>
+        В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [Рис.4]. </p>
+
+        <h4>Базовый и расширенный варианты классификации. H4</h4>
+
+        <ol>
+          <li>Телеангиэктазии и/или ретикулярные вены;</li>
+          <li>Большая подкожная вена бедра;</li>
+          <li>Большая подкожная вена голени;</li>
+          <li>Малая подкожная вена;</li>
+        </ol>
+
+        <h5>Глубокие вены. H5</h5>
+
+        <ul>
+          <li>Нижняя полая вена;</li>
+          <li>Общая подвздошная вена;</li>
+          <li>Внутренняя подвздошная вена;</li>
+          <li>Наружная подвздошная вена;</li>
+        </ul>
+
+        <h6>Пример формулировки диагноза согласно классификации CEAP. H6</h6>
+
+        <p>Пациентка обратилась к флебологу 03.09.2016. Предъявляет жалобы на наличие варикозно измененных вен на левой нижней конечности, отеки дистальных отделов голени, боли и тяжесть в икроножных мышцах во второй половине дня.
+        <br><br>
+        Выполнено ультразвуковое ангиосканирование: глубокие вены – без патологии, клапанная недостаточность большой подкожной вены на бедре, несостоятельность перфорантной вены в средней трети бедра.</p>
+
+        <a href="#" class="button mb-3 px-3 bg-purple-300 text-white space-x-4 group" data-micromodal-close>
+          <span class="pointer-events-none">Вернуться к рекомендациям</span>
+          {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform pointer-events-none group-hover:translate-x-1'} %}
+        </a>
+      </div>
+
+      <hr class="hr-vertical mx-10 border-r border-dashed border-purple-300 border-opacity-20">
+
+      <div class="w-1/6 text-gray-900">
+        <p class="mb-3 text-md text-purple-300 font-bold">Содержание</p>
+
+        <ul class="hierarchy-menu text-base">
+          <li>
+            <a href="#">Рекомендации</a>
+          </li>
+          <li>
+            <a href="#">Краткая информация</a>
+            
+            <ul>
+              <li>
+                <a href="#">Определение</a>
+              </li>
+              <li>
+                <a href="#">Этиология и патогенез</a>
+              </li>
+              <li>
+                <a href="#">Эпидемиология</a>
+              </li>
+              <li>
+                <a href="#">Определение</a>
+              </li>
+              <li>
+                <a href="#">Кодирование по МКБ 10</a>
+              </li>
+              <li>
+                <a href="#">Классификация</a>
+
+                <ul>
+                  <li>
+                    <a href="#">Описание классификации CEAP</a>
+                  </li>
+                  <li>
+                    <a href="#">Базовый и расширенный варианты классификации</a>
+                  </li>
+                  <li>
+                    <a href="#">Уровень диагностических действий</a>
+                  </li>
+                  <li>
+                    <a href="#">Пример формулировки диагноза согласно классификации CEAP</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     {% endblock %}
   {% endembed %}
 {% endblock %}

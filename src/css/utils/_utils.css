@@ -75,3 +75,7 @@ a:hover {
 
   transform: translateY(0) rotateX(0) translateY(-1rem);
 }
+
+.hr-vertical {
+  height: 100%;
+}

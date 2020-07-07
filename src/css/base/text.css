@@ -11,6 +11,10 @@
     @apply mb-10 text-4xl;
   }
 
+  :--h4 {
+    @apply mb-10 text-3-5xl;
+  }
+
   :--h5 {
     @apply mb-8 text-3-5xl;
   }

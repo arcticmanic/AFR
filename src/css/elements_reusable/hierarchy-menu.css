@@ -1,0 +1,33 @@
+.hierarchy-menu {
+  & > li {
+    & > a {
+      position: relative;
+      padding-left: 25px;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 4px;
+
+        display: block;
+        width: 7px;
+        height: 7px;
+
+        border-bottom: 1px solid var(--purple-300);
+        border-right: 1px solid var(--purple-300);
+        transform: rotate(45deg);
+
+        content: '';
+      }
+
+      &.opened {
+        color: var(--purple-300);
+
+        &:before {
+          top: 8px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+}
