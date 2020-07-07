@@ -156,3 +156,23 @@
     }
   }
 }
+
+.append-line-to-right {
+  position: relative;
+
+  display: table;
+
+  &:after {
+    position: absolute;
+    top: 60%;
+    right: -64px;
+
+    width: 33px;
+    height: 0;
+    border-bottom: 2px solid var(--purple-300);
+
+    transform: translateY(-40%);
+
+    content: '';
+  }
+}

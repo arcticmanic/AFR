@@ -1,13 +1,13 @@
 $(document).ready(function () {
+  const carouselBaseOptions = {
+    infinite: true,
+    dots: false,
+    prevArrow: $('.carousel-arrow_left'),
+    nextArrow: $('.carousel-arrow_right'),
+  }
+
   $(document).on('modal-opens', e => {
     const modal = e.detail.modal
-
-    const carouselBaseOptions = {
-      infinite: true,
-      dots: false,
-      prevArrow: $('.carousel-arrow_left'),
-      nextArrow: $('.carousel-arrow_right'),
-    }
 
     if ($(modal).find('.carousel').length > 0) {
       $(modal)
@@ -132,6 +132,51 @@ $(document).ready(function () {
   $('.select-here').select2({
     language: 'ru',
     minimumResultsForSearch: Infinity,
+  })
+
+  $('.carousel-partners').slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    infinite: false,
+    dots: false,
+    prevArrow: $('.carousel-arrow_left'),
+    nextArrow: $('.carousel-arrow_right'),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 370,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  })
+
+  $('.carousel-conf').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    dots: true,
+    prevArrow: false,
+    nextArrow: false,
+    appendDots: '.carousel-conf-cont',
   })
 
   if ($('#map').length > 0 && $('#init-map').length > 0) {

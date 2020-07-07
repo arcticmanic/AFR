@@ -84,3 +84,13 @@ a:hover {
   max-width: 100%;
   /* height: auto; */
 }
+
+.half-background {
+  background-image: linear-gradient(
+    to top,
+    #fff 0%,
+    #fff 50%,
+    transparent 51%,
+    transparent 100%
+  );
+}
