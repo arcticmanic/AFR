@@ -16,7 +16,8 @@ body {
   }
 }
 
-.page-content {
+.page-content,
+.striped-bg {
   position: relative;
 
   background-size: 12.35vw 100vh;

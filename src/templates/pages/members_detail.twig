@@ -1,0 +1,87 @@
+{% extends '../layout/default.twig' %}
+
+{% block content %}
+<div class="container z-10 flex lg:flex-row flex-col items-end justify-between py-10">
+  <img data-src="./assets/images/members_detail-img.png" alt="" class="md:ml-0 md:mr-20 mx-auto lg:mb-0 mb-10 rounded-full">
+
+  <div>
+    <h2 class="mb-6">Евгений Аркадьевич Илюхин</h2>
+
+    <div class="mb-3 flex items-center space-x-1">
+      <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+        {% include '../svg/fb-icon-svg.twig' with {classes: 'text-blue-900'} %}
+      </a>
+
+      <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+        {% include '../svg/vk-icon-svg.twig' with {classes: 'text-blue-900'} %}
+      </a>
+
+      <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+        {% include '../svg/ok-icon-svg.twig' with {classes: 'text-blue-900'} %}
+      </a>
+
+      <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+        {% include '../svg/tw-icon-svg.twig' with {classes: 'text-blue-900'} %}
+      </a>
+
+      <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+        {% include '../svg/ig-icon-svg.twig' with {classes: 'text-blue-900 ml-1'} %}
+      </a>
+    </div>
+
+    <div class="flex flex-wrap items-center mt-16 mb-2 space-x-2">
+      <ul class="flex flex-wrap items-center justify-start space-x-2" data-tabs>
+        <li class="mb-3">
+          <a href="#info" class="button py-3 bg-purple-300 text-white space-x-3" data-tabby-default>
+            {% include '../svg/list-icon-svg.twig' with {classes: 'text-white'} %}
+            <span class="whitespace-no-wrap">Информация</span>
+          </a>
+        </li>
+        <li class="mb-3">
+          <a href="#publications" id="init-map"  class="button py-2 bg-purple-300 text-white space-x-3 opacity-25">
+            {% include '../svg/book-svg.twig' with {classes: 'text-white'} %}
+            <span>Публикации</span>
+          </a>
+        </li>
+      </ul>
+
+      <a href="#" class="button mb-3 py-1 px-2 bg-transparent border-sm border-purple-300 text-purple-300 space-x-3">
+        {% include '../svg/user-icon-svg.twig' with {classes: 'text-purple-300'} %}
+        <span>Личная страница</span>
+        {% include '../svg/arrow-right-svg.twig' with {classes: 'text-purple-300'} %}
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="striped-bg py-10 bg-blue-600">
+  <div id="info">
+    <table class="w-full sm:text-md text-tiny font-light">
+      <thead>
+        <tr>
+          <th class="w-1/2 py-2 sm:pr-12 pr-2 text-right sm:text-md text-tiny font-light">Город:</th>
+          <th class="w-1/2 py-2 sm:pl-12 pl-2 text-left sm:text-md text-tiny font-light underline"><a href="#">Санкт-Петербург</a></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for row in rows %}
+          <tr class="border-t border-white border-opacity-10">
+            <td class="w-1/2 py-2 sm:pr-12 pr-2 sm:pl-0 pl-2 text-right align-top">{{row.left}}</td>
+            <td class="w-1/2 py-2 sm:pl-12 pl-2 sm:pr-0 pr-2 text-left align-top">{{row.right}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="publications" class="container">
+    <ol class="decimal">
+      <li>Субфасциальная диссекция перфорантных вен голени в лечении варикозной болезни</li>
+    </ol>
+  </div>
+</div>
+
+{% endblock %}

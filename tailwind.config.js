@@ -81,7 +81,7 @@ module.exports = {
         300: '#43c0ff', //custom
         400: '#63b3ed',
         // 500: '#4299e1',
-        // 600: '#3182ce',
+        600: '#343846', //custom
         700: '#324456', //custom
         800: '#363a47', //custom
         900: '#303441', // custom
@@ -233,6 +233,7 @@ module.exports = {
     },
     borderWidth: {
       default: '1px',
+      sm: '2px',
     },
     borderRadius: {
       sm: '0.125rem',

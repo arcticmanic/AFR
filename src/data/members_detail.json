@@ -1,0 +1,60 @@
+{
+  "breadcrumbs": [
+    { "title": "Члены АФР" },
+    { "title": "Евгений Аркадьевич Илюхин " }
+  ],
+  "rows": [
+    {
+      "left": "ВУЗ:",
+      "right": "<a href='#' class='underline'>Санкт-Петербург</a>"
+    },
+    {
+      "left": "ВУЗ:",
+      "right": "Санкт-Петербургский медицинский институт им. акад. И.П. Павлова"
+    },
+    {
+      "left": "Рабочая специальность:",
+      "right": "Флебология"
+    },
+    {
+      "left": "Место работы:",
+      "right": "Reaclinic / Medalp"
+    },
+    {
+      "left": "Рабочий адрес:",
+      "right": "СПб, Коломяжский пр. 28"
+    },
+    {
+      "left": "Сайт организации:",
+      "right": "<a href='#' class='underline'>www.reaclinic.ru</a>"
+    },
+    {
+      "left": "Личный сайт:",
+      "right": "<a href='#' class='underline'>ilyukhin.info/</a>"
+    },
+    {
+      "left": "Контакты:",
+      "right": "evgeny@ilyukhin.info"
+    },
+    {
+      "left": "Ссылка на резюме:",
+      "right": "<a href='#' class='underline'>ilyukhin.info/biografija</a>"
+    },
+    {
+      "left": "ORCID:",
+      "right": "0000-0002-8288-8239"
+    },
+    {
+      "left": "ScopusID:",
+      "right": "55681461600"
+    },
+    {
+      "left": "Spin-код:",
+      "right": "6611-1950"
+    },
+    {
+      "left": "Сертификат:",
+      "right": "<img data-src='./assets/images/members_detail-img-1.png' />"
+    }
+  ]
+}
