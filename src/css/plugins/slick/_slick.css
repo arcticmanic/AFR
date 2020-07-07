@@ -116,10 +116,12 @@
 
 .carousel-nav {
   height: 680px;
+  width: 220px;
 
   @media (--max-tablet) {
     height: auto;
     max-width: 100%;
+    width: 100%;
   }
 }
 

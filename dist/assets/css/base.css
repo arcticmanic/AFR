@@ -6067,11 +6067,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .carousel-nav {
+  width: 220px;
   height: 680px;
 }
 
 @media (max-width: 1024px) {
   .carousel-nav {
+    width: 100%;
     max-width: 100%;
     height: auto
   }

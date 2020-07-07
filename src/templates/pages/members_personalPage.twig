@@ -1,0 +1,72 @@
+{% extends '../layout/default.twig' %}
+
+{% block content %}
+  {% include '../includes/content-header.twig' with {title: 'Илюхин Евгений Аркадьевич'} %}
+
+  <div class="container md:mb-12 mb-6">
+    <div>
+      <img data-src="./assets/images/members_personalPage-img-1.png" alt="">
+    </div>
+    <div class="text text-on-page prepend-line md:mt-20 mt-10">
+      <p>При описании флебологического статуса пациента можно использовать базовый или расширенный варианты классификации. Для лечебных учреждений и врачей, специализирующихся на лечении ХЗВ, предпочтителен расширенный вариант.</p>
+
+      <h2>Краткая информация. H2</h2>
+
+      <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
+      <br><br>
+      В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [10]. </p>
+
+      <h3>Классификация. H3</h3>
+
+      <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
+      <br><br>
+      В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [Рис.4]. </p>
+
+      <h4>Базовый и расширенный варианты классификации. H4</h4>
+
+      <ol>
+        <li>Телеангиэктазии и/или ретикулярные вены;</li>
+        <li>Большая подкожная вена бедра;</li>
+        <li>Большая подкожная вена голени;</li>
+        <li>Малая подкожная вена;</li>
+      </ol>
+
+      <h5>Глубокие вены. H5</h5>
+
+      <ul>
+        <li>Нижняя полая вена;</li>
+        <li>Общая подвздошная вена;</li>
+        <li>Внутренняя подвздошная вена;</li>
+        <li>Наружная подвздошная вена;</li>
+      </ul>
+
+      <h6>Пример формулировки диагноза согласно классификации CEAP. H6</h6>
+
+      <p>Пациентка обратилась к флебологу 03.09.2016. Предъявляет жалобы на наличие варикозно измененных вен на левой нижней конечности, отеки дистальных отделов голени, боли и тяжесть в икроножных мышцах во второй половине дня.
+      <br><br>
+      Выполнено ультразвуковое ангиосканирование: глубокие вены – без патологии, клапанная недостаточность большой подкожной вены на бедре, несостоятельность перфорантной вены в средней трети бедра.</p>
+    </div>
+  </div>
+
+  <div class="relative flex py-16 lg:mb-40 md:mb-20 sm:mb-16 mb-6">
+    {% include '../includes/pattern.twig' %}
+
+    <div class="container relative z-10 grid gap-6 grid-cols-12">
+      <div class="md:col-span-6 sm:col-span-4 col-span-12">
+        <img data-src="./assets/images/members_personalPage-gallery-img-1.png" class="w-full h-full object-cover" alt="">
+      </div>
+      <div class="md:col-span-3 sm:col-span-4 col-span-12">
+        <img data-src="./assets/images/members_personalPage-gallery-img-2.png" class="w-full h-full object-cover" alt="">
+      </div>
+      <div class="md:col-span-3 sm:col-span-4 col-span-12">
+        <img data-src="./assets/images/members_personalPage-gallery-img-3.png" class="w-full h-full object-cover" alt="">
+      </div>
+      <div class="md:col-span-4 sm:col-span-6 col-span-12">
+        <img data-src="./assets/images/members_personalPage-gallery-img-4.png" class="w-full h-full object-cover" alt="">
+      </div>
+      <div class="md:col-span-8 sm:col-span-6 col-span-12">
+        <img data-src="./assets/images/members_personalPage-gallery-img-5.png" class="w-full h-full object-cover" alt="">
+      </div>
+    </div>
+  </div>
+{% endblock %}

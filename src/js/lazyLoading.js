@@ -2,7 +2,7 @@ import LazyLoad from 'vanilla-lazyload'
 
 const lazyLoading = () => {
   const lazyLoadInstance = new LazyLoad({
-    elements_selector: '.lazy',
+    elements_selector: 'img[data-src]',
     use_native: true,
   })
 
