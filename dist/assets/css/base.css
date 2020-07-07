@@ -4637,11 +4637,12 @@ html {
 
 @media (max-width: 768px) {
   .text.prepend-line {
-    padding-left: 0;
+    padding-left: 0.75rem;
   }
 
   .text.prepend-line:before {
     top: -15px;
+    left: 0.75rem;
   }
 }
 
@@ -4963,6 +4964,11 @@ h6:not([class*='text-']) {
 .tick-icon-svg {
   width: 10px;
   height: 7px;
+}
+
+.ig-icon-svg {
+  width: 15px;
+  height: 15px;
 }
 
 .space-y-0 > :not(:last-child) {
@@ -7683,24 +7689,6 @@ video {
 
 .flex-grow {
   flex-grow: 1;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-none {
-  float: none;
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .font-sans {
@@ -15074,24 +15062,6 @@ video {
     flex: none;
   }
 
-  .sm\:float-right {
-    float: right;
-  }
-
-  .sm\:float-left {
-    float: left;
-  }
-
-  .sm\:float-none {
-    float: none;
-  }
-
-  .sm\:clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
   .sm\:font-sans {
     font-family: IBM Plex Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
@@ -19258,24 +19228,6 @@ video {
 
   .md\:flex-none {
     flex: none;
-  }
-
-  .md\:float-right {
-    float: right;
-  }
-
-  .md\:float-left {
-    float: left;
-  }
-
-  .md\:float-none {
-    float: none;
-  }
-
-  .md\:clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 
   .md\:font-sans {
@@ -23446,24 +23398,6 @@ video {
     flex: none;
   }
 
-  .lg\:float-right {
-    float: right;
-  }
-
-  .lg\:float-left {
-    float: left;
-  }
-
-  .lg\:float-none {
-    float: none;
-  }
-
-  .lg\:clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
   .lg\:font-sans {
     font-family: IBM Plex Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
@@ -27630,24 +27564,6 @@ video {
 
   .xl\:flex-none {
     flex: none;
-  }
-
-  .xl\:float-right {
-    float: right;
-  }
-
-  .xl\:float-left {
-    float: left;
-  }
-
-  .xl\:float-none {
-    float: none;
-  }
-
-  .xl\:clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 
   .xl\:font-sans {

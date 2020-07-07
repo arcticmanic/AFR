@@ -3,70 +3,136 @@
 {% block content %}
   {% include '../includes/content-header.twig' with {title: 'Илюхин Евгений Аркадьевич'} %}
 
-  <div class="container md:mb-12 mb-6">
-    <div>
-      <img data-src="./assets/images/members_personalPage-img-1.png" alt="">
+  <div id="info" class="lg:mb-20 mb-16">
+    <div class="md:mb-12 mb-6">
+      <div class="relative flex">
+        <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-0 right-0 lg:w-2/3 w-5/6 h-full text-blue-800 z-0 pb-20" >
+          <defs>
+            <pattern id="pattern_0gLSGx" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+              <line x1="0" y="0" x2="0" y2="4" stroke="currentColor" stroke-width="4" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#pattern_0gLSGx)" :opacity="1" />
+        </svg>
+      
+        <div class="container z-10 flex lg:flex-row flex-col items-center justify-between py-10">
+          <img data-src="./assets/images/members_personalPage-img-1.png" alt="" class="md:ml-0 md:mr-20 mx-auto lg:mb-0 mb-10">
+
+          <div>
+            <p class="md:mb-20 mb-10 font-sans italic text-lg leading-snug font-regular">Владеет всем арсеналом методов, используемых в современной флебологии. Применяет все виды эндоваскулярных вмешательств (лазерная, радиочастотная облитерация), все виды склерооблитерации, в том числе, эхо-контролируемую склерооблитерацию магистральных подкожных вен.
+            <br><br>
+            В 2007 году первым в СПб начал применять эндовазальную лазерную коагуляцию в соответствии с принятой в мире и зарегистрированной в России методикой.</p>
+
+            <div class="mb-3 flex items-center space-x-1">
+              <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+                {% include '../svg/fb-icon-svg.twig' with {classes: 'text-white'} %}
+              </a>
+
+              <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+                {% include '../svg/vk-icon-svg.twig' with {classes: 'text-white'} %}
+              </a>
+
+              <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+                {% include '../svg/ok-icon-svg.twig' with {classes: 'text-white'} %}
+              </a>
+
+              <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+                {% include '../svg/tw-icon-svg.twig' with {classes: 'text-white'} %}
+              </a>
+
+              <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+                {% include '../svg/ig-icon-svg.twig' with {classes: 'text-white ml-1'} %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container text text-on-page prepend-line md:mt-20 mt-10">
+        <p>При описании флебологического статуса пациента можно использовать базовый или расширенный варианты классификации. Для лечебных учреждений и врачей, специализирующихся на лечении ХЗВ, предпочтителен расширенный вариант.</p>
+
+        <h2>Краткая информация. H2</h2>
+
+        <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
+        <br><br>
+        В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [10]. </p>
+
+        <h3>Классификация. H3</h3>
+
+        <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
+        <br><br>
+        В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [Рис.4]. </p>
+
+        <h4>Базовый и расширенный варианты классификации. H4</h4>
+
+        <ol>
+          <li>Телеангиэктазии и/или ретикулярные вены;</li>
+          <li>Большая подкожная вена бедра;</li>
+          <li>Большая подкожная вена голени;</li>
+          <li>Малая подкожная вена;</li>
+        </ol>
+
+        <h5>Глубокие вены. H5</h5>
+
+        <ul>
+          <li>Нижняя полая вена;</li>
+          <li>Общая подвздошная вена;</li>
+          <li>Внутренняя подвздошная вена;</li>
+          <li>Наружная подвздошная вена;</li>
+        </ul>
+
+        <h6>Пример формулировки диагноза согласно классификации CEAP. H6</h6>
+
+        <p>Пациентка обратилась к флебологу 03.09.2016. Предъявляет жалобы на наличие варикозно измененных вен на левой нижней конечности, отеки дистальных отделов голени, боли и тяжесть в икроножных мышцах во второй половине дня.
+        <br><br>
+        Выполнено ультразвуковое ангиосканирование: глубокие вены – без патологии, клапанная недостаточность большой подкожной вены на бедре, несостоятельность перфорантной вены в средней трети бедра.</p>
+      </div>
     </div>
-    <div class="text text-on-page prepend-line md:mt-20 mt-10">
-      <p>При описании флебологического статуса пациента можно использовать базовый или расширенный варианты классификации. Для лечебных учреждений и врачей, специализирующихся на лечении ХЗВ, предпочтителен расширенный вариант.</p>
 
-      <h2>Краткая информация. H2</h2>
+    <div class="relative flex py-16 lg:mb-20 md:mb-20 sm:mb-16 mb-6">
+      {% include '../includes/pattern.twig' %}
 
-      <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
-      <br><br>
-      В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [10]. </p>
+      <div class="container relative z-10 grid gap-6 grid-cols-12">
+        <div class="md:col-span-6 sm:col-span-4 col-span-12">
+          <img data-src="./assets/images/members_personalPage-gallery-img-1.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="md:col-span-3 sm:col-span-4 col-span-12">
+          <img data-src="./assets/images/members_personalPage-gallery-img-2.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="md:col-span-3 sm:col-span-4 col-span-12">
+          <img data-src="./assets/images/members_personalPage-gallery-img-3.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="md:col-span-4 sm:col-span-6 col-span-12">
+          <img data-src="./assets/images/members_personalPage-gallery-img-4.png" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="md:col-span-8 sm:col-span-6 col-span-12">
+          <img data-src="./assets/images/members_personalPage-gallery-img-5.png" class="w-full h-full object-cover" alt="">
+        </div>
+      </div>
+    </div>
 
-      <h3>Классификация. H3</h3>
+    <div class="container flex items-center justify-center">
+      <iframe width="870" height="490" src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen class="responsive-iframe"></iframe>
 
-      <p>Базовым является вариант, в котором указывают клинический класс по максимально выраженному клиническому признаку, а в патофизиологическом разделе отмечают только сам факт наличия рефлюкса, окклюзии или их отсутствие.
-      <br><br>
-      В расширенном варианте используется обозначение клинического класса с перечислением всех имеющихся объективных проявлений и указанием тех сегментов венозной системы, в которых были обнаружены патологические изменения (рефлюкс или окклюзия) [Рис.4]. </p>
-
-      <h4>Базовый и расширенный варианты классификации. H4</h4>
-
-      <ol>
-        <li>Телеангиэктазии и/или ретикулярные вены;</li>
-        <li>Большая подкожная вена бедра;</li>
-        <li>Большая подкожная вена голени;</li>
-        <li>Малая подкожная вена;</li>
-      </ol>
-
-      <h5>Глубокие вены. H5</h5>
-
-      <ul>
-        <li>Нижняя полая вена;</li>
-        <li>Общая подвздошная вена;</li>
-        <li>Внутренняя подвздошная вена;</li>
-        <li>Наружная подвздошная вена;</li>
-      </ul>
-
-      <h6>Пример формулировки диагноза согласно классификации CEAP. H6</h6>
-
-      <p>Пациентка обратилась к флебологу 03.09.2016. Предъявляет жалобы на наличие варикозно измененных вен на левой нижней конечности, отеки дистальных отделов голени, боли и тяжесть в икроножных мышцах во второй половине дня.
-      <br><br>
-      Выполнено ультразвуковое ангиосканирование: глубокие вены – без патологии, клапанная недостаточность большой подкожной вены на бедре, несостоятельность перфорантной вены в средней трети бедра.</p>
     </div>
   </div>
 
-  <div class="relative flex py-16 lg:mb-40 md:mb-20 sm:mb-16 mb-6">
-    {% include '../includes/pattern.twig' %}
+  <div id="publications" class="lg:mb-20 mb-16"></div>
 
-    <div class="container relative z-10 grid gap-6 grid-cols-12">
-      <div class="md:col-span-6 sm:col-span-4 col-span-12">
-        <img data-src="./assets/images/members_personalPage-gallery-img-1.png" class="w-full h-full object-cover" alt="">
-      </div>
-      <div class="md:col-span-3 sm:col-span-4 col-span-12">
-        <img data-src="./assets/images/members_personalPage-gallery-img-2.png" class="w-full h-full object-cover" alt="">
-      </div>
-      <div class="md:col-span-3 sm:col-span-4 col-span-12">
-        <img data-src="./assets/images/members_personalPage-gallery-img-3.png" class="w-full h-full object-cover" alt="">
-      </div>
-      <div class="md:col-span-4 sm:col-span-6 col-span-12">
-        <img data-src="./assets/images/members_personalPage-gallery-img-4.png" class="w-full h-full object-cover" alt="">
-      </div>
-      <div class="md:col-span-8 sm:col-span-6 col-span-12">
-        <img data-src="./assets/images/members_personalPage-gallery-img-5.png" class="w-full h-full object-cover" alt="">
-      </div>
-    </div>
-  </div>
+  <ul class="container flex items-center justify-center lg:mb-30 md:mb-20 mb-16 space-x-2" data-tabs>
+    <li>
+      <a href="#info" class="button py-3 bg-purple-300 text-white space-x-3" data-tabby-default data-title="Поиск врачей по городу">
+        {% include '../svg/list-icon-svg.twig' with {classes: 'text-white'} %}
+        <span class="whitespace-no-wrap">Информация</span>
+      </a>
+    </li>
+    <li>
+      <a href="#publications" id="init-map"  class="button py-2 bg-purple-300 text-white space-x-3 opacity-25" data-title="Поиск врачей по карте">
+        {% include '../svg/book-svg.twig' with {classes: 'text-white'} %}
+        <span>Публикации</span>
+      </a>
+    </li>
+  </ul>
+
 {% endblock %}

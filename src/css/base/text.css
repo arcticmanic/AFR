@@ -213,9 +213,10 @@
 
   @media (--max-mobile-landscape) {
     &.prepend-line {
-      @apply pl-0;
+      @apply pl-3;
 
       &:before {
+        left: 0.75rem;
         top: -15px;
       }
     }

@@ -368,7 +368,7 @@ module.exports = {
     divideColor: false,
     divideOpacity: false,
     divideWidth: false,
-    // float: false,
+    float: false,
     flexShrink: false,
     fontSmoothing: false,
     listStylePosition: false,
@@ -379,10 +379,8 @@ module.exports = {
     placeholderOpacity: false,
     skew: false,
     space: false,
-    // rotate: false,
     transitionProperty: false,
     transitionDelay: false,
     transformOrigin: false,
   },
 }
-// IBMPlexSans
