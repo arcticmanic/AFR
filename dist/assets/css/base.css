@@ -6705,6 +6705,38 @@ video {
   }
 }
 
+.container-big {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 640px) {
+  .container-big {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-big {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-big {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-big {
+    max-width: 1402px;
+  }
+}
+
 .button {
   max-width: fit-content;
   max-width: -moz-fit-content;
@@ -6829,6 +6861,12 @@ video {
   background-color: rgba(99, 179, 237, var(--bg-opacity));
 }
 
+.bg-blue-500 {
+  --bg-opacity: 1;
+  background-color: #3b4461;
+  background-color: rgba(59, 68, 97, var(--bg-opacity));
+}
+
 .bg-blue-600 {
   --bg-opacity: 1;
   background-color: #343846;
@@ -6943,6 +6981,12 @@ video {
   --bg-opacity: 1;
   background-color: #63b3ed;
   background-color: rgba(99, 179, 237, var(--bg-opacity));
+}
+
+.hover\:bg-blue-500:hover {
+  --bg-opacity: 1;
+  background-color: #3b4461;
+  background-color: rgba(59, 68, 97, var(--bg-opacity));
 }
 
 .hover\:bg-blue-600:hover {
@@ -7121,6 +7165,12 @@ video {
   border-color: rgba(99, 179, 237, var(--border-opacity));
 }
 
+.border-blue-500 {
+  --border-opacity: 1;
+  border-color: #3b4461;
+  border-color: rgba(59, 68, 97, var(--border-opacity));
+}
+
 .border-blue-600 {
   --border-opacity: 1;
   border-color: #343846;
@@ -7235,6 +7285,12 @@ video {
   --border-opacity: 1;
   border-color: #63b3ed;
   border-color: rgba(99, 179, 237, var(--border-opacity));
+}
+
+.hover\:border-blue-500:hover {
+  --border-opacity: 1;
+  border-color: #3b4461;
+  border-color: rgba(59, 68, 97, var(--border-opacity));
 }
 
 .hover\:border-blue-600:hover {
@@ -8047,6 +8103,10 @@ video {
 
 .text-4xl {
   font-size: 2.25rem;
+}
+
+.text-4-25xl {
+  font-size: 2.5rem;
 }
 
 .text-4-5xl {
@@ -10473,6 +10533,10 @@ video {
   color: #63b3ed;
 }
 
+.placeholder-blue-500::placeholder {
+  color: #3b4461;
+}
+
 .placeholder-blue-600::placeholder {
   color: #343846;
 }
@@ -10991,6 +11055,12 @@ video {
   color: rgba(99, 179, 237, var(--text-opacity));
 }
 
+.text-blue-500 {
+  --text-opacity: 1;
+  color: #3b4461;
+  color: rgba(59, 68, 97, var(--text-opacity));
+}
+
 .text-blue-600 {
   --text-opacity: 1;
   color: #343846;
@@ -11107,6 +11177,12 @@ video {
   color: rgba(99, 179, 237, var(--text-opacity));
 }
 
+.hover\:text-blue-500:hover {
+  --text-opacity: 1;
+  color: #3b4461;
+  color: rgba(59, 68, 97, var(--text-opacity));
+}
+
 .hover\:text-blue-600:hover {
   --text-opacity: 1;
   color: #343846;
@@ -11221,6 +11297,12 @@ video {
   --text-opacity: 1;
   color: #63b3ed;
   color: rgba(99, 179, 237, var(--text-opacity));
+}
+
+.group:hover .group-hover\:text-blue-500 {
+  --text-opacity: 1;
+  color: #3b4461;
+  color: rgba(59, 68, 97, var(--text-opacity));
 }
 
 .group:hover .group-hover\:text-blue-600 {
@@ -14821,6 +14903,7 @@ video {
   100: #f7f9ff;
   300: #43c0ff;
   400: #63b3ed;
+  500: #3b4461;
   600: #343846;
   700: #324456;
   800: #363a47;
@@ -14831,6 +14914,7 @@ video {
   100: #f7f9ff;
   300: #43c0ff;
   400: #63b3ed;
+  500: #3b4461;
   600: #343846;
   700: #324456;
   800: #363a47;
@@ -14841,6 +14925,7 @@ video {
   100: #f7f9ff;
   300: #43c0ff;
   400: #63b3ed;
+  500: #3b4461;
   600: #343846;
   700: #324456;
   800: #363a47;
@@ -14851,6 +14936,7 @@ video {
   100: #f7f9ff;
   300: #43c0ff;
   400: #63b3ed;
+  500: #3b4461;
   600: #343846;
   700: #324456;
   800: #363a47;
@@ -15444,6 +15530,10 @@ video {
 
   .sm\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .sm\:text-4-25xl {
+    font-size: 2.5rem;
   }
 
   .sm\:text-4-5xl {
@@ -19614,6 +19704,10 @@ video {
     font-size: 2.25rem;
   }
 
+  .md\:text-4-25xl {
+    font-size: 2.5rem;
+  }
+
   .md\:text-4-5xl {
     font-size: 2.8125rem;
   }
@@ -23782,6 +23876,10 @@ video {
     font-size: 2.25rem;
   }
 
+  .lg\:text-4-25xl {
+    font-size: 2.5rem;
+  }
+
   .lg\:text-4-5xl {
     font-size: 2.8125rem;
   }
@@ -27948,6 +28046,10 @@ video {
 
   .xl\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .xl\:text-4-25xl {
+    font-size: 2.5rem;
   }
 
   .xl\:text-4-5xl {

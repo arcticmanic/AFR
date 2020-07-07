@@ -80,7 +80,7 @@ module.exports = {
         // 200: '#bee3f8',
         300: '#43c0ff', //custom
         400: '#63b3ed',
-        // 500: '#4299e1',
+        500: '#3b4461', //custom
         600: '#343846', //custom
         700: '#324456', //custom
         800: '#363a47', //custom
@@ -192,6 +192,7 @@ module.exports = {
       '3xl': '1.75rem', // 28px
       '3-5xl': '1.875rem', // 30px
       '4xl': '2.25rem', // 36px
+      '4-25xl': '2.5rem', // 40xl
       '4-5xl': '2.8125rem', // 45px
       '5xl': '3rem', // 48px
       '6xl': '3.75rem', // 60px
@@ -330,6 +331,29 @@ module.exports = {
           },
           '@screen xl': {
             maxWidth: '1200px',
+          },
+        },
+      })
+    },
+    function ({ addComponents }) {
+      addComponents({
+        '.container-big': {
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: '15px',
+          paddingRight: '15px',
+          '@screen sm': {
+            maxWidth: '100%',
+          },
+          '@screen md': {
+            maxWidth: '100%',
+          },
+          '@screen lg': {
+            maxWidth: '1024px',
+          },
+          '@screen xl': {
+            maxWidth: '1402px',
           },
         },
       })
