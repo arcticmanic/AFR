@@ -34,17 +34,16 @@
 
     <div class="top-pattern max-h-full pointer-events-none"></div>
 
-    {% include '../layout/header.twig' %}
+    {% include '../layout/index-header.twig' %}
 
     <main class="page-main-content z-10 flex flex-col  flex-auto">
-      {% include '../includes/breadcrumbs.twig' %}
       
       {% block content %}
 
       {% endblock %}
     </main>
 
-    {% include '../layout/footer.twig' %}
+    {% include '../layout/index-footer.twig' %}
 
     {% block afterFooter %}
 
@@ -147,6 +146,7 @@
             <option>Санкт-Петербург</option>
             <option>Москва</option>
           </select>
+          {# <input type="text" class="p-2 flex-1 text-blue-900 text-base border border-gray-200 rounded-sm focus:outline-none focus:shadow-outline placeholder-gray-900" placeholder="Санкт-Петербург"> #}
         </div>
 
         <div class="flex md:flex-row flex-col md:items-center mt-8 space-x-4">
