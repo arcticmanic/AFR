@@ -79,3 +79,8 @@ a:hover {
 .hr-vertical {
   height: 100%;
 }
+
+.responsive-iframe {
+  max-width: 100%;
+  /* height: auto; */
+}

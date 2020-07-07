@@ -1,11 +1,15 @@
 {% extends '../layout/default.twig' %}
 
+{% block scripts %}
+  <script src="./assets/js/slick.min.js" defer></script>
+{% endblock %}
+
 {% block content %}
   {% include '../includes/content-header-with-scheme-btn.twig' with {title: 'УЗИ-планшеты'} %}
 
   <div class="container md:mt-8 lg:mb-30 md:mb-20 sm:mb-16 mb-12 my-6 pr-8 grid xl:row-gap-24 md:row-gap-20 row-gap-16 col-gap-12 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     {% for item in items %}
-      <a href="#" class="item group">
+      <a href="#" class="item group" data-micromodal-trigger="modal-phlebologistCatalog_category">
         <div class="bg-white shifted-shadow">
           <img data-src="./assets/images/phlebologistCatalog_category-img-{{item.img}}.png" class="lazy h-64 w-full object-contain" alt="">
         </div>
@@ -18,4 +22,107 @@
   </div>
 
   {% include '../includes/pagination.twig' %}
+{% endblock %}
+
+{% block afterFooter %}
+  {% embed '../includes/modal-side_big.twig' with {id: 'modal-phlebologistCatalog_category', classes: 'modal-side_big'} %}
+    {% block content %}
+      <h2 class="append-line font-serif text-gray-900 xl:text-6xl lg:text-5xl md:text-4xl text-3xl ">Siemens ACUSON Freestyle</h2>
+
+      <div class="">
+        <div class="carousel-for-nav">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-1.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-2.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-3.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-4.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-5.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-1.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-2.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-3.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-4.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-5.png" alt="">
+        </div>
+
+        <div class="carousel-nav">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-1.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-2.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-3.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-4.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-5.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-1.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-2.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-3.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-4.png" alt="">
+          <img src="./assets/images/phlebologistCatalog_category_detail-img-5.png" alt="">
+        </div>
+      </div>
+
+      <div class="text text-gray-900">
+
+        <h3>Описание</h3>
+
+        <p>УЗИ сканер Siemens ACUSON Freestyle  разработан на платформе Pixelformer, которая обеспечивает однородно четкое изображение без выборочных зон фокусировки.
+        <br><br>
+        Высокая контрастность и детализация – благодаря усовершенствованной технологии фильтрации спекл-шумов и составного многолучевого сканирования.
+        <br><br>
+        Для быстрого управления рабочим процессом наиболее используемые элементы управления продублированы на корпусе датчика.
+        <br><br>
+        Устойчивую связь между сканером и датчиками обеспечивают несколько антенн.
+        <br><br>
+        Операционная система сканера позволяет быстро включить аппарат. Приготовления к работе занимают несколько секунд.</p>
+
+        <h3>Характеристики</h3>
+
+        <ul>
+          <li>Производитель — <strong>Siemens</strong> </li>
+          <li>Класс аппарата — <strong>высокий</strong></li>
+          <li>Диагональ основного монитора, дюймы — <strong>15</strong></li>
+          <li>Тип основного монитора — <strong>LED</strong></li>
+          <li>Тип корпуса — <strong>портативный</strong></li>
+          <li>Число совместимых датчиков — <strong>3</strong></li>
+          <li>Количество USB-портов — <strong>2</strong></li>
+          <li>Режимы визуализации — <strong>2D-режим, ЦДК, энергетический доплер</strong></li>
+          <li>Поддержка DICOM — <strong>да</strong></li>
+          <li>Жесткий диск, Гб — <strong>16</strong></li>
+          <li>Аккумулятор — <strong>90 минут</strong></li>
+          <li>Вес, кг — <strong>4.8</strong></li>
+          <li>Габариты, см — <strong>4*37*12</strong></li>
+        </ul>
+
+        <iframe width="870" height="490" src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="responsive-iframe"></iframe>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between mt-12">
+        <div class="mb-3 flex items-center justify-between space-x-1">
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/fb-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/vk-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/ok-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/tw-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+
+          <a href="#" class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-300">
+            {% include '../svg/wa-icon-svg.twig' with {classes: 'text-white'} %}
+          </a>
+        </div>
+
+        <div class="mb-3 flex flex-wrap items-center justify-between space-x-1">
+          <a href="#" class="button mb-1 px-3 bg-purple-300 space-x-4 group">
+            <span>К списку</span>
+            {% include '../svg/arrow-right-svg.twig' with {classes: 'text-white ease-in-out  duration-300 transform group-hover:translate-x-1'} %}
+          </a>
+        </div>
+
+      </div>
+    {% endblock %}
+  {% endembed %}
 {% endblock %}

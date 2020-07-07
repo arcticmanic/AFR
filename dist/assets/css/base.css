@@ -5534,6 +5534,11 @@ a:hover .shifted-shadow__pattern {
   height: 100%;
 }
 
+.responsive-iframe {
+  max-width: 100%;
+  /* height: auto; */
+}
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--blue-900) var(--purple-300);
