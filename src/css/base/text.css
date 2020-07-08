@@ -67,6 +67,14 @@
         content: '';
       }
     }
+
+    &.bullets-blue-300 {
+      & > li {
+        &:before {
+          @apply bg-blue-200;
+        }
+      }
+    }
   }
 
   :--ol {

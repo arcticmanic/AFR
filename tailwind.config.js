@@ -77,7 +77,7 @@ module.exports = {
       // },
       blue: {
         100: '#f7f9ff', //custom
-        // 200: '#bee3f8',
+        200: '#4192ed', //custom
         300: '#43c0ff', //custom
         400: '#63b3ed',
         500: '#3b4461', //custom
@@ -86,17 +86,17 @@ module.exports = {
         800: '#363a47', //custom
         900: '#303441', // custom
       },
-      // indigo: {
-      //   100: '#ebf4ff',
-      //   200: '#c3dafe',
-      //   300: '#a3bffa',
-      //   400: '#7f9cf5',
-      //   500: '#667eea',
-      //   600: '#5a67d8',
-      //   700: '#4c51bf',
-      //   800: '#434190',
-      //   900: '#3c366b',
-      // },
+      indigo: {
+        // 100: '#ebf4ff',
+        // 200: '#c3dafe',
+        // 300: '#a3bffa',
+        // 400: '#7f9cf5',
+        500: '#41b2ed',
+        // 600: '#5a67d8',
+        // 700: '#4c51bf',
+        // 800: '#434190',
+        // 900: '#3c366b',
+      },
       purple: {
         // 100: '#faf5ff',
         200: '#6a8eff', // custom
@@ -263,9 +263,15 @@ module.exports = {
     opacity: {
       '0': '0',
       '10': '0.1',
-      '20': '0.2',
+      // '20': '0.2',
       '25': '0.25',
+      '30': '0.3',
+      // '40': '0.4',
       '50': '0.5',
+      // '60': '0.6',
+      // '70': '0.7',
+      // '80': '0.8',
+      // '90': '0.9',
     },
     fill: {
       current: 'currentColor',
@@ -314,7 +320,7 @@ module.exports = {
     strokeWidth: [],
     tableLayout: [],
     textColor: ['hover', 'group-hover'],
-    translate: ['responsive', 'hover', 'group-hover'],
+    translate: ['responsive', 'hover', 'focus', 'group-hover'],
     transitionTimingFunction: [],
     textDecoration: ['hover'],
     textTransform: [],
@@ -326,7 +332,6 @@ module.exports = {
     zIndex: [],
     transform: [],
     scale: ['hover', 'focus', 'group-hover'],
-    translate: ['hover', 'focus', 'group-hover'],
   },
   plugins: [
     function ({ addComponents }) {
