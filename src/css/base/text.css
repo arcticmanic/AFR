@@ -30,7 +30,10 @@
   img {
     width: 100%;
     height: auto;
-    @apply mb-10;
+
+    &:not([class*='mb']) {
+      @apply mb-10;
+    }
   }
 
   :--lists {
@@ -113,7 +116,12 @@
     img {
       width: 100%;
       height: auto;
-      @apply mt-24 mb-30;
+
+      @apply mt-24;
+
+      &:not([class*='mb']) {
+        @apply mb-30;
+      }
     }
 
     :--lists {

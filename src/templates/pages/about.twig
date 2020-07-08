@@ -4,10 +4,13 @@
   {% include '../includes/content-header.twig' with {title: 'Об ассоциации'} %}
 
   <div class="container md:mb-12 mb-6">
-    <div class="text text-on-page prepend-line md:mt-20 mt-10 md:mb-30 mb-20">
+    <div class="text text-on-page prepend-line md:mt-16 mt-10 md:mb-30 mb-20 lg:pr-48">
       <p>Ассоциация флебологов России (АФР)  более 20 лет тому назад была создана выдающимся отечественным хирургом академиком РАН В.С. Савельевым. За этот период  флебология, как одно из направлений современной сердечно-сосудистой хирургии, открыла новую эпоху в развитии и изучении патологии венозной системы, включая ее аспекты на клеточном и генетическом уровнях, разработаны эндоваскулярные аспекты реконструктивных операций, созданы высокоэффективные алгоритмы диагностики  и профилактики тромбоэмболических осложнений. </p>
 
-      <img data-src="./assets/images/history-img.png" alt="">
+      <div class="shifted-shadow_patterned">
+        <img data-src="./assets/images/history-img.png" alt="" /> 
+        {% include '../includes/shifted-shadow__pattern.twig' %}
+      </div>
 
       <p>Ассоциация флебологов России (АФР)  более 20 лет тому назад была создана выдающимся отечественным хирургом академиком РАН В.С. Савельевым. За этот период  флебология, как одно из направлений современной сердечно-сосудистой хирургии, открыла новую эпоху в развитии и изучении патологии венозной системы, включая ее аспекты на клеточном и генетическом уровнях, разработаны эндоваскулярные аспекты реконструктивных операций, созданы высокоэффективные алгоритмы диагностики  и профилактики тромбоэмболических осложнений. </p>
 
@@ -20,10 +23,8 @@
     <div class="relative flex py-8">
       {% include '../includes/pattern.twig' %}
 
-
-
       <div class="container relative z-10 flex flex-wrap items-center lg:pl-36 pl-3">
-        <span class="absolute vertical-text top-0 left-0 lg:pl-0 pl-2 text-blue-300 ">Президент</span>
+        <span class="absolute vertical-text top-0 left-0 lg:mt-0 -mt-1 lg:pl-0 pl-4 lg:text-tiny text-md text-blue-300">Президент</span>
 
         <div class="md:w-1/2 my-4 flex items-center md:space-x-10 space-x-4">
           <img data-src="./assets/images/about-img-1.png" alt="" class=" md:h-36 md:w-36 h-30 w-30 rounded-full">
@@ -37,7 +38,7 @@
 
     <div class="relative flex py-8">
       <div class="container relative z-10 flex flex-wrap items-center lg:pl-36 pl-3">
-        <span class="absolute vertical-text top-0 left-0 lg:pl-0 pl-2 text-blue-300 ">Почетные президенты</span>
+        <span class="absolute vertical-text top-0 left-0 lg:mt-0 -mt-1 lg:pl-0 pl-4 lg:text-tiny text-md text-blue-300">Почетные президенты</span>
 
         <div class="md:w-1/2 my-4 flex items-center md:space-x-10 space-x-4">
           <img data-src="./assets/images/about-img-2.png" alt="" class=" md:h-36 md:w-36 h-30 w-30 rounded-full">
@@ -61,7 +62,7 @@
       {% include '../includes/pattern.twig' %}
 
       <div class="container relative z-10 flex flex-wrap items-center lg:pl-36 pl-3">
-        <span class="absolute vertical-text top-0 left-0 lg:pl-0 pl-2 text-blue-300 ">Почетные президенты</span>
+        <span class="absolute vertical-text top-0 left-0 lg:mt-0 -mt-1 lg:pl-0 pl-4 lg:text-tiny text-md text-blue-300">Почетные президенты</span>
 
         <div class="md:w-1/2 my-4 flex items-center md:space-x-10 space-x-4">
           <img data-src="./assets/images/about-img-4.png" alt="" class=" md:h-36 md:w-36 h-30 w-30 rounded-full">
@@ -91,7 +92,7 @@
 
     <div class="relative flex py-8">
       <div class="container relative z-10 flex flex-wrap items-center lg:pl-36 pl-3">
-        <span class="absolute vertical-text top-0 left-0 lg:pl-0 pl-2 text-blue-300 ">Совет АФР </span>
+        <span class="absolute vertical-text top-0 left-0 lg:mt-0 -mt-1 lg:pl-0 pl-4 lg:text-tiny text-md text-blue-300">Совет АФР </span>
 
         <div class="md:w-1/2 my-4 flex items-center md:space-x-10 space-x-4">
           <img data-src="./assets/images/about-img-7.png" alt="" class=" md:h-36 md:w-36 h-30 w-30 rounded-full">

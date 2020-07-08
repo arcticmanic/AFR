@@ -4455,6 +4455,9 @@ html {
 .text img {
   width: 100%;
   height: auto;
+}
+
+.text img:not([class*='mb']) {
   margin-bottom: 2.5rem;
 }
 
@@ -4542,6 +4545,9 @@ html {
   width: 100%;
   height: auto;
   margin-top: 6rem;
+}
+
+.text.text-on-page img:not([class*='mb']) {
   margin-bottom: 7.5rem;
 }
 
@@ -5597,7 +5603,7 @@ body::-webkit-scrollbar-thumb {
 .page-content,
 .striped-bg {
   position: relative;
-  background-image: linear-gradient(to right, #324456 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(50, 68, 86, 0.3) 1px, transparent 1px);
   background-position: 107%;
   background-size: 12.35vw 100vh;
 }
@@ -5609,7 +5615,7 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   left: 0;
   height: 750px;
-  background-image: linear-gradient(to bottom, #324456 1px, transparent 1px);
+  background-image: linear-gradient(to bottom, rgba(50, 68, 86, 0.3) 1px, transparent 1px);
   background-position: 100% 102%;
   background-size: 100% 12.35vw;
 }
