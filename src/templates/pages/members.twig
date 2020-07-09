@@ -1,0 +1,36 @@
+{% extends '../layout/default.twig' %}
+
+{% block content %}
+  {% include '../includes/content-header.twig' with {title: 'Члены ассоциации'} %}
+
+  <div class="container md:mb-4 mb-2">
+    <div class="text text-on-page prepend-line lg:mt-16 md:mt-12 md-10 lg:pr-48">
+      <p>Ассоциация флебологов России (АФР)  более 20 лет тому назад была создана выдающимся отечественным хирургом академиком РАН В.С. Савельевым. За этот период  флебология, как одно из направлений современной сердечно-сосудистой хирургии, открыла новую эпоху в развитии и изучении патологии венозной системы, включая ее аспекты на клеточном и генетическом уровнях, разработаны эндоваскулярные аспекты реконструктивных операций, созданы высокоэффективные алгоритмы диагностики  и профилактики тромбоэмболических осложнений. </p>
+    </div>
+  </div>
+
+  <div class="lg:mb-40 md:mb-20 sm:mb-16 mb-6">
+    <div class="relative flex py-12">
+      {% include '../includes/pattern.twig' %}
+
+      <div class="container z-10">
+
+        <div class="relative flex flex-wrap items-center justify-between lg:pl-24 pl-3">
+          <span class="absolute top-0 left-0 lg:mt-0 transform lg:translate-x-3 lg:translate-y-10 -translate-y-6 lg:pl-0 pl-4 lg:text-tiny text-md text-blue-300">
+            <span class="vertical-text">Почетные члены ассоциации</span>
+          </span>
+
+          {% for item in items %}
+            <div class="md:w-1/2 my-4 flex items-center">
+              <img data-src="./assets/images/members-img-{{loop.index}}.png" alt="" class="md:mr-16 mr-4 md:h-36 md:w-36 h-30 w-30 rounded-full {{loop.index % 2 == 0 ? 'ml-auto' : ''}}">
+              <div class="md:w-1/2">
+                <p class="md:w-5/6 mb-1 font-serif text-xl leading-tight">{{item.name}}</p>
+                <p class="text-tiny">{{item.country}}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
