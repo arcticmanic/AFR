@@ -9,41 +9,46 @@ $(document).ready(function () {
   $(document).on('modal-opens', e => {
     const modal = e.detail.modal
 
-    if ($(modal).find('.carousel').length > 0) {
-      $(modal)
-        .find('.carousel')
-        .slick({
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          ...carouselBaseOptions,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-              },
+    const carousel = $(modal).find('.carousel')
+
+    if (carousel.length > 0 && !carousel.hasClass('slick-initialized')) {
+      carousel.slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        ...carouselBaseOptions,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
             },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-              },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
             },
-            {
-              breakpoint: 500,
-              settings: {
-                slidesToShow: 1,
-              },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
             },
-          ],
-        })
+          },
+        ],
+      })
     }
 
+    const carouselNav = $(modal).find('.carousel-nav')
+    const carouselForNav = $(modal).find('.carousel-for-nav')
+
     if (
-      $(modal).find('.carousel-nav').length > 0 &&
-      $(modal).find('.carousel-for-nav').length > 0
+      carouselNav.length > 0 &&
+      !carouselNav.hasClass('slick-initialized') &&
+      carouselForNav.length > 0 &&
+      !carouselForNav.hasClass('slick-initialized')
     ) {
-      $(modal).find('.carousel-for-nav').slick({
+      carouselForNav.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
@@ -53,38 +58,36 @@ $(document).ready(function () {
         arrows: false,
       })
 
-      $(modal)
-        .find('.carousel-nav')
-        .slick({
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false,
-          centerMode: true,
-          focusOnSelect: true,
-          vertical: true,
-          asNavFor: '.carousel-for-nav',
-          prevArrow: $('.carousel-arrow_left'),
-          nextArrow: $('.carousel-arrow_right'),
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                centerMode: true,
-                vertical: false,
-                slidesToShow: 3,
-              },
+      carouselNav.slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        vertical: true,
+        asNavFor: '.carousel-for-nav',
+        prevArrow: $('.carousel-arrow_left'),
+        nextArrow: $('.carousel-arrow_right'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              centerMode: true,
+              vertical: false,
+              slidesToShow: 3,
             },
-            {
-              breakpoint: 768,
-              settings: {
-                centerMode: true,
-                vertical: false,
-                slidesToShow: 2,
-              },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              centerMode: true,
+              vertical: false,
+              slidesToShow: 2,
             },
-          ],
-        })
+          },
+        ],
+      })
     }
 
     if ($(modal).find('.select-here').length > 0) {
@@ -182,6 +185,7 @@ $(document).ready(function () {
       appendDots: '.carousel-conf-cont',
     })
   }
+  
   if ($('#map').length > 0 && $('#init-map').length > 0) {
     $('#init-map').one('click', () => {
       ymaps.ready(init)

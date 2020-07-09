@@ -10,7 +10,7 @@
 }
 
 .dimmed-img-50 {
-  filter: grayscale(0.5) brightness(0.8);
+  filter: grayscale(0.5) brightness(0.5);
 }
 
 .shifted-shadow {

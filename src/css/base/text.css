@@ -60,11 +60,11 @@
         width: 4px;
         height: 4px;
 
-        @apply bg-gray-900;
+        color: inherit;
 
         border-radius: 50%;
 
-        content: '';
+        content: '·';
       }
     }
 
@@ -89,7 +89,8 @@
         position: absolute;
         left: 0;
 
-        @apply text-gray-900;
+        font-size: inherit;
+        color: inherit;
 
         content: counter(my-awesome-counter) '. ';
       }
@@ -147,7 +148,7 @@
     :--ul {
       li {
         &:before {
-          @apply bg-white;
+          background: inherit;
         }
       }
     }
@@ -155,7 +156,7 @@
     :--ol {
       li {
         &:before {
-          @apply text-white;
+          font-size: inherit;
         }
       }
     }
@@ -242,7 +243,7 @@
     &,
     &.text-on-page {
       :--h2 {
-        @apply mb-6 text-3xl;
+        @apply mb-8 text-3xl;
       }
 
       :--h3 {
