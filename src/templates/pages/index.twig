@@ -5,13 +5,167 @@
 {% endblock %}
 
 {% block content %}
-  <div class="mt-40">
-    <div class="container content-header flex flex-wrap items-center justify-between space-x-6">
-      <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Объединяем флебологов</h1>
+  <div class="main-map relative container">
+    <div class="main-map-cont relative">
+      <img data-src="./assets/images/main-map.png" alt="">
+
+      <div id="spb-placemark" class="main-map-object" style="top: 39%; left: 49%;">
+        <div class="main-map-object__cont">
+          <span class="number">32</span>
+          <img class="geo-icon" src="./assets/images/main-map-geo.png" alt="">
+          <img class="dot" src="./assets/images/main-map-dot.png" alt="">
+        </div>
+      </div>
+
+      <div id="saratov-placemark" class="main-map-object" style="top: 41%; left: 21%;">
+        <div class="main-map-object__cont">
+          <span class="number">12</span>
+          <img class="geo-icon" src="./assets/images/main-map-geo.png" alt="">
+          <img class="dot" src="./assets/images/main-map-dot.png" alt="">
+        </div>
+      </div>
+
+      <div id="samara-placemark" class="main-map-object" style="top: 51%; left: 28%;">
+        <div class="main-map-object__cont">
+          <span class="number">2</span>
+          <img class="geo-icon" src="./assets/images/main-map-geo.png" alt="">
+          <img class="dot" src="./assets/images/main-map-dot.png" alt="">
+        </div>
+      </div>
+
+      <div id="riazan-placemark" class="main-map-object" style="top: 73%; left: 29%;">
+        <div class="main-map-object__cont">
+          <span class="number">14</span>
+          <img class="geo-icon" src="./assets/images/main-map-geo.png" alt="">
+          <img class="dot" src="./assets/images/main-map-dot.png" alt="">
+        </div>
+      </div>
+
+      <div id="sevastopol-placemark" class="main-map-object" style="top: 69%; left: 71%;">
+        <div class="main-map-object__cont">
+          <span class="number">9</span>
+          <img class="geo-icon" src="./assets/images/main-map-geo.png" alt="">
+          <img class="dot" src="./assets/images/main-map-dot.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="md:absolute md:top-0 w-full md:pt-40 sm:pt-20 pt-4">
+      <div class="container content-header">
+        <h1 class="mb-4 font-serif xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-none">Объединяем флебологов</h1>
+
+        <div class="mt-6 flex flex-wrap items-center space-x-12">
+          <a href="#" class="flex items-center text-white font-thin text-base underline hover:text-purple-300 space-x-3">
+            <span>Все города</span>
+            {% include '../svg/geo-icon-svg.twig' %}
+          </a>
+          <a href="#" class="flex items-center text-white font-thin text-base underline hover:text-purple-300 space-x-6">
+            <span>Подробная карта</span>
+            {% include '../svg/map-icon-svg.twig' %}
+          </a>
+        </div>
+
+        <div class="relative md:pt-6 pb-10 md:mt-20 mt-10">
+          <div class="carousel-cities">
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="samara-placemark">
+                <h6>Самара</h6>
+                <span class="block mb-auto">2 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="riazan-placemark">
+                <h6>Рязань</h6>
+                <span class="block mb-auto">14 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center space-x-3">
+                <h6>Самара</h6>
+                <span class="block mb-auto">2 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3"  data-toggle-placemark-id="spb-placemark">
+                <h6>Санкт-Петербург</h6>
+                <span class="block mb-auto">32 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="saratov-placemark">
+                <h6>Саратов</h6>
+                <span class="block mb-auto">12 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="sevastopol-placemark">
+                <h6>Севастополь</h6>
+                <span class="block mb-auto">9 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="samara-placemark">
+                <h6>Самара</h6>
+                <span class="block mb-auto">2 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="riazan-placemark">
+                <h6>Рязань</h6>
+                <span class="block mb-auto">14 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center space-x-3">
+                <h6>Самара</h6>
+                <span class="block mb-auto">2 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3"  data-toggle-placemark-id="spb-placemark">
+                <h6>Санкт-Петербург</h6>
+                <span class="block mb-auto">32 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="saratov-placemark">
+                <h6>Саратов</h6>
+                <span class="block mb-auto">12 врача</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="carousel-cities-inner flex items-center space-x-3" data-toggle-placemark-id="sevastopol-placemark">
+                <h6>Севастополь</h6>
+                <span class="block mb-auto">9 врача</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute top-50 left-0 pl-2 carousel-arrows flex flex-col items-start justify-between h-full pointer-events-none">
+            <button class="carousel-arrow transform -rotate-90 focus:outline-none pointer-events-auto group">
+              {% include '../svg/accord-svg.twig' with {classes: 'carousel-arrow carousel-arrow_left text-blue-300 group-hover:text-white'} %}
+            </button>
+            <button class="carousel-arrow transform rotate-90 focus:outline-none pointer-events-auto group">
+              {% include '../svg/accord-svg.twig' with {classes: 'carousel-arrow carousel-arrow_right text-blue-300 group-hover:text-white'} %}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="container-big z-10 mt-40 half-background">
+  <div class="container-big z-10 md:-mt-12 mt-10 half-background">
     <div class="container">
       <div class="grid md:grid-cols-3 md:gap-0 gap-4">
         <a href="#" class="h-40 xl:p-10 lg:p-6 md:p-4 p-3 flex flex-col justify-between group bg-purple-300">

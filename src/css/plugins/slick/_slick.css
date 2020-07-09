@@ -86,6 +86,10 @@
     height: auto;
     border: 1px solid transparent;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 .slick-arrow.slick-hidden {
   display: none;
@@ -124,5 +128,42 @@
     height: auto;
     max-width: 100%;
     width: 100%;
+  }
+}
+
+.carousel-cities {
+  .slick-slide {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    h6 {
+      font-size: 30px;
+
+      @media (--max-mobile) {
+        font-size: 22px;
+      }
+    }
+
+    span {
+      @media (--max-mobile) {
+        font-size: 11px;
+      }
+    }
+  }
+  .slick-slide:not(.slick-current) {
+    opacity: 0.2;
+    color: var(--purple-300);
+
+    h6 {
+      font-size: 22px;
+
+      @media (--max-mobile) {
+        font-size: 16px;
+      }
+    }
+
+    span {
+      display: none;
+    }
   }
 }

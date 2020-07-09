@@ -1,0 +1,61 @@
+.main-map-object {
+  position: absolute;
+
+  @media (max-width: 750px) {
+    margin-top: -10px;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: -15px;
+  }
+
+  @media (max-width: 360px) {
+    margin-top: -20px;
+  }
+
+  &:not(.show) {
+    .main-map-object__cont {
+      .number,
+      .geo-icon {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__cont {
+    position: relative;
+  }
+
+  .number {
+    transition: all 0.15s ease;
+  }
+
+  .geo-icon {
+    transition: all 0.1s ease;
+  }
+
+  .number {
+    position: absolute;
+    top: 10%;
+    left: 48.5%;
+    transform: translateX(-50%);
+    font-weight: 700;
+  }
+
+  .dot {
+    position: absolute;
+    bottom: 3%;
+    left: 48.5%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 1030px) {
+    .geo-icon {
+      height: 55px;
+    }
+    .number {
+      font-size: 10px;
+    }
+  }
+}

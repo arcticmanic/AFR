@@ -192,6 +192,39 @@ $(document).ready(function () {
     })
   }
 
+  if (
+    $('.carousel-cities').length > 0 &&
+    !$('.carousel-cities').hasClass('slick-initialized')
+  ) {
+    const carousel = $('.carousel-cities')
+
+    carousel.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+      vertical: true,
+      centerMode: true,
+      dots: false,
+      prevArrow: $('.carousel-arrow_left'),
+      nextArrow: $('.carousel-arrow_right'),
+      initialSlide: 2,
+    })
+
+    carousel.on('afterChange', function (slick, currentSlide, nextSlide) {
+      var placemarkId = $('.slick-current')
+        .first()
+        .first()
+        .find('.carousel-cities-inner')
+        .attr('data-toggle-placemark-id')
+
+      $(`.main-map-object.show`).removeClass('show')
+
+      if ($(`#${placemarkId}`).length > 0) {
+        $(`#${placemarkId}`).toggleClass('show')
+      }
+    })
+  }
+
   if ($('[data-lightbox]').length > 0) {
     lightbox.option({
       resizeDuration: 200,
