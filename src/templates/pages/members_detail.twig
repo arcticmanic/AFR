@@ -1,5 +1,9 @@
 {% extends '../layout/default.twig' %}
 
+{% block scripts %}
+  <script src="./assets/js/lightbox.min.js" defer></script>
+{% endblock %}
+
 {% block content %}
 <div class="container z-10 flex lg:flex-row flex-col lg:items-end items-center justify-between py-10">
   <img data-src="./assets/images/members_detail-img.png" alt="" class="md:ml-0 md:mr-32 mx-auto lg:mb-0 mb-10 rounded-full">
@@ -79,7 +83,7 @@
   
   <div id="publications">
     <div class="container flex lg:justify-end justify-center pt-4">
-      <ol class="decimal lg:w-2/3 text-white transform lg:translate-x-16">
+      <ol class="decimal font-18 lg:w-2/3 text-white transform lg:translate-x-16">
         <li class="md:mb-20 mb-12">
           <h6 class="mb-3 font-serif text-xl leading-tight">Субфасциальная диссекция перфорантных вен голени в лечении варикозной болезни</h6>
           <p class="mb-2 text-base">Жирновой В.М., Прохоров Г.Г., Илюхин Е.А., Шпилькина Н.А., Абесадзе Е.Ю. </p>

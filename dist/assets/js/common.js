@@ -137,7 +137,10 @@ $(document).ready(function () {
     minimumResultsForSearch: Infinity,
   })
 
-  if ($('.carousel-partners').length > 0) {
+  if (
+    $('.carousel-partners').length > 0 &&
+    !$('.carousel-partners').hasClass('slick-initialized')
+  ) {
     $('.carousel-partners').slick({
       slidesToShow: 7,
       slidesToScroll: 1,
@@ -174,7 +177,10 @@ $(document).ready(function () {
     })
   }
 
-  if ($('.carousel-conf').length > 0) {
+  if (
+    $('.carousel-conf').length > 0 &&
+    !$('.carousel-conf').hasClass('slick-initialized')
+  ) {
     $('.carousel-conf').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -185,53 +191,67 @@ $(document).ready(function () {
       appendDots: '.carousel-conf-cont',
     })
   }
-  
+
+  if ($('[data-lightbox]').length > 0) {
+    lightbox.option({
+      resizeDuration: 200,
+      fadeDuration: 200,
+    })
+  }
+
   if ($('#map').length > 0 && $('#init-map').length > 0) {
     $('#init-map').one('click', () => {
       ymaps.ready(init)
       function init() {
         const map = new ymaps.Map('map', {
-          center: [59.978246, 30.315464],
-          zoom: 16,
+          center: [59.939095, 30.315868],
+          zoom: 8,
           controls: ['zoomControl'],
         })
-        // HintLayout = ymaps.templateLayoutFactory.createClass(
-        //   `<div class='styled-hint-on-map'>
-        //     {{ properties.address }}
-        //   </div>`,
-        //   {
-        //     getShape: function () {
-        //       var el = this.getElement(),
-        //         result = null
-        //       if (el) {
-        //         var firstChild = el.firstChild
-        //         result = new ymaps.shape.Rectangle(
-        //           new ymaps.geometry.pixel.Rectangle([
-        //             [0, 0],
-        //             [firstChild.offsetWidth, firstChild.offsetHeight],
-        //           ])
-        //         )
-        //       }
-        //       return result
-        //     },
-        //   }
-        // )
-        var iconLayoutObj = {
-          iconLayout: 'default#image',
-          iconImageHref: './assets/images/geo-icon.png',
-          iconImageSize: [70, 63],
-          iconImageOffset: [-70, -63],
-          // hintLayout: HintLayout,
-        }
-        var geoObj = new ymaps.Placemark(
-          [59.978246, 30.315464],
-          {
-            address: 'СПб, Аптекарская набережная, д.20 Лит.А, оф. 211',
-          },
-          iconLayoutObj
+
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="width:20px;"><strong>$[properties.iconContent]</strong></div>'
         )
 
-        map.geoObjects.add(geoObj)
+        var icon = {
+          iconLayout: 'default#imageWithContent',
+          iconImageHref: './assets/images/geo.png',
+          iconImageSize: [85, 66],
+          iconImageOffset: [-42.5, -50],
+          iconContentOffset: [30, 13],
+          iconContentLayout: MyIconContentLayout,
+        }
+
+        var geoArr = [
+          new ymaps.Placemark(
+            [59.939095, 30.315868],
+            {
+              iconContent: '888',
+            },
+            icon
+          ),
+          new ymaps.Placemark(
+            [59.900538, 32.352672],
+            {
+              iconContent: '1',
+            },
+            icon
+          ),
+          new ymaps.Placemark(
+            [59.568405, 30.122892],
+            {
+              iconContent: '1',
+            },
+            icon
+          ),
+        ]
+
+        geoArr.forEach(el => {
+          el.events.add('click', function () {
+            MicroModal.show('modal-city')
+          })
+          map.geoObjects.add(el)
+        })
 
         map.behaviors.disable('scrollZoom')
       }

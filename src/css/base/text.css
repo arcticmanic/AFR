@@ -318,7 +318,17 @@ ol.decimal {
       position: absolute;
       left: 0;
 
+      font-size: 1em;
+
       content: counter(my-awesome-counter) '. ';
+    }
+  }
+}
+
+ol.decimal.font-18 {
+  & > li {
+    &:before {
+      font-size: 18px;
     }
   }
 }

@@ -50,7 +50,7 @@
     },
     {
       "left": "Сертификат:",
-      "right": "<img data-src='./assets/images/members_detail-img-1.png' />"
+      "right": "<a href='./assets/images/members_detail-img-1.png' data-lightbox='image-1'><img data-src='./assets/images/members_detail-img-1.png' /></a>"
     }
   ]
 }
