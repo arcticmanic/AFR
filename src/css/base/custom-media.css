@@ -21,6 +21,14 @@
   h5:not([class*='text-']),
   h6:not([class*='text-']);
 
+@custom-selector :--non-sans-h
+  h1:not(.font-sans),
+  h2:not(.font-sans),
+  h3:not(.font-sans),
+  h4:not(.font-sans),
+  h5:not(.font-sans),
+  h6:not(.font-sans);
+
 @custom-selector :--h1 h1:not([class*='text-']);
 @custom-selector :--h2 h2:not([class*='text-']);
 @custom-selector :--h3 h3:not([class*='text-']);

@@ -60,11 +60,11 @@
         width: 4px;
         height: 4px;
 
-        color: inherit;
+        background: inherit;
 
         border-radius: 50%;
 
-        content: '·';
+        content: '';
       }
     }
 

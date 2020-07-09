@@ -4486,8 +4486,8 @@ html {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  color: inherit;
-  content: '·';
+  background: inherit;
+  content: '';
 }
 
 .text ul:not(.unstyled).bullets-blue-300 > li:before {
@@ -4742,9 +4742,17 @@ ol.decimal > li:before {
   }
 }
 
-h1:not([class*='text-']),h2:not([class*='text-']),h3:not([class*='text-']),h4:not([class*='text-']),h5:not([class*='text-']),h6:not([class*='text-']) {
-  font-family: IBM Plex Serif, Cambria, "Times New Roman", Times, serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
+}
+
+h1:not(.font-sans),h2:not(.font-sans),h3:not(.font-sans),h4:not(.font-sans),h5:not(.font-sans),h6:not(.font-sans) {
+  font-family: IBM Plex Serif, Cambria, "Times New Roman", Times, serif;
 }
 
 h2:not([class*='text-']) {
@@ -4887,6 +4895,28 @@ h6:not([class*='text-']) {
   content: '';
 }
 
+ul.styled > li {
+  position: relative;
+  padding-left: 20px;
+}
+
+ul.styled > li:before {
+  position: absolute;
+  top: 0.65rem;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  content: '';
+}
+
+ul.styled.bullets-blue-300 > li:before {
+  --bg-opacity: 1;
+  background-color: #4192ed;
+  background-color: rgba(65, 146, 237, var(--bg-opacity));
+}
+
 .icon-search-svg {
   width: 13px;
   height: 13px;
@@ -4978,8 +5008,8 @@ h6:not([class*='text-']) {
 }
 
 .geo-icon-svg {
-  width: 20px;
-  height: 24px;
+  width: 15px;
+  height: 18px;
 }
 
 .tick-icon-svg {

@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <div class="lg:mb-40 md:mb-20 sm:mb-16 mb-6">
+  <div class="lg:mb-20 md:mb-8 sm:mb-6 mb-4">
     <div class="relative flex py-12">
       {% include '../includes/pattern.twig' %}
 
@@ -31,6 +31,42 @@
           {% endfor %}
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="flex flex-wrap justify-between items-center">
+      <h2 class="mb-3 lg:text-4-5xl md:text-4xl text-3-5xl">Члены АФР</h2>
+
+      <ul class="flex items-center justify-start space-x-4" data-tabs>
+        <li>
+          <a href="#list" class="button py-3 px-6 bg-purple-300 text-white md:text-base space-x-3" data-tabby-default data-title="Поиск врачей по городу">
+            {% include '../svg/list-icon-svg.twig' with {classes: 'text-white'} %}
+            <span class="whitespace-no-wrap">Список городов</span>
+          </a>
+        </li>
+        <li>
+          <a href="#map-tab" id="init-map"  class="button py-3 px-6 bg-purple-300 text-white md:text-base space-x-3 opacity-25" data-title="Поиск врачей по карте">
+            {% include '../svg/geo-icon-svg.twig' with {classes: 'text-white'} %}
+            <span>Карта</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lg:mt-12 md:mt-16 sm:mt-12 mt-8 lg:mb-36 md:mb-20 mb-16 pl-6">
+      {% for letter in letters %}
+        <div class="{{loop.index == 1 ? 'md:mt-18' : 'md:mt-20'}} mt-10 flex md:flex-row flex-col items-start justify-start">
+          <h5 class="md:mb-0 sm:mb-6 mb-3 mr-6">{{letter.value}}</h5>
+          {% for column in letter.columns %}
+            <ul class="md:w-2/6 md:pl-3 pt-2 text-sm styled">
+              {% for name in column.names %}
+                <li class="mb-5"><a href="#" class="hover:underline">{{name}}</a></li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}

@@ -1,5 +1,14 @@
-:--h {
-  @apply font-serif  font-regular;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-regular;
+}
+
+:--non-sans-h {
+  @apply font-serif;
 }
 
 :--h2 {
@@ -180,5 +189,36 @@
     transform: translateY(-40%);
 
     content: '';
+  }
+}
+
+ul.styled {
+  & > li {
+    position: relative;
+
+    padding-left: 20px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+
+      width: 4px;
+      height: 4px;
+
+      background: #fff;
+
+      border-radius: 50%;
+
+      content: '';
+    }
+  }
+
+  &.bullets-blue-300 {
+    & > li {
+      &:before {
+        @apply bg-blue-200;
+      }
+    }
   }
 }
