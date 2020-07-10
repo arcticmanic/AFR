@@ -60,7 +60,7 @@
         width: 4px;
         height: 4px;
 
-        background: inherit;
+        @apply bg-white;
 
         border-radius: 50%;
 
@@ -157,6 +157,16 @@
       li {
         &:before {
           font-size: inherit;
+        }
+      }
+    }
+  }
+
+  &.white-bg {
+    :--ul {
+      & > li {
+        &:before {
+          @apply bg-gray-900;
         }
       }
     }

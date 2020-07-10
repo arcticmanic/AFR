@@ -146,8 +146,8 @@ $(document).ready(function () {
       slidesToScroll: 1,
       infinite: false,
       dots: false,
-      prevArrow: $('.carousel-arrow_left'),
-      nextArrow: $('.carousel-arrow_right'),
+      prevArrow: $('.carousel-partners-container .carousel-arrow_left'),
+      nextArrow: $('.carousel-partners-container .carousel-arrow_right'),
       responsive: [
         {
           breakpoint: 1024,
@@ -165,12 +165,6 @@ $(document).ready(function () {
           breakpoint: 500,
           settings: {
             slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 370,
-          settings: {
-            slidesToShow: 1,
           },
         },
       ],
@@ -205,8 +199,8 @@ $(document).ready(function () {
       vertical: true,
       centerMode: true,
       dots: false,
-      prevArrow: $('.carousel-arrow_left'),
-      nextArrow: $('.carousel-arrow_right'),
+      prevArrow: $('.carousel-cities-cont .carousel-arrow_left'),
+      nextArrow: $('.carousel-cities-cont .carousel-arrow_right'),
       initialSlide: 2,
     })
 
@@ -221,6 +215,16 @@ $(document).ready(function () {
 
       if ($(`#${placemarkId}`).length > 0) {
         $(`#${placemarkId}`).toggleClass('show')
+      }
+    })
+
+    carousel.on('wheel', function (e) {
+      e.preventDefault()
+
+      if (e.originalEvent.deltaY < 0) {
+        $(this).slick('slickNext')
+      } else {
+        $(this).slick('slickPrev')
       }
     })
   }

@@ -84,6 +84,10 @@ a:hover {
   height: 100%;
 }
 
+.border-t-2 {
+  border-top-width: 2px;
+}
+
 .responsive-iframe {
   max-width: 100%;
   /* height: auto; */
@@ -97,4 +101,8 @@ a:hover {
     transparent 51%,
     transparent 100%
   );
+}
+
+[class*="ymaps-2-1"][class*="-ground-pane"] {
+  filter: grayscale(1);
 }
